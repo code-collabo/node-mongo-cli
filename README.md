@@ -1,5 +1,5 @@
 # node-mongo-cli
-This is the main repository for the node-mongo-cli project.
+This is the main repository for the node-mongo-cli project by Code Collabo community.
 
 
 | 📌 Header here  |
