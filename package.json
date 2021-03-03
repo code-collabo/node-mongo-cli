@@ -11,6 +11,8 @@
     "access": "public"
   },
   "scripts": {
+    "lint": "esw src --color",
+    "lint:watch": "npm run lint -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
