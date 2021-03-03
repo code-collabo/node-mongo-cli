@@ -1,0 +1,50 @@
+{
+  "name": "@code-collabo/node-mongo-cli",
+  "version": "1.0.0",
+  "description": "node-mongo-cli package to bootstrap mongodb projects by Code Collabo community.",
+  "main": "src/cli.js",
+  "bin": {
+    "@code-collabo/node-mongo-cli": "bin/node-mongo-cli",
+    "node-mongo-cli": "bin/node-mongo-cli"
+  },
+  "publicConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-collabo/node-mongo-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "node-mongo-cli",
+    "node",
+    "nodejs",
+    "mongo",
+    "mongodb",
+    "javascript"
+  ],
+  "author": "Code Collabo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/code-collabo/node-mongo-cli/issues"
+  },
+  "homepage": "https://github.com/code-collabo/node-mongo-cli#readme",
+  "dependencies": {
+    "arg": "^5.0.0",
+    "chalk": "^4.1.0",
+    "esm": "^3.2.25",
+    "execa": "^5.0.0",
+    "inquirer": "^8.0.0",
+    "listr": "^0.14.3",
+    "ncp": "^2.0.0",
+    "pkg-install": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-watch": "^7.0.0"
+  }
+}
