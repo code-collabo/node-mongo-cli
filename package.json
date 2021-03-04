@@ -15,7 +15,7 @@
     "start": "npm-run-all --parallel lint:watch",
     "lint": "esw src --color",
     "lint:watch": "npm run lint -- --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon --exec babel-node spec/run.js"
   },
   "repository": {
     "type": "git",
@@ -48,8 +48,14 @@
     "pkg-install": "^1.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "eslint": "^7.21.0",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-watch": "^7.0.0"
+    "eslint-watch": "^7.0.0",
+    "jasmine": "^3.6.4",
+    "nodemon": "^2.0.7"
   }
 }
