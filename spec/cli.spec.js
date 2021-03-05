@@ -1,6 +1,6 @@
 import { cli as cli } from '../src/cli';
 
-describe('Cli function', () => {
+describe('Initial test: cli function', () => {
 
   it('should return undefined', () => {
     let test = cli();
