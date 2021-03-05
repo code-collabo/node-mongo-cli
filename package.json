@@ -15,8 +15,8 @@
     "start": "npm-run-all --parallel lint:watch",
     "lint": "esw src --color",
     "lint:watch": "npm run lint -- --watch",
-    "test": "babel-node spec/run.js",
-    "dev-test": "nodemon --exec babel-node spec/run.js"
+    "CI-test": "babel-node spec/run.js",
+    "test": "nodemon --exec babel-node spec/run.js"
   },
   "repository": {
     "type": "git",
