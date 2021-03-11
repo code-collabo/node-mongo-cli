@@ -1,7 +1,9 @@
 # node-mongo-cli
-This is the main repository for the node-mongo-cli project by Code Collabo community. More detailed description of the project to be added once the features in 1st release have been added successfully.
+This is the main repository for the node-mongo-cli project by Code Collabo community.
 
 <!--
+More detailed description of the project to be added once the features in 1st release have been added successfully.
+
 ## How to use node-mongo-cli
 
 Add how to use description once the features in 1st release have been added successfully.
@@ -14,6 +16,11 @@ You can contribute to node-mongo-cli as a `nodejs developer`, `mongoDB developer
 * [Contribution & community guidelines](https://github.com/code-collabo/node-mongo-docs/issues/3).
 * [Development environment & git workflow](https://github.com/code-collabo/node-mongo-docs/issues/2).
 * [Node-mongo-cli Project resources](https://github.com/code-collabo/node-mongo-docs/issues/1).
+
+
+## Related repositories
+* [node-mongo-starter-kit](https://github.com/code-collabo/node-mongo-starter-kit).
+* [node-mongo-docs](https://github.com/code-collabo/node-mongo-docs).
 
 
 ## Technologies
