@@ -1,5 +1,5 @@
 # node-mongo-cli
-This is the main repository for the node-mongo-cli project by Code Collabo community.
+`node-mongo-cli` is a command-line interface tool useful to initialize, scaffold and make mongoDB development easier. Useful for MERN or MEAN projects. Work is still in progress, see **contributing to node-mongo-cli** section to contribute to project.
 
 <!--
 More detailed description of the project to be added once the features in 1st release have been added successfully.
@@ -18,6 +18,7 @@ You can contribute to node-mongo-cli as a `nodejs developer`, `mongoDB developer
 
 
 ## Related repositories
+This is the main repository for the node-mongo-cli project by Code Collabo community. Other related repos to the cli project:
 * [node-mongo-starter-kit](https://github.com/code-collabo/node-mongo-starter-kit).
 * [node-mongo-docs](https://github.com/code-collabo/node-mongo-docs).
 
