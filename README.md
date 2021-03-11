@@ -15,7 +15,6 @@ You can contribute to node-mongo-cli as a `nodejs developer`, `mongoDB developer
 * [Project details & first task](https://github.com/code-collabo/node-mongo-cli/issues/1).
 * [Contribution & community guidelines](https://github.com/code-collabo/node-mongo-docs/issues/3).
 * [Development environment & git workflow](https://github.com/code-collabo/node-mongo-docs/issues/2).
-* [Node-mongo-cli Project resources](https://github.com/code-collabo/node-mongo-docs/issues/1).
 
 
 ## Related repositories
