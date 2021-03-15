@@ -1,5 +1,7 @@
 import arg from 'arg';
 import inquirer from 'inquirer';
+import { createProject } from './main';
+import chalk from 'chalk';
 
 let parseArgumentsIntoOptions = (rawArgs) => {
 
@@ -53,5 +55,13 @@ let promptForMissingOptions = async (options) => {
 export let cli = async (args) => {
   let options = parseArgumentsIntoOptions(args);
   options = await promptForMissingOptions(options);
+
   console.log(options);
+
+  try {
+    await createProject(options);
+  } catch (err) {
+    console.error('\n%s options.template is undefined: \nThis error will stop to show up when prompt for options.template has been added as instructed.\n', chalk.red.bold('ERROR'));
+    process.exit(1);
+  }
 }
