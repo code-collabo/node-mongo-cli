@@ -4,8 +4,8 @@
   "description": "node-mongo-cli package to bootstrap mongodb projects by Code Collabo community.",
   "main": "src/cli.js",
   "bin": {
-    "@code-collabo/node-mongo-cli": "bin/node-mongo-cli",
-    "node-mongo-cli": "bin/node-mongo-cli"
+    "@code-collabo/node-mongo-cli": "bin/create-node-mongo-project",
+    "node-mongo": "bin/create-node-mongo-project"
   },
   "publicConfig": {
     "access": "public"
