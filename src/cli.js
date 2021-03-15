@@ -1,9 +1,9 @@
 import arg from 'arg';
 
-function parseArgumentsIntoOptions(rawArgs) {
+let parseArgumentsIntoOptions = (rawArgs) => {
 
     //make -x the alias for --skip-git
-    function myHandler(value, argName, previousValue) {
+    let myHandler = (value, argName, previousValue) => {
         return previousValue || '--skip-git';
     }
 
