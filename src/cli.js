@@ -1,4 +1,5 @@
 import arg from 'arg';
+import inquirer from 'inquirer';
 
 let parseArgumentsIntoOptions = (rawArgs) => {
 
@@ -35,9 +36,22 @@ let parseArgumentsIntoOptions = (rawArgs) => {
     }
 }
 
-export let cli = (args) => {
-  let options = parseArgumentsIntoOptions(args);
-  console.log(options);
+let promptForMissingOptions = async (options) => {
+  const [defaultFolderName, defaultTemplate] = ['node-mongo-starter-kit', 'es6'];
+
+  const questions = [];
+
+  const templateCollection = ['es6', 'cjs', 'ts-es6'];
+
+  const answers = await inquirer.prompt(questions);
+
+  return {
+      ...options,
+  }
 }
 
-
+export let cli = async (args) => {
+  let options = parseArgumentsIntoOptions(args);
+  options = await promptForMissingOptions(options);
+  console.log(options);
+}
