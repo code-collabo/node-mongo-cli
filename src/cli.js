@@ -46,7 +46,7 @@ let promptForMissingOptions = async (options) => {
   const answers = await inquirer.prompt(questions);
 
   return {
-      ...options,
+      ...options
   }
 }
 
