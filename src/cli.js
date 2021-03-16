@@ -59,7 +59,7 @@ let promptForMissingOptions = async (options) => {
   }
 
   if (equalToAtLeastOneTemplate === false && options.template !== undefined) {
-      console.log( chalk.cyanBright(`Cli does not have template: "${options.template}" in it's template collection`) );
+      console.log( chalk.cyanBright(`Cli does not have template: "${options.template}" in its template collection`) );
   }
 
   const answers = await inquirer.prompt(questions);
