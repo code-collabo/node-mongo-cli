@@ -11,8 +11,8 @@ Add how to use description once the features in 1st release have been added succ
 
 ## Contributing to node-mongo-cli
 
-You can contribute to node-mongo-cli as a `nodejs developer`, `mongoDB developer` and/or help with `documentation` & `research`. We are still working on documentation, but Please go through these before you start contributing:
-*  For anyone who will be writing, mentoring and/or reviewing code, in any or both of these repos: [node-mongo-cli repo](https://github.com/code-collabo/node-mongo-cli) and [node-mongo-starter-kit repo](https://github.com/code-collabo/node-mongo-starter-kit), the [first task assignment](https://github.com/code-collabo/node-mongo-cli/issues/1#issuecomment-785559734) needs to be completed & submitted first.
+You can contribute to node-mongo-cli as a `nodejs developer`, `mongoDB developer` and/or help with `documentation` & `research`. We are still working on documentation, but please go through these before you start contributing:
+* For anyone who will be writing, mentoring and/or reviewing code, in any or both of these repos: [node-mongo-cli repo](https://github.com/code-collabo/node-mongo-cli) and [node-mongo-starter-kit repo](https://github.com/code-collabo/node-mongo-starter-kit), the [first task assignment](https://github.com/code-collabo/node-mongo-cli/issues/1#issuecomment-785559734) needs to be completed & submitted first.
 * Also, please do not make changes directly in the `main` or `develop` branches. See [development environment & git workflow](https://github.com/code-collabo/node-mongo-docs/issues/2) on how to make changes to the code base and submit pull request.
 * Please leave a comment under the issue you wish to work on and wait for approval before you send in a pull request. See [contribution & community guidelines](https://github.com/code-collabo/node-mongo-docs/issues/3) for complete details.
 
