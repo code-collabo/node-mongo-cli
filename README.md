@@ -1,3 +1,10 @@
+![GitHub Repo stars](https://img.shields.io/github/stars/code-collabo/node-mongo-cli)
+![GitHub all releases](https://img.shields.io/github/downloads/code-collabo/node-mongo-cli/total)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/code-collabo/node-mongo-cli)
+![GitHub issues](https://img.shields.io/github/issues/code-collabo/node-mongo-cli)
+![GitHub forks](https://img.shields.io/github/forks/code-collabo/node-mongo-cli)
+
+
 # node-mongo-cli
 `node-mongo-cli` is a command-line interface tool useful to initialize, scaffold and make mongoDB development easier. Useful for MERN or MEAN projects. Work is still in progress, see **contributing to node-mongo-cli** section to contribute to project.
 
