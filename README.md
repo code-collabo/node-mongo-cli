@@ -17,6 +17,8 @@ You can contribute as a `nodejs developer`, `mongoDB developer` and/or help with
 
 Feel free to ask questions concerning anything not clear on this topic if you have any. Just [ask your question(s) in the comment here](https://github.com/code-collabo/node-mongo-cli/issues/29), or in the comment under the issue you wish to work on and you'll be attended to.
 
+_Tag **@Ifycode** in the comment, otherwise she won't receive a notification and therefore may not know that you wrote._
+
 [Report or find issues to work on here](https://github.com/code-collabo/node-mongo-cli/issues).
 
 ## Related repositories
