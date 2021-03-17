@@ -16,7 +16,7 @@ You can contribute to node-mongo-cli as a `nodejs developer`, `mongoDB developer
 * Also, please do not make changes directly in the `main` or `develop` branches. See [development environment & git workflow](https://github.com/code-collabo/node-mongo-docs/issues/2) on how to make changes to the code base and submit pull request.
 * Please leave a comment under the issue you wish to work on and wait for approval before you send in a pull request. See [contribution & community guidelines](https://github.com/code-collabo/node-mongo-docs/issues/3) for complete details.
 
-Feel free to ask questions concerning anything not clear on this topic if you have any. Just ask your question(s) in the comment under the issue you wish to work on and you'll be attended to. It is better to ask if you're not sure, than for your pull request to be discarded. 
+Feel free to ask questions concerning anything not clear on this topic if you have any. Just [ask your question(s) in the comment here](https://github.com/code-collabo/node-mongo-cli/issues/29), or in the comment under the issue you wish to work on and you'll be attended to. It is better to ask if you're not sure, than for your pull request to be discarded. 
 
 [Report or find issues to work on here](https://github.com/code-collabo/node-mongo-cli/issues). 
 
