@@ -12,14 +12,14 @@
   },
   "scripts": {
     "preinstall": "node bin/customize-preinstall",
-    "prestart": "node -r esm src/startMessage.js",
+    "prestart": "node -r esm src/customize/startMessage.js",
     "start": "npm-run-all --parallel lint:watch",
     "lint": "esw src --color",
     "lint:watch": "npm run lint -- --watch",
     "test": "npm-run-all --parallel test-message dev-test",
     "dev-test": "nodemon --exec babel-node spec/run.js",
     "CI-test": "babel-node spec/run.js",
-    "test-message": "node -r esm src/testMessage"
+    "test-message": "node -r esm src/customize/testMessage"
   },
   "repository": {
     "type": "git",
