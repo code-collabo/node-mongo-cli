@@ -53,8 +53,31 @@ let promptForMissingOptions = async (options) => {
   }
 
   const templateCollection = ['es6', 'cjs', 'ts-es6'];
+  const equalToAtLeastOneTemplate = templateCollection.some(tc => {
+    return tc === options.template
+  });
+
+  if (!options.template || equalToAtLeastOneTemplate === false) {
+      questions.push({
+          type: 'list',
+          name: 'template',
+          message: 'Please choose which project template to use',
+          choices: templateCollection,
+          default: defaultTemplate
+      });
+  }
+
+  if (equalToAtLeastOneTemplate === false && options.template !== undefined) {
+      console.log( chalk.cyanBright(`Cli does not have template: "${options.template}" in its template collection`) );
+  }
 
   const answers = await inquirer.prompt(questions);
+  if (equalToAtLeastOneTemplate === false) {
+    return {
+        ...options,
+        template: answers.template
+    }
+  }
 
   return {
       ...options,
