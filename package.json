@@ -11,6 +11,7 @@
     "access": "public"
   },
   "scripts": {
+    "preinstall": "node bin/customize-preinstall",
     "prestart": "node -r esm src/startMessage.js",
     "start": "npm-run-all --parallel lint:watch",
     "lint": "esw src --color",
@@ -42,8 +43,10 @@
   "dependencies": {
     "arg": "^5.0.0",
     "chalk": "^4.1.0",
+    "clear": "^0.1.0",
     "esm": "^3.2.25",
     "execa": "^5.0.0",
+    "figlet": "^1.5.0",
     "inquirer": "^8.0.0",
     "listr": "^0.14.3",
     "ncp": "^2.0.0",
