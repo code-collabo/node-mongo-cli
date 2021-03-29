@@ -43,12 +43,22 @@ let promptForMissingOptions = async (options) => {
 
   const questions = [];
 
+  if (!options.folderName) {
+    questions.push({
+        type: 'input',
+        name: 'folderName',
+        message: 'Please enter folder name:',
+        default: defaultFolderName
+    });
+  }
+
   const templateCollection = ['es6', 'cjs', 'ts-es6'];
 
   const answers = await inquirer.prompt(questions);
 
   return {
-      ...options
+      ...options,
+      folderName: options.folderName || answers.folderName
   }
 }
 
