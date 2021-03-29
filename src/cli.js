@@ -17,7 +17,7 @@ let parseArgumentsIntoOptions = (rawArgs) => {
         '--install': Boolean,
         '--skip-install': Boolean,
         '-g': '--git',
-        '--skip-git': arg.flag(myHandler),
+        '--skip-git': arg.flag(myHandler), //eslint-disable-line no-dupe-keys
         '-x': '--skip-git',
         '-y': '--yes',
         '-i': '--install',
