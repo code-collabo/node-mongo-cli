@@ -75,13 +75,15 @@ let promptForMissingOptions = async (options) => {
   if (equalToAtLeastOneTemplate === false) {
     return {
         ...options,
+        folderName: options.folderName || answers.folderName,
         template: answers.template
     }
   }
 
   return {
       ...options,
-      folderName: options.folderName || answers.folderName
+      folderName: options.folderName || answers.folderName,
+      template: options.template || answers.template
   }
 }
 
