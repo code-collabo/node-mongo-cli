@@ -5,37 +5,37 @@ import chalk from 'chalk';
 
 let parseArgumentsIntoOptions = (rawArgs) => {
 
-    //make -x the alias for --skip-git
-    let myHandler = (value, argName, previousValue) => {
-        return previousValue || '--skip-git';
-    }
+  //make -x the alias for --skip-git
+  let myHandler = (value, argName, previousValue) => {
+    return previousValue || '--skip-git';
+  }
 
-    const args = arg({
-        '--git': Boolean,
-        '--skip-git': Boolean,
-        '--yes': Boolean,
-        '--install': Boolean,
-        '--skip-install': Boolean,
-        '-g': '--git',
-        '--skip-git': arg.flag(myHandler), //eslint-disable-line no-dupe-keys
-        '-x': '--skip-git',
-        '-y': '--yes',
-        '-i': '--install',
-        '-s': '--skip-install'
-    },
-    {
-       argv: rawArgs.slice(2),
-    });
+  const args = arg({
+    '--git': Boolean,
+    '--skip-git': Boolean,
+    '--yes': Boolean,
+    '--install': Boolean,
+    '--skip-install': Boolean,
+    '-g': '--git',
+    '--skip-git': arg.flag(myHandler), //eslint-disable-line no-dupe-keys
+    '-x': '--skip-git',
+    '-y': '--yes',
+    '-i': '--install',
+    '-s': '--skip-install'
+  },
+  {
+    argv: rawArgs.slice(2)
+  });
 
-    return {
-        skipPrompts: args['--yes'] || false,
-        git: args['--git'] || true,
-        skipGit: args['--skip-git'],
-        folderName: args._[0],
-        template: args._[1],
-        runInstall: args['--install'] || true,
-        skipInstall: args['--skip-install'] || false
-    }
+  return {
+    skipPrompts: args['--yes'] || false,
+    git: args['--git'] || true,
+    skipGit: args['--skip-git'],
+    folderName: args._[0],
+    template: args._[1],
+    runInstall: args['--install'] || true,
+    skipInstall: args['--skip-install'] || false
+  }
 }
 
 let promptForMissingOptions = async (options) => {
@@ -45,21 +45,22 @@ let promptForMissingOptions = async (options) => {
 
   if (!options.folderName) {
     questions.push({
-        type: 'input',
-        name: 'folderName',
-        message: 'Please enter folder name:',
-        default: defaultFolderName
+      type: 'input',
+      name: 'folderName',
+      message: 'Please enter folder name:',
+      default: defaultFolderName
     });
   }
 
   const templateCollection = ['es6', 'cjs', 'ts-es6'];
+
   const equalToAtLeastOneTemplate = templateCollection.some(tc => {
     return tc === options.template
   });
 
-  const notAmongTemplates = equalToAtLeastOneTemplate === false;
+  const notAmongTemplateCollection = equalToAtLeastOneTemplate === false;
 
-  if (notAmongTemplates && options.skipPrompts) {
+  if (notAmongTemplateCollection && options.skipPrompts) {
     console.log( chalk.cyanBright(`There are only 3 templates you can choose from: es6, cjs and ts-es6.
     Cli does not have template: "${options.template}" in its template collection,
     the default template: "${defaultTemplate}" will be used instead.`) );
@@ -67,41 +68,42 @@ let promptForMissingOptions = async (options) => {
 
   if (options.skipPrompts) {
     return {
-        ...options,
-        folderName: options.folderName || defaultFolderName,
-        template: defaultTemplate,
-        runInstall: false,
-        git: false
+      ...options,
+      folderName: options.folderName || defaultFolderName,
+      template: defaultTemplate,
+      runInstall: false,
+      git: false
     }
   }
 
-  if (!options.template || equalToAtLeastOneTemplate === false) {
-      questions.push({
-          type: 'list',
-          name: 'template',
-          message: 'Please choose which project template to use',
-          choices: templateCollection,
-          default: defaultTemplate
-      });
+  if (!options.template || notAmongTemplateCollection) {
+    questions.push({
+      type: 'list',
+      name: 'template',
+      message: 'Please choose which project template to use',
+      choices: templateCollection,
+      default: defaultTemplate
+    });
   }
 
-  if (equalToAtLeastOneTemplate === false && options.template !== undefined) {
-      console.log( chalk.cyanBright(`Cli does not have template: "${options.template}" in its template collection`) );
+  if (notAmongTemplateCollection && options.template !== undefined) {
+    console.log( chalk.cyanBright(`Cli does not have template: "${options.template}" in its template collection`) );
   }
 
   const answers = await inquirer.prompt(questions);
-  if (equalToAtLeastOneTemplate === false) {
+
+  if (notAmongTemplateCollection) {
     return {
-        ...options,
-        folderName: options.folderName || answers.folderName,
-        template: answers.template
+      ...options,
+      folderName: options.folderName || answers.folderName,
+      template: answers.template
     }
   }
 
   return {
-      ...options,
-      folderName: options.folderName || answers.folderName,
-      template: options.template || answers.template
+    ...options,
+    folderName: options.folderName || answers.folderName,
+    template: options.template || answers.template
   }
 }
 
