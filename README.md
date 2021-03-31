@@ -46,7 +46,7 @@ A big thank you to the authors [@dkundel](https://github.com/dkundel) [@academin
 
 ## Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks to these wonderful people helping to improve the ***node-mongo-cli*** project ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
