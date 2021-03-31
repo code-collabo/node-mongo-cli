@@ -57,7 +57,9 @@ let promptForMissingOptions = async (options) => {
     return tc === options.template
   });
 
-  if (!options.template || equalToAtLeastOneTemplate === false) {
+  const notAmongTemplateCollection = equalToAtLeastOneTemplate === false;
+
+  if (!options.template || notAmongTemplateCollection) {
       questions.push({
           type: 'list',
           name: 'template',
@@ -67,12 +69,12 @@ let promptForMissingOptions = async (options) => {
       });
   }
 
-  if (equalToAtLeastOneTemplate === false && options.template !== undefined) {
+  if (notAmongTemplateCollection && options.template !== undefined) {
       console.log( chalk.cyanBright(`Cli does not have template: "${options.template}" in its template collection`) );
   }
 
   const answers = await inquirer.prompt(questions);
-  if (equalToAtLeastOneTemplate === false) {
+  if (notAmongTemplateCollection) {
     return {
         ...options,
         folderName: options.folderName || answers.folderName,
