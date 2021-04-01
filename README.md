@@ -31,16 +31,9 @@ List of all repos in the node-mongo-cli project by Code Collabo community:
 ## Project resources
 A big thank you to the authors [@dkundel](https://github.com/dkundel) [@academind](https://github.com/academind) [@CodAffection](https://github.com/CodAffection) whose awesome YouTube videos and/or articles make up the **main** [resources](https://github.com/code-collabo/node-mongo-docs/issues/1) we're using to build this project. Also to [@coryhouse](https://github.com/coryhouse), author of building a javascript development environment course.
 
-## Technologies
-
-[<img alt="javascript" height="25px" src="https://www.freepnglogos.com/uploads/javascript/javascript-online-logo-for-website-0.png" />](https://github.com/code-collabo/node-mongo-cli)
-[<img alt="node js" height="25px" src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" />](https://github.com/code-collabo/node-mongo-cli)
-[<img alt="mongoDB" height="25px" src="https://webassets.mongodb.com/_com_assets/cms/MongoDB_Logo_FullColorBlack_RGB-4td3yuxzjs.png" />](https://github.com/code-collabo/node-mongo-cli)
-
-
 ## Contributors ✨
 
-Thanks to these wonderful people helping to improve the ***node-mongo-cli*** project ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks to these wonderful people helping to improve the ***node-mongo-cli*** project [= (emoji key) =>](https://allcontributors.org/docs/en/emoji-key)
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -56,4 +49,10 @@ Thanks to these wonderful people helping to improve the ***node-mongo-cli*** pro
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+See complete list of Code Collabo contributors in the [docs: all-contributors.md](https://github.com/code-collabo/docs/blob/main/all-contributors.md).
+
+## Technologies
+
+[<img alt="javascript" height="25px" src="https://www.freepnglogos.com/uploads/javascript/javascript-online-logo-for-website-0.png" />](https://github.com/code-collabo/node-mongo-cli)
+[<img alt="node js" height="25px" src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" />](https://github.com/code-collabo/node-mongo-cli)
+[<img alt="mongoDB" height="25px" src="https://webassets.mongodb.com/_com_assets/cms/MongoDB_Logo_FullColorBlack_RGB-4td3yuxzjs.png" />](https://github.com/code-collabo/node-mongo-cli)
