@@ -1,6 +1,6 @@
 # node-mongo-cli
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) ![GitHub Repo stars](https://img.shields.io/github/stars/code-collabo/node-mongo-cli) ![GitHub forks](https://img.shields.io/github/forks/code-collabo/node-mongo-cli) ![GitHub issues](https://img.shields.io/github/issues/code-collabo/node-mongo-cli?color=red) ![GitHub pull requests](https://img.shields.io/github/issues-pr/code-collabo/node-mongo-cli?color=goldenrod)
@@ -41,6 +41,7 @@ Thanks to these wonderful people helping to improve the ***node-mongo-cli*** pro
 <table>
   <tr>
     <td align="center"><a href="https://github.com/Ifycode"><img src="https://avatars.githubusercontent.com/u/45185388?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Obiagba Mary Ifeoma</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/commits?author=Ifycode" title="Code">💻</a> <a href="https://github.com/code-collabo/node-mongo-cli/commits?author=Ifycode" title="Documentation">📖</a> <a href="#infra-Ifycode" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-Ifycode" title="Maintenance">🚧</a> <a href="https://github.com/code-collabo/node-mongo-cli/pulls?q=is%3Apr+reviewed-by%3AIfycode" title="Reviewed Pull Requests">👀</a> <a href="#projectManagement-Ifycode" title="Project Management">📆</a> <a href="#ideas-Ifycode" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/jiobiagba"><img src="https://avatars.githubusercontent.com/u/42423547?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joseph Obiagba</b></sub></a><br /><a href="#mentoring-jiobiagba" title="Mentoring">🧑‍🏫</a></td>
   </tr>
 </table>
 
