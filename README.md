@@ -28,8 +28,8 @@ List of all repos in the node-mongo-cli project by Code Collabo community:
 * [node-mongo-starter-cjs](https://github.com/code-collabo/node-mongo-starter-cjs).
 * [node-mongo-docs](https://github.com/code-collabo/node-mongo-docs).
 
-## Project resources
-A big thank you to the authors [@dkundel](https://github.com/dkundel) [@academind](https://github.com/academind) [@CodAffection](https://github.com/CodAffection) whose awesome YouTube videos and/or articles make up the **main** [resources](https://github.com/code-collabo/node-mongo-docs/issues/1) we're using to build this project. Also to [@coryhouse](https://github.com/coryhouse), author of building a javascript development environment course.
+## Resources
+A big thank you to the authors [@dkundel](https://github.com/dkundel) [@academind](https://github.com/academind) [@CodAffection](https://github.com/CodAffection) whose awesome [YouTube videos and/or articles](https://github.com/code-collabo/node-mongo-docs/issues/1) have been useful to building the node-mongo project. Also to [@coryhouse](https://github.com/coryhouse), author of building a javascript development environment course.
 
 ## Contributors ✨
 
