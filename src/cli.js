@@ -52,7 +52,7 @@ let promptForMissingOptions = async (options) => {
     });
   }
 
-  const templateCollection = ['es6', 'cjs', 'ts-es6'];
+  const templateCollection = ['es6+', 'cjs', 'ts-es6+'];
 
   const equalToAtLeastOneTemplate = templateCollection.some(tc => {
     return tc === options.template
