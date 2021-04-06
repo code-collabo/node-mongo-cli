@@ -7,14 +7,14 @@
 
 `node-mongo-cli` is a command-line interface tool useful to initialize, scaffold and make mongoDB development easier. With the CLI, you can install any of the starter kit versions or templates - es6 and cjs. It not only helps install the starter-kit versions, but also allows you to add new model & controller files with content using simple commands. 
 
-The [cli](https://github.com/code-collabo/node-mongo-cli) is built to help provide better experience when using the starter-kit in MongoDB, MERN or MEAN projects. Work is still in progress, see contributing to node-mongo-cli section to contribute to project.
+The [cli](https://github.com/code-collabo/node-mongo-cli) is built to help provide better experience when using the starter-kit in MongoDB, MERN or MEAN projects. 
 
 ## Documentation
-For easy maintenance (due to modifications to be made and addition of more features) and also to provide you better support, sections previously included in the readme have been [moved to our docs](https://github.com/code-collabo/docs). Simply click on any of the links to learn to install, use the library in your project and contribute to the library.
-#### Using library
-* [Docs: styles and classes](https://github.com/code-collabo/docs/blob/main/user-guide/less-css-helper-library/styles-and-classes.md)
-* [Docs: how to use](https://github.com/code-collabo/docs/blob/main/user-guide/less-css-helper-library/how-to-use.md)
-#### Contributing to library
+For easy maintenance (due to modifications to be made and addition of more features) and also to provide you better support, sections previously included in the readme have been [moved to our docs](https://github.com/code-collabo/docs). Simply click on any of the links to learn to install, use and contribute to the node-mongo project.
+#### Using node-mongo
+No user guide yet, work is still in progress.
+
+#### Contributing to node-mongo
 * See [docs: contributor guide](https://github.com/code-collabo/docs/tree/main/contributor-guide) which contains ***contributing.md***, ***CODE_OF_CONDUCT***, ***git workflow*** and ***project development setup*** to help you get started.
 
 ## Resources
