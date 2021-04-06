@@ -18,7 +18,7 @@ No user guide yet, work is still in progress.
 * See [docs: contributor guide](https://github.com/code-collabo/docs/tree/main/contributor-guide) which contains ***contributing.md***, ***CODE_OF_CONDUCT***, ***git workflow*** and ***project development setup*** to help you get started.
 
 ## Resources
-You can [use these resources](https://github.com/code-collabo/docs/blob/main/contributor-guide/node-mongo-cli/resources.md) to guide you while contributing to the project. Appreciation goes to authors [@dkundel](https://github.com/dkundel), [@academind](https://github.com/academind), [@CodAffection](https://github.com/CodAffection), whose awesome youTube videos and/or articles make up this list of resources, and which have been useful to building the node-mongo project so far. Also to [@coryhouse](https://github.com/coryhouse), author of building a javascript development environment course.
+You can [use these resources](https://github.com/code-collabo/docs/blob/main/contributor-guide/node-mongo-cli/resources.md) as guide while contributing to the project. Appreciation goes to authors [@dkundel](https://github.com/dkundel), [@academind](https://github.com/academind), [@CodAffection](https://github.com/CodAffection), whose awesome youTube videos and/or articles make up this list of resources, and which have been useful to building the node-mongo project so far. Also to [@coryhouse](https://github.com/coryhouse), author of building a javascript development environment course.
 
 ## Contributors ✨
 
