@@ -9,24 +9,13 @@
 
 The [cli](https://github.com/code-collabo/node-mongo-cli) is built to help provide better experience when using the starter-kit in MongoDB, MERN or MEAN projects. Work is still in progress, see contributing to node-mongo-cli section to contribute to project.
 
-## Contributing to node-mongo-cli
-You can contribute as a `nodejs developer`, `mongoDB developer` and/or help with `documentation` & `research`. We are still working on documentation, but please go through these before you start contributing:
-* Completing the [first task assignment](https://github.com/code-collabo/node-mongo-cli/issues/1#issuecomment-785559734) is compulsory, for issues with `cli-only` label or `starter-kit-only` label.
-* Do not make changes directly in the `main` or `develop` branches. See [development environment & git workflow](https://github.com/code-collabo/node-mongo-docs/issues/2) on how to make changes to the code base and submit pull request.
-* Do not submit a pull request for an issue you have not been assigned to. Leave a comment under the issue you wish to work on and wait for approval before you start working on the issue. See [contribution & community guidelines](https://github.com/code-collabo/node-mongo-docs/issues/3) for complete details.
-
-Feel free to ask questions concerning anything not clear on this topic if you have any. Just [ask your question(s) in the comment here](https://github.com/code-collabo/node-mongo-cli/issues/29), or in the comment under the issue you wish to work on and you'll be attended to.
-
-_Tag **@Ifycode** in the comment, otherwise she won't receive a notification and therefore may not know that you wrote._
-
-[Report or find issues to work on here](https://github.com/code-collabo/node-mongo-cli/issues).
-
-## Related repositories
-List of all repos in the node-mongo-cli project by Code Collabo community:
-* [node-mongo-cli](https://github.com/code-collabo/node-mongo-cli).
-* [node-mongo-starter-kit](https://github.com/code-collabo/node-mongo-starter-kit).
-* [node-mongo-starter-cjs](https://github.com/code-collabo/node-mongo-starter-cjs).
-* [node-mongo-docs](https://github.com/code-collabo/node-mongo-docs).
+## Documentation
+For easy maintenance (due to modifications to be made and addition of more features) and also to provide you better support, sections previously included in the readme have been [moved to our docs](https://github.com/code-collabo/docs). Simply click on any of the links to learn to install, use the library in your project and contribute to the library.
+#### Using library
+* [Docs: styles and classes](https://github.com/code-collabo/docs/blob/main/user-guide/less-css-helper-library/styles-and-classes.md)
+* [Docs: how to use](https://github.com/code-collabo/docs/blob/main/user-guide/less-css-helper-library/how-to-use.md)
+#### Contributing to library
+* See [docs: contributor guide](https://github.com/code-collabo/docs/tree/main/contributor-guide) which contains ***contributing.md***, ***CODE_OF_CONDUCT***, ***git workflow*** and ***project development setup*** to help you get started.
 
 ## Resources
 A big thank you to the authors [@dkundel](https://github.com/dkundel) [@academind](https://github.com/academind) [@CodAffection](https://github.com/CodAffection) whose awesome [YouTube videos and/or articles](https://github.com/code-collabo/node-mongo-docs/issues/1) have been useful to building the node-mongo project. Also to [@coryhouse](https://github.com/coryhouse), author of building a javascript development environment course.
