@@ -5,9 +5,9 @@
 
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) ![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg) ![GitHub issues](https://img.shields.io/github/issues/code-collabo/node-mongo-cli?color=red) ![GitHub pull requests](https://img.shields.io/github/issues-pr/code-collabo/node-mongo-cli?color=goldenrod)
 
-`node-mongo-cli` is a command-line interface tool useful to initialize, scaffold and make mongoDB development easier in nodejs environment. With the CLI, you can install any of the starter kit templates - [es6+](https://github.com/code-collabo/node-mongo-starter-kit) and [cjs](https://github.com/code-collabo/node-mongo-starter-cjs). It not only helps install the starter-kit, but also allows you to add new model & controller files with content using simple commands. 
+`node-mongo-cli` is a command-line interface tool useful to initialize, scaffold and make mongoDB development easier in nodejs environment. With the CLI, you can install any of the starter kit templates - [es6](https://github.com/code-collabo/node-mongo-starter-kit) and [cjs](https://github.com/code-collabo/node-mongo-starter-cjs). It not only helps install the starter-kit, but also allows you to add new model & controller files with content using simple commands.
 
-The [cli](https://github.com/code-collabo/node-mongo-cli) is built to help provide better experience when using the starter-kit in MongoDB, MERN or MEAN projects. 
+The [cli](https://github.com/code-collabo/node-mongo-cli) is built to help provide better experience when using the starter-kit in MongoDB, MERN or MEAN projects.
 
 ## Documentation
 For easy maintenance (due to modifications to be made and addition of more features) and also to provide you better support, sections previously included in the readme have been [moved to our docs](https://github.com/code-collabo/docs). Simply click on any of the links to learn to install, use and contribute to the node-mongo project.
