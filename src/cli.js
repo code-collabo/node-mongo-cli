@@ -96,14 +96,16 @@ let promptForMissingOptions = async (options) => {
     return {
       ...options,
       folderName: options.folderName || answers.folderName,
-      template: answers.template
+      template: answers.template,
+      git: options.git || answers.git
     }
   }
 
   return {
     ...options,
     folderName: options.folderName || answers.folderName,
-    template: options.template || answers.template
+    template: options.template || answers.template,
+    git: options.git || answers.git
   }
 }
 
@@ -112,6 +114,10 @@ export let cli = async (args) => {
 
   if (options.skipInstall) {
     options.runInstall = false;
+  }
+  
+  if (options.skipGit) {
+    options.git = false;
   }
 
   options = await promptForMissingOptions(options);
