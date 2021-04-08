@@ -93,6 +93,11 @@ let promptForMissingOptions = async (options) => {
 
 export let cli = async (args) => {
   let options = parseArgumentsIntoOptions(args);
+
+  if (options.skipInstall) {
+    options.runInstall = false;
+  }
+
   options = await promptForMissingOptions(options);
 
   console.log(options);

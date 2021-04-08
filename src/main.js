@@ -4,6 +4,7 @@ import ncp from 'ncp';
 import path from 'path';
 import { promisify } from 'util';
 import Listr from 'listr';
+import { projectInstall } from 'pkg-install';
 
 const access = promisify(fs.access);
 const copy = promisify(ncp);
@@ -48,6 +49,13 @@ export let createProject = async (options) => {
     {
       title: 'copy project files',
       task: () => copyTemplateFiles(options)
+    },
+    {
+        title: 'Install dependencies',
+        task: () => projectInstall({
+            cwd: options.targetDirectory
+        }),
+        skip: () => !options.runInstall ? 'Automatically install dependencies by doing nothing. Alternatively, pass --install or -i' : undefined
     }
   ]);
 
