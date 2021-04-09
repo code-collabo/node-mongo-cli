@@ -129,7 +129,6 @@ export let cli = async (args) => {
   try {
     await createProject(options);
   } catch (err) {
-    console.error('\n%s options.template is undefined: \nThis error will stop to show up when prompt for options.template has been added as instructed.\n', chalk.red.bold('ERROR'));
-    process.exit(1);
+    console.log('Error | ', err);
   }
 }

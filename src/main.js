@@ -56,7 +56,7 @@ export let createProject = async (options) => {
   try {
     await access(templateDir, fs.constants.R_OK);
   }catch (err) {
-    console.error(`\n%s "${options.template}" is an invalid template name i.e. not among template name stored in the templateCollection variable/array: this error will no longer show up when prompt for options.template has been added as instructed.`, chalk.red.bold('ERROR'));
+    console.error(`\n%s "${options.template}" is (probably) an invalid template name i.e. not among template name stored in the templateCollection variable/array.`, chalk.red.bold('ERROR'));
     process.exit(1);
   }
 
