@@ -66,16 +66,16 @@ export let createProject = async (options) => {
       task: () => copyTemplateFiles(options)
     },
     {
+      title: 'Initialize git',
+      task: () => initGit(options),
+      skip: () => !options.git ? 'Automatically initialize git by doing nothing. Alternatively, pass --git or -g' : undefined
+    },
+    {
       title: 'Install dependencies',
       task: () => projectInstall({
         cwd: options.targetDirectory
       }),
       skip: () => !options.runInstall ? 'Automatically install dependencies by doing nothing. Alternatively, pass --install or -i' : undefined
-    },
-    {
-      title: 'Initialize git',
-      task: () => initGit(options),
-      skip: () => !options.git ? 'Automatically initialize git by doing nothing. Alternatively, pass --git or -g' : undefined
     }
   ]);
 
