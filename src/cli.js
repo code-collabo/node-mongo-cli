@@ -60,10 +60,12 @@ let promptForMissingOptions = async (options) => {
 
   const notAmongTemplateCollection = equalToAtLeastOneTemplate === false;
 
-  if (notAmongTemplateCollection && options.skipPrompts) {
-    console.log( chalk.cyanBright(`There are only 3 templates you can choose from: es6, cjs and ts-es6.
-    Cli does not have template: "${options.template}" in its template collection,
-    the default template: "${defaultTemplate}" will be used instead.`) );
+  if (notAmongTemplateCollection && options.skipPrompts && options.template !== undefined) {
+    console.log( chalk.cyanBright(`Cli does not have template: "${options.template}" in its template collection, the default template: "${defaultTemplate}" will be used instead.`) );
+  }
+
+  if (notAmongTemplateCollection && options.skipPrompts && options.template === undefined) {
+    console.log( chalk.cyanBright(`No template specified, the default template: "${defaultTemplate}" will be used instead.`) );
   }
 
   if (options.skipPrompts) {
@@ -115,14 +117,14 @@ export let cli = async (args) => {
   if (options.skipInstall) {
     options.runInstall = false;
   }
-  
+
   if (options.skipGit) {
     options.git = false;
   }
 
   options = await promptForMissingOptions(options);
 
-  console.log(options);
+  //console.log(options);
 
   try {
     await createProject(options);
