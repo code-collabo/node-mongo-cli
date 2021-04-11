@@ -20,27 +20,9 @@ No user guide yet, work is still in progress.
 ## Resources
 You can [use these resources](https://code-collabo.gitbook.io/docs-code-collabo/contributor-guide/node-mongo-project/resources) as guide while contributing to the project. Appreciation goes to authors [@dkundel](https://github.com/dkundel), [@academind](https://github.com/academind), [@CodAffection](https://github.com/CodAffection), whose awesome youTube videos and/or articles make up this list of resources, and which have been useful to building the node-mongo project so far. Also to [@coryhouse](https://github.com/coryhouse), author of building a javascript development environment course.
 
-## Contributors ✨
+## Meet our contributors ✨
 
-Thanks to these wonderful people helping to improve the ***node-mongo-cli*** project [= (emoji key) =>](https://allcontributors.org/docs/en/emoji-key)
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/Ifycode"><img src="https://avatars.githubusercontent.com/u/45185388?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Obiagba Mary Ifeoma</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/commits?author=Ifycode" title="Code">💻</a> <a href="https://github.com/code-collabo/node-mongo-cli/commits?author=Ifycode" title="Documentation">📖</a> <a href="#infra-Ifycode" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-Ifycode" title="Maintenance">🚧</a> <a href="https://github.com/code-collabo/node-mongo-cli/pulls?q=is%3Apr+reviewed-by%3AIfycode" title="Reviewed Pull Requests">👀</a> <a href="#projectManagement-Ifycode" title="Project Management">📆</a> <a href="#ideas-Ifycode" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://github.com/IsraelObiagba"><img src="https://avatars.githubusercontent.com/u/14045379?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Israel Obiagba</b></sub></a><br /><a href="#mentoring-IsraelObiagba" title="Mentoring">🧑‍🏫</a></td>
-    <td align="center"><a href="https://github.com/jiobiagba"><img src="https://avatars.githubusercontent.com/u/42423547?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joseph Obiagba</b></sub></a><br /><a href="#mentoring-jiobiagba" title="Mentoring">🧑‍🏫</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-See complete list of Code Collabo contributors in the [docs: all-contributors.md](https://github.com/code-collabo/docs/blob/main/all-contributors.md).
+[Thanks to these wonderful people](https://code-collabo.gitbook.io/docs-code-collabo/meet-our-awesome-contributors/all-contributors) helping to improve some or all aspects of the [Code Collabo project](https://github.com/code-collabo)_**.**_ 
 
 ## Technologies
 
