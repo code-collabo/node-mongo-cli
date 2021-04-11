@@ -20,7 +20,7 @@ No user guide yet, work is still in progress.
 ## Resources
 You can [use these resources](https://code-collabo.gitbook.io/docs-code-collabo/contributor-guide/node-mongo-project/resources) as guide while contributing to the project. Appreciation goes to authors [@dkundel](https://github.com/dkundel), [@academind](https://github.com/academind), [@CodAffection](https://github.com/CodAffection), whose awesome youTube videos and/or articles make up this list of resources, and which have been useful to building the node-mongo project so far. Also to [@coryhouse](https://github.com/coryhouse), author of building a javascript development environment course.
 
-## Meet our contributors ✨
+## Contributors ✨
 
 [Thanks to these wonderful people](https://code-collabo.gitbook.io/docs-code-collabo/meet-our-awesome-contributors/all-contributors) helping to improve some or all aspects of the [Code Collabo project](https://github.com/code-collabo)_**.**_ 
 
