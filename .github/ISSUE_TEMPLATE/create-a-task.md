@@ -2,8 +2,8 @@
 name: Create a task
 about: Pattern to follow while creating a task to be solved
 title: ''
-labels: ''
-assignees: ''
+labels: repo setup
+assignees: Ifycode
 
 ---
 
