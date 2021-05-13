@@ -2,6 +2,7 @@ import arg from 'arg';
 import inquirer from 'inquirer';
 import { createProject } from './main';
 import chalk from 'chalk';
+import fs from 'fs';
 
 let parseArgumentsIntoOptions = (rawArgs) => {
 
@@ -41,16 +42,95 @@ let parseArgumentsIntoOptions = (rawArgs) => {
 let promptForMissingOptions = async (options) => {
   const [defaultFolderName, defaultTemplate] = ['node-mongo-starter-kit', 'es6'];
 
-  const questions = [];
+  const folderQuestions = [];
 
-  if (!options.folderName) {
-    questions.push({
+  let questionPush = (msgString, folder) => {
+    folderQuestions.push({
       type: 'input',
       name: 'folderName',
-      message: 'Please enter folder name:',
-      default: defaultFolderName
+      message: msgString,
+      default: folder
     });
   }
+
+  let folderNameAnswers;
+
+  if (!options.folderName) {
+    try {
+      fs.accessSync(`./${defaultFolderName}`, fs.constants.F_OK); //, () => {
+        console.log( chalk.cyanBright(`Folder name: ${options.folderName} already exists, enter a different folder name instead`) );
+        questionPush( 'Enter different folder name:', null);
+    } catch (err) {
+      if (err) {
+        questionPush('Please enter folder name:', defaultFolderName);
+      }
+    }
+    folderNameAnswers = await inquirer.prompt(folderQuestions);
+  }
+
+  if (options.folderName) {
+    try {
+      fs.accessSync(`./${options.folderName}`, fs.constants.F_OK); //, () => {
+        console.log( chalk.cyanBright(`Folder name: ${options.folderName} already exists, enter a different folder name instead`) );
+        questionPush( 'Enter different folder name:', null);
+        folderNameAnswers = await inquirer.prompt(folderQuestions);
+    } catch (err) {
+      if (err) {
+        folderNameAnswers = {};
+        folderNameAnswers.folderName = options.folderName;
+       }
+    }
+  }
+
+  try {
+    fs.accessSync(`./${folderNameAnswers.folderName}`, fs.constants.F_OK);
+
+    const rootDir = process.cwd();
+    //console.log(rootDir);
+    const rootDirContent = fs.readdirSync(rootDir, (err, files) => {
+      if (err) {
+        throw err;
+      }
+
+      return files;
+    });
+
+    //console.log(rootDirContent);
+
+    let equalToAtLeastOneFolder;
+
+    do {
+      equalToAtLeastOneFolder = rootDirContent.some(content => {
+        return content === folderNameAnswers.folderName;
+      });
+
+      console.log(equalToAtLeastOneFolder);
+
+      if (equalToAtLeastOneFolder === true) {
+        console.log( chalk.cyanBright(`Folder name: "${folderNameAnswers.folderName}" already exists, enter a different folder name instead`) );
+        folderQuestions.push({
+          type: 'input',
+          name: 'folderName',
+          message: 'Enter different folder name:',
+        });
+        folderNameAnswers = await inquirer.prompt(folderQuestions);
+      }
+    } while (equalToAtLeastOneFolder === true);
+
+  } catch (err) {
+    if (err) {
+      //console.log('if (err) statement & the comment prevents: unhandledPromiseRejectionWarning in console');
+    }
+  }
+
+  //Note: This affects only the try block (when options.folderName arg is present)
+  if (options.folderName) {
+    options.folderName = folderNameAnswers.folderName;
+  }
+
+  console.log(folderNameAnswers);
+
+  const templateQuestions = [];
 
   const templateCollection = [defaultTemplate, 'cjs', 'ts-es6'];
 
@@ -79,7 +159,7 @@ let promptForMissingOptions = async (options) => {
   }
 
   if (!options.template || notAmongTemplateCollection) {
-    questions.push({
+    templateQuestions.push({
       type: 'list',
       name: 'template',
       message: 'Please choose which project template to use',
@@ -92,22 +172,23 @@ let promptForMissingOptions = async (options) => {
     console.log( chalk.cyanBright(`Cli does not have template: "${options.template}" in its template collection`) );
   }
 
-  const answers = await inquirer.prompt(questions);
+  const templateAnswers = await inquirer.prompt(templateQuestions);
+  console.log(templateAnswers);
 
   if (notAmongTemplateCollection) {
     return {
       ...options,
-      folderName: options.folderName || answers.folderName,
-      template: answers.template,
-      git: options.git || answers.git
+      folderName: options.folderName || folderNameAnswers.folderName,
+      template: templateAnswers.template,
+      git: options.git
     }
   }
 
   return {
     ...options,
-    folderName: options.folderName || answers.folderName,
-    template: options.template || answers.template,
-    git: options.git || answers.git
+    folderName: options.folderName || folderNameAnswers.folderName,
+    template: options.template || templateAnswers.template,
+    git: options.git
   }
 }
 
