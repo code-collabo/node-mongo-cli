@@ -65,6 +65,18 @@ let promptForMissingOptions = async (options) => {
     }
   }
 
+  if (options.folderName) {
+    try {
+      fs.accessSync(`./${options.folderName}`, fs.constants.F_OK); //, () => {
+        console.log( chalk.cyanBright(`Folder name: ${options.folderName} already exists, enter a different folder name instead`) );
+        questionPush( 'Enter different folder name:', null);
+    } catch (err) {
+      if (err) {
+        //console.log('if (err) statement & the comment prevents: unhandledPromiseRejectionWarning in console');
+      }
+    }
+  }
+
   let folderNameAnswers = await inquirer.prompt(folderQuestions);
 
   try {
@@ -106,6 +118,10 @@ let promptForMissingOptions = async (options) => {
     if (err) {
       //console.log('if (err) statement & the comment prevents: unhandledPromiseRejectionWarning in console');
     }
+  }
+
+  if (options.folderName) {
+    options.folderName = folderNameAnswers.folderName;
   }
 
   console.log(folderNameAnswers);
