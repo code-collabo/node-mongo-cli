@@ -176,7 +176,7 @@ let promptForMissingOptions = async (options) => {
       ...options,
       folderName: options.folderName || folderNameAnswers.folderName,
       template: templateAnswers.template,
-      git: options.git || answers.git
+      git: options.git
     }
   }
 
@@ -184,7 +184,7 @@ let promptForMissingOptions = async (options) => {
     ...options,
     folderName: options.folderName || folderNameAnswers.folderName,
     template: options.template || templateAnswers.template,
-    git: options.git || answers.git
+    git: options.git
   }
 }
 
