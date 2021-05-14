@@ -53,6 +53,8 @@ let promptForMissingOptions = async (options) => {
     });
   }
 
+  let folderNameAnswers;
+
   if (!options.folderName) {
     try {
       fs.accessSync(`./${defaultFolderName}`, fs.constants.F_OK); //, () => {
@@ -63,6 +65,7 @@ let promptForMissingOptions = async (options) => {
         questionPush('Please enter folder name:', defaultFolderName);
       }
     }
+    folderNameAnswers = await inquirer.prompt(folderQuestions);
   }
 
   if (options.folderName) {
@@ -70,14 +73,14 @@ let promptForMissingOptions = async (options) => {
       fs.accessSync(`./${options.folderName}`, fs.constants.F_OK); //, () => {
         console.log( chalk.cyanBright(`Folder name: ${options.folderName} already exists, enter a different folder name instead`) );
         questionPush( 'Enter different folder name:', null);
+        folderNameAnswers = await inquirer.prompt(folderQuestions);
     } catch (err) {
       if (err) {
-        //console.log('if (err) statement & the comment prevents: unhandledPromiseRejectionWarning in console');
-      }
+        folderNameAnswers = {};
+        folderNameAnswers.folderName = options.folderName;
+       }
     }
   }
-
-  let folderNameAnswers = await inquirer.prompt(folderQuestions);
 
   try {
     fs.accessSync(`./${folderNameAnswers.folderName}`, fs.constants.F_OK);
@@ -120,6 +123,7 @@ let promptForMissingOptions = async (options) => {
     }
   }
 
+  //Note: This affects only the try block (when options.folderName arg is present)
   if (options.folderName) {
     options.folderName = folderNameAnswers.folderName;
   }
