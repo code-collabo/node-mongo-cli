@@ -86,7 +86,6 @@ let promptForMissingOptions = async (options) => {
     fs.accessSync(`./${folderNameAnswers.folderName}`, fs.constants.F_OK);
 
     const rootDir = process.cwd();
-    //console.log(rootDir);
     const rootDirContent = fs.readdirSync(rootDir, (err, files) => {
       if (err) {
         throw err;
@@ -95,16 +94,12 @@ let promptForMissingOptions = async (options) => {
       return files;
     });
 
-    //console.log(rootDirContent);
-
     let equalToAtLeastOneFolder;
 
     do {
       equalToAtLeastOneFolder = rootDirContent.some(content => {
         return content === folderNameAnswers.folderName;
       });
-
-      console.log(equalToAtLeastOneFolder);
 
       if (equalToAtLeastOneFolder === true) {
         console.log( chalk.cyanBright(`Folder name: "${folderNameAnswers.folderName}" already exists, enter a different folder name instead`) );
@@ -119,7 +114,7 @@ let promptForMissingOptions = async (options) => {
 
   } catch (err) {
     if (err) {
-      //console.log('if (err) statement & the comment prevents: unhandledPromiseRejectionWarning in console');
+      //Dummy comment to prevent: unhandledPromiseRejectionWarning in console
     }
   }
 
@@ -127,8 +122,6 @@ let promptForMissingOptions = async (options) => {
   if (options.folderName) {
     options.folderName = folderNameAnswers.folderName;
   }
-
-  console.log(folderNameAnswers);
 
   const templateQuestions = [];
 
@@ -173,7 +166,6 @@ let promptForMissingOptions = async (options) => {
   }
 
   const templateAnswers = await inquirer.prompt(templateQuestions);
-  console.log(templateAnswers);
 
   if (notAmongTemplateCollection) {
     return {
