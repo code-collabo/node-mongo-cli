@@ -1,5 +1,5 @@
 {
-    "name": "es6-template",
+    "name": "esm-template",
     "version": "1.0.0",
     "description": "",
     "main": "src/index.js",

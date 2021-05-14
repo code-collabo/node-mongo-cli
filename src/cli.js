@@ -40,7 +40,7 @@ let parseArgumentsIntoOptions = (rawArgs) => {
 }
 
 let promptForMissingOptions = async (options) => {
-  const [defaultFolderName, defaultTemplate] = ['node-mongo-starter-kit', 'es6'];
+  const [defaultFolderName, defaultTemplate] = ['node-mongo-starter-kit', 'esm'];
 
   const folderQuestions = [];
 
@@ -132,7 +132,7 @@ let promptForMissingOptions = async (options) => {
 
   const templateQuestions = [];
 
-  const templateCollection = [defaultTemplate, 'cjs', 'ts-es6'];
+  const templateCollection = [defaultTemplate, 'cjs', 'ts-esm'];
 
   const equalToAtLeastOneTemplate = templateCollection.some(tc => {
     return tc === options.template
