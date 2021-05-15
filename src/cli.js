@@ -57,7 +57,7 @@ let promptForMissingOptions = async (options) => {
 
   if (!options.folderName) {
     try {
-      fs.accessSync(`./${defaultFolderName}`, fs.constants.F_OK); //, () => {
+      fs.accessSync(`./${defaultFolderName}`, fs.constants.F_OK);
         console.log( chalk.cyanBright(`Folder name: ${options.folderName} already exists, enter a different folder name instead`) );
         questionPush( 'Enter different folder name:', null);
     } catch (err) {
@@ -70,7 +70,7 @@ let promptForMissingOptions = async (options) => {
 
   if (options.folderName) {
     try {
-      fs.accessSync(`./${options.folderName}`, fs.constants.F_OK); //, () => {
+      fs.accessSync(`./${options.folderName}`, fs.constants.F_OK);
         console.log( chalk.cyanBright(`Folder name: ${options.folderName} already exists, enter a different folder name instead`) );
         questionPush( 'Enter different folder name:', null);
         folderNameAnswers = await inquirer.prompt(folderQuestions);
