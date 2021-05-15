@@ -1,206 +1,234 @@
-import arg from 'arg';
-import inquirer from 'inquirer';
-import { createProject } from './main';
-import chalk from 'chalk';
-import fs from 'fs';
+import arg from 'arg'
+import inquirer from 'inquirer'
+import { createProject } from './main'
+import chalk from 'chalk'
+import fs from 'fs'
 
 let parseArgumentsIntoOptions = (rawArgs) => {
+    //make -x the alias for --skip-git
+    let myHandler = (value, argName, previousValue) => {
+        return previousValue || '--skip-git'
+    }
 
-  //make -x the alias for --skip-git
-  let myHandler = (value, argName, previousValue) => {
-    return previousValue || '--skip-git';
-  }
+    const args = arg(
+        {
+            '--git': Boolean,
+            '--skip-git': Boolean,
+            '--yes': Boolean,
+            '--install': Boolean,
+            '--skip-install': Boolean,
+            '-g': '--git',
+            '--skip-git': arg.flag(myHandler), //eslint-disable-line no-dupe-keys
+            '-x': '--skip-git',
+            '-y': '--yes',
+            '-i': '--install',
+            '-s': '--skip-install',
+        },
+        {
+            argv: rawArgs.slice(2),
+        }
+    )
 
-  const args = arg({
-    '--git': Boolean,
-    '--skip-git': Boolean,
-    '--yes': Boolean,
-    '--install': Boolean,
-    '--skip-install': Boolean,
-    '-g': '--git',
-    '--skip-git': arg.flag(myHandler), //eslint-disable-line no-dupe-keys
-    '-x': '--skip-git',
-    '-y': '--yes',
-    '-i': '--install',
-    '-s': '--skip-install'
-  },
-  {
-    argv: rawArgs.slice(2)
-  });
-
-  return {
-    skipPrompts: args['--yes'] || false,
-    git: args['--git'] || true,
-    skipGit: args['--skip-git'],
-    folderName: args._[0],
-    template: args._[1],
-    runInstall: args['--install'] || true,
-    skipInstall: args['--skip-install'] || false
-  }
+    return {
+        skipPrompts: args['--yes'] || false,
+        git: args['--git'] || true,
+        skipGit: args['--skip-git'],
+        folderName: args._[0],
+        template: args._[1],
+        runInstall: args['--install'] || true,
+        skipInstall: args['--skip-install'] || false,
+    }
 }
 
 let promptForMissingOptions = async (options) => {
-  let [defaultFolderName, defaultTemplate] = ['node-mongo-kit', 'esm'];
+    let [defaultFolderName, defaultTemplate] = ['node-mongo-kit', 'esm']
 
-  const folderQuestions = [];
+    const folderQuestions = []
 
-  let questionPush = (msgString, folder) => {
-    folderQuestions.push({
-      type: 'input',
-      name: 'folderName',
-      message: msgString,
-      default: folder
-    });
-  }
-
-  const rootDir = process.cwd();
-  const rootDirContent = fs.readdirSync(rootDir, (err, files) => {
-    if (err) {
-      throw err;
-    }
-
-    return files;
-  });
-
-  let matchDefaultValue = rootDirContent.filter(content => {
-    return content.match(defaultFolderName);
-  });
-
-  let folderNameAnswers;
-
-  if (!options.folderName) {
-    if (matchDefaultValue.length >= 1) {
-      defaultFolderName = `${defaultFolderName}-${matchDefaultValue.length}`;
-    }
-    questionPush('Please enter folder name:', defaultFolderName);
-    folderNameAnswers = await inquirer.prompt(folderQuestions);
-  }
-
-  if (options.folderName) {
-    try {
-      fs.accessSync(`./${options.folderName}`, fs.constants.F_OK);
-        console.log( chalk.cyanBright(`Folder name: ${options.folderName} already exists, enter a different folder name instead`) );
-        questionPush( 'Enter different folder name:', null);
-        folderNameAnswers = await inquirer.prompt(folderQuestions);
-    } catch (err) {
-      if (err) {
-        folderNameAnswers = {};
-        folderNameAnswers.folderName = options.folderName;
-       }
-    }
-  }
-
-  try {
-    fs.accessSync(`./${folderNameAnswers.folderName}`, fs.constants.F_OK);
-
-    let equalToAtLeastOneFolder;
-
-    do {
-      equalToAtLeastOneFolder = rootDirContent.some(content => {
-        return content === folderNameAnswers.folderName;
-      });
-
-      if (equalToAtLeastOneFolder === true) {
-        console.log( chalk.cyanBright(`Folder name: "${folderNameAnswers.folderName}" already exists, enter a different folder name instead`) );
+    let questionPush = (msgString, folder) => {
         folderQuestions.push({
-          type: 'input',
-          name: 'folderName',
-          message: 'Enter different folder name:',
-        });
-        folderNameAnswers = await inquirer.prompt(folderQuestions);
-      }
-    } while (equalToAtLeastOneFolder === true);
-
-  } catch (err) {
-    if (err) {
-      //Dummy comment to prevent: unhandledPromiseRejectionWarning in console
+            type: 'input',
+            name: 'folderName',
+            message: msgString,
+            default: folder,
+        })
     }
-  }
 
-  //Note: This affects only the try block (when options.folderName arg is present)
-  if (options.folderName) {
-    options.folderName = folderNameAnswers.folderName;
-  }
+    const rootDir = process.cwd()
+    const rootDirContent = fs.readdirSync(rootDir, (err, files) => {
+        if (err) {
+            throw err
+        }
 
-  const templateQuestions = [];
+        return files
+    })
 
-  const templateCollection = [defaultTemplate, 'cjs', 'ts-esm'];
+    let matchDefaultValue = rootDirContent.filter((content) => {
+        return content.match(defaultFolderName)
+    })
 
-  const equalToAtLeastOneTemplate = templateCollection.some(tc => {
-    return tc === options.template
-  });
+    let folderNameAnswers
 
-  const notAmongTemplateCollection = equalToAtLeastOneTemplate === false;
+    if (!options.folderName) {
+        if (matchDefaultValue.length >= 1) {
+            defaultFolderName = `${defaultFolderName}-${matchDefaultValue.length}`
+        }
+        questionPush('Please enter folder name:', defaultFolderName)
+        folderNameAnswers = await inquirer.prompt(folderQuestions)
+    }
 
-  if (notAmongTemplateCollection && options.skipPrompts && options.template !== undefined) {
-    console.log( chalk.cyanBright(`Cli does not have template: "${options.template}" in its template collection, the default template: "${defaultTemplate}" will be used instead.`) );
-  }
+    if (options.folderName) {
+        try {
+            fs.accessSync(`./${options.folderName}`, fs.constants.F_OK)
+            console.log(
+                chalk.cyanBright(
+                    `Folder name: ${options.folderName} already exists, enter a different folder name instead`
+                )
+            )
+            questionPush('Enter different folder name:', null)
+            folderNameAnswers = await inquirer.prompt(folderQuestions)
+        } catch (err) {
+            if (err) {
+                folderNameAnswers = {}
+                folderNameAnswers.folderName = options.folderName
+            }
+        }
+    }
 
-  if (notAmongTemplateCollection && options.skipPrompts && options.template === undefined) {
-    console.log( chalk.cyanBright(`No template specified, the default template: "${defaultTemplate}" will be used instead.`) );
-  }
+    try {
+        fs.accessSync(`./${folderNameAnswers.folderName}`, fs.constants.F_OK)
 
-  if (options.skipPrompts) {
+        let equalToAtLeastOneFolder
+
+        do {
+            equalToAtLeastOneFolder = rootDirContent.some((content) => {
+                return content === folderNameAnswers.folderName
+            })
+
+            if (equalToAtLeastOneFolder === true) {
+                console.log(
+                    chalk.cyanBright(
+                        `Folder name: "${folderNameAnswers.folderName}" already exists, enter a different folder name instead`
+                    )
+                )
+                folderQuestions.push({
+                    type: 'input',
+                    name: 'folderName',
+                    message: 'Enter different folder name:',
+                })
+                folderNameAnswers = await inquirer.prompt(folderQuestions)
+            }
+        } while (equalToAtLeastOneFolder === true)
+    } catch (err) {
+        if (err) {
+            //Dummy comment to prevent: unhandledPromiseRejectionWarning in console
+        }
+    }
+
+    //Note: This affects only the try block (when options.folderName arg is present)
+    if (options.folderName) {
+        options.folderName = folderNameAnswers.folderName
+    }
+
+    const templateQuestions = []
+
+    const templateCollection = [defaultTemplate, 'cjs', 'ts-esm']
+
+    const equalToAtLeastOneTemplate = templateCollection.some((tc) => {
+        return tc === options.template
+    })
+
+    const notAmongTemplateCollection = equalToAtLeastOneTemplate === false
+
+    if (
+        notAmongTemplateCollection &&
+        options.skipPrompts &&
+        options.template !== undefined
+    ) {
+        console.log(
+            chalk.cyanBright(
+                `Cli does not have template: "${options.template}" in its template collection, the default template: "${defaultTemplate}" will be used instead.`
+            )
+        )
+    }
+
+    if (
+        notAmongTemplateCollection &&
+        options.skipPrompts &&
+        options.template === undefined
+    ) {
+        console.log(
+            chalk.cyanBright(
+                `No template specified, the default template: "${defaultTemplate}" will be used instead.`
+            )
+        )
+    }
+
+    if (options.skipPrompts) {
+        return {
+            ...options,
+            folderName: options.folderName || defaultFolderName,
+            template: defaultTemplate,
+            runInstall: false,
+            git: false,
+        }
+    }
+
+    if (!options.template || notAmongTemplateCollection) {
+        templateQuestions.push({
+            type: 'list',
+            name: 'template',
+            message: 'Please choose which project template to use',
+            choices: templateCollection,
+            default: defaultTemplate,
+        })
+    }
+
+    if (notAmongTemplateCollection && options.template !== undefined) {
+        console.log(
+            chalk.cyanBright(
+                `Cli does not have template: "${options.template}" in its template collection`
+            )
+        )
+    }
+
+    const templateAnswers = await inquirer.prompt(templateQuestions)
+
+    if (notAmongTemplateCollection) {
+        return {
+            ...options,
+            folderName: options.folderName || folderNameAnswers.folderName,
+            template: templateAnswers.template,
+            git: options.git,
+        }
+    }
+
     return {
-      ...options,
-      folderName: options.folderName || defaultFolderName,
-      template: defaultTemplate,
-      runInstall: false,
-      git: false
+        ...options,
+        folderName: options.folderName || folderNameAnswers.folderName,
+        template: options.template || templateAnswers.template,
+        git: options.git,
     }
-  }
-
-  if (!options.template || notAmongTemplateCollection) {
-    templateQuestions.push({
-      type: 'list',
-      name: 'template',
-      message: 'Please choose which project template to use',
-      choices: templateCollection,
-      default: defaultTemplate
-    });
-  }
-
-  if (notAmongTemplateCollection && options.template !== undefined) {
-    console.log( chalk.cyanBright(`Cli does not have template: "${options.template}" in its template collection`) );
-  }
-
-  const templateAnswers = await inquirer.prompt(templateQuestions);
-
-  if (notAmongTemplateCollection) {
-    return {
-      ...options,
-      folderName: options.folderName || folderNameAnswers.folderName,
-      template: templateAnswers.template,
-      git: options.git
-    }
-  }
-
-  return {
-    ...options,
-    folderName: options.folderName || folderNameAnswers.folderName,
-    template: options.template || templateAnswers.template,
-    git: options.git
-  }
 }
 
 export let cli = async (args) => {
-  let options = parseArgumentsIntoOptions(args);
+    let options = parseArgumentsIntoOptions(args)
 
-  if (options.skipInstall) {
-    options.runInstall = false;
-  }
+    if (options.skipInstall) {
+        options.runInstall = false
+    }
 
-  if (options.skipGit) {
-    options.git = false;
-  }
+    if (options.skipGit) {
+        options.git = false
+    }
 
-  options = await promptForMissingOptions(options);
+    options = await promptForMissingOptions(options)
 
-  //console.log(options);
+    //console.log(options);
 
-  try {
-    await createProject(options);
-  } catch (err) {
-    console.log('Error | ', err);
-  }
+    try {
+        await createProject(options)
+    } catch (err) {
+        console.log('Error | ', err)
+    }
 }
