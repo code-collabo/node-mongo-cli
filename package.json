@@ -11,7 +11,6 @@
     "access": "public"
   },
   "scripts": {
-    "preinstall": "node bin/customize-preinstall",
     "prestart": "node -r esm src/customize/startMessage.js",
     "start": "npm-run-all --parallel lint:watch",
     "lint": "esw src --color",
