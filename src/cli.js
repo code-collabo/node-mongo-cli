@@ -40,7 +40,7 @@ let parseArgumentsIntoOptions = (rawArgs) => {
 }
 
 let promptForMissingOptions = async (options) => {
-  const [defaultFolderName, defaultTemplate] = ['node-mongo-starter-kit', 'esm'];
+  let [defaultFolderName, defaultTemplate] = ['node-mongo-kit', 'esm'];
 
   const folderQuestions = [];
 
@@ -53,18 +53,26 @@ let promptForMissingOptions = async (options) => {
     });
   }
 
+  const rootDir = process.cwd();
+  const rootDirContent = fs.readdirSync(rootDir, (err, files) => {
+    if (err) {
+      throw err;
+    }
+
+    return files;
+  });
+
+  let matchDefaultValue = rootDirContent.filter(content => {
+    return content.match(defaultFolderName);
+  });
+
   let folderNameAnswers;
 
   if (!options.folderName) {
-    try {
-      fs.accessSync(`./${defaultFolderName}`, fs.constants.F_OK);
-        console.log( chalk.cyanBright(`Folder name: ${options.folderName} already exists, enter a different folder name instead`) );
-        questionPush( 'Enter different folder name:', null);
-    } catch (err) {
-      if (err) {
-        questionPush('Please enter folder name:', defaultFolderName);
-      }
+    if (matchDefaultValue.length >= 1) {
+      defaultFolderName = `${defaultFolderName}-${matchDefaultValue.length}`;
     }
+    questionPush('Please enter folder name:', defaultFolderName);
     folderNameAnswers = await inquirer.prompt(folderQuestions);
   }
 
@@ -84,15 +92,6 @@ let promptForMissingOptions = async (options) => {
 
   try {
     fs.accessSync(`./${folderNameAnswers.folderName}`, fs.constants.F_OK);
-
-    const rootDir = process.cwd();
-    const rootDirContent = fs.readdirSync(rootDir, (err, files) => {
-      if (err) {
-        throw err;
-      }
-
-      return files;
-    });
 
     let equalToAtLeastOneFolder;
 
