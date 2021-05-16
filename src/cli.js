@@ -62,6 +62,8 @@ let promptForMissingOptions = async (options) => {
     return files;
   });
 
+  rootDirContent.push('');
+
   let matchDefaultValue = rootDirContent.filter(content => {
     return content.match(defaultFolderName);
   });
@@ -101,7 +103,11 @@ let promptForMissingOptions = async (options) => {
       });
 
       if (equalToAtLeastOneFolder === true) {
-        console.log( chalk.cyanBright(`Folder name: "${folderNameAnswers.folderName}" already exists, enter a different folder name instead`) );
+        if (folderNameAnswers.folderName !== '') {
+          console.log( chalk.cyanBright(`Folder name: "${folderNameAnswers.folderName}" already exists, enter a different folder name instead`) );
+        } else {
+          console.log( chalk.cyanBright(`Folder name cannot be empty`) );
+        }
         folderQuestions.push({
           type: 'input',
           name: 'folderName',
