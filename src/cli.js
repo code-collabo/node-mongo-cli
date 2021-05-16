@@ -117,11 +117,11 @@ let promptForMissingOptions = async (options) => {
 
   } catch (err) {
     if (err) {
-      //Dummy comment to prevent: unhandledPromiseRejectionWarning in console
+      //Dummy if statement to prevent: unhandledPromiseRejectionWarning in console
     }
   }
 
-  //Note: This affects only the try block (when options.folderName arg is present)
+  //Note: This affects only the try block of the previous if (options.folderName) statement
   if (options.folderName) {
     options.folderName = folderNameAnswers.folderName;
   }
