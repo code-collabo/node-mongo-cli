@@ -1,8 +1,9 @@
 {
   "files": [
-    "README.md"
+    "README.md",
+    "contributor.md"
   ],
-  "imageSize": 100,
+  "imageSize": 90,
   "commit": false,
   "contributors": [
     {
@@ -12,11 +13,9 @@
       "profile": "https://github.com/Ifycode",
       "contributions": [
         "code",
-        "doc",
-        "infra",
         "maintenance",
         "review",
-        "projectManagement",
+        "bug",
         "ideas"
       ]
     },
@@ -39,7 +38,7 @@
       ]
     }
   ],
-  "contributorsPerLine": 7,
+  "contributorsPerLine": 3,
   "projectName": "node-mongo-cli",
   "projectOwner": "code-collabo",
   "repoType": "github",

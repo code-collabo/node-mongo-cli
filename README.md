@@ -1,7 +1,4 @@
 # node-mongo-cli
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) ![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg) ![GitHub issues](https://img.shields.io/github/issues/code-collabo/node-mongo-cli?color=red) ![GitHub pull requests](https://img.shields.io/github/issues-pr/code-collabo/node-mongo-cli?color=goldenrod)
 
@@ -22,7 +19,7 @@ You can [use these resources](https://code-collabo.gitbook.io/docs/contributor-g
 
 ## Contributors ✨
 
-[Thanks to these wonderful people](https://code-collabo.gitbook.io/docs/meet-our-awesome-contributors/all-contributors) helping to improve some or all aspects of the [Code Collabo project](https://github.com/code-collabo)_**.**_
+[Thanks to these wonderful people](https://github.com/code-collabo/node-mongo-cli/contributor.md) helping to improve the [node-mongo-cli project](https://github.com/code-collabo/node-mongo-cli), and [all contributors](https://code-collabo.gitbook.io/docs/meet-our-awesome-contributors/all-contributors) to the [Code Collabo community project](https://github.com/code-collabo)_**.**_
 
 ## Technologies
 
