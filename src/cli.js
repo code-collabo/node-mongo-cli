@@ -107,7 +107,11 @@ let promptForMissingOptions = async (options) => {
           name: 'folderName',
           message: 'Enter different folder name:',
         });
-        folderNameAnswers = await inquirer.prompt(folderQuestions);
+        if (options.folderName) {
+          folderNameAnswers = await inquirer.prompt(folderQuestions);
+        } else {
+          folderNameAnswers = await inquirer.prompt([folderQuestions[1]]);
+        }
       }
     } while (equalToAtLeastOneFolder === true);
 
