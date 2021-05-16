@@ -34,6 +34,15 @@
         "maintenance",
         "ideas"
       ]
+    },
+    {
+      "login": "chuddyjoachim",
+      "name": "Chikezie Joachim",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56943504?v=4",
+      "profile": "https://github.com/chuddyjoachim",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 4,

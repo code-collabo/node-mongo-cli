@@ -1,5 +1,9 @@
 # node-mongo-cli
 
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) ![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg) ![GitHub issues](https://img.shields.io/github/issues/code-collabo/node-mongo-cli?color=red) ![GitHub pull requests](https://img.shields.io/github/issues-pr/code-collabo/node-mongo-cli?color=goldenrod)
 
 `node-mongo-cli` is a command-line interface tool useful to initialize, scaffold and make mongoDB development easier in nodejs environment. With the CLI, you can install any of the starter kit templates - [esm](https://github.com/code-collabo/node-mongo-starter-kit) and [cjs](https://github.com/code-collabo/node-mongo-starter-cjs). It not only helps install the starter-kit, but also allows you to add new model and controller files with content using simple commands.
