@@ -45,12 +45,12 @@ export let createProject = async (options) => {
 
   const currentFileUrl = import.meta.url;
 
-  const templateDir = path.resolve(
-    new URL(currentFileUrl).pathname.substring(new URL(currentFileUrl).pathname.indexOf('/') + 1),
-    '../../templates',
-    options.template.toLowerCase()
-  );
+  let newUrl;
+  if (process.platform === 'darwin') newUrl = new URL(currentFileUrl).pathname;
+   else newUrl = new URL(currentFileUrl).pathname.substring(new URL(currentFileUrl).pathname.indexOf('/') + 1);
 
+  const templateDir = path.resolve(newUrl, '../../templates', options.template.toLowerCase());
+  
   options.templateDirectory = templateDir;
 
   try {
