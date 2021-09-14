@@ -2,7 +2,7 @@ import inquirer from 'inquirer';
 import chalk from 'chalk';
 import fs from 'fs';
 
-export const folderNamePrompt = async (options) => {
+export const folderNameMissingOptionPrompt = async (options) => {
     let defaultFolderName = 'node-mongo-kit';
     const folderQuestions = [];
   

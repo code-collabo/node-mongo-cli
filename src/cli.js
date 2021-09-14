@@ -1,7 +1,7 @@
 import arg from 'arg';
 import inquirer from 'inquirer';
 import chalk from 'chalk';
-import { folderNamePrompt } from './prompts/folder';
+import { folderNameMissingOptionPrompt } from './prompts/folder';
 import { createProject } from './main';
 
 let parseArgumentsIntoOptions = (rawArgs) => {
@@ -61,7 +61,7 @@ let skipPrompts = (options, defaultFolderName, notAmongTemplateCollection, defau
   return options;
 }
 
-let promptForMissingOptions = async (options, folderNameAnswers, defaultFolderName) => {
+let templateMissingOptionPrompt = async (options, folderNameAnswers, defaultFolderName) => {
   const defaultTemplate = 'esm';
 
   const templateQuestions = [];
@@ -128,11 +128,11 @@ export let cli = async (args) => {
     options.git = false;
   }
 
-  let [updatedOptions, folderNameAnswers, defaultFolderName] = await folderNamePrompt(options);
+  let [updatedOptions, folderNameAnswers, defaultFolderName] = await folderNameMissingOptionPrompt(options);
 
-  options = await promptForMissingOptions(updatedOptions, folderNameAnswers, defaultFolderName);
+  options = await templateMissingOptionPrompt(updatedOptions, folderNameAnswers, defaultFolderName);
 
-  console.log(options);
+  //console.log(options);
 
   try {
     await createProject(options);
