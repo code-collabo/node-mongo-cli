@@ -39,7 +39,7 @@ let parseArgumentsIntoOptions = (rawArgs) => {
   }
 }
 
-let promptForMissingOptions = async (options, folderNameAnswers) => {
+let promptForMissingOptions = async (options, folderNameAnswers, defaultFolderName) => {
   let defaultTemplate = 'esm';
 
   const templateQuestions = [];
@@ -54,17 +54,19 @@ let promptForMissingOptions = async (options, folderNameAnswers) => {
 
   if (notAmongTemplateCollection && options.skipPrompts && options.template !== undefined) {
     console.log( chalk.cyanBright(`Cli does not have template: "${options.template}" in its template collection, the default template: "${defaultTemplate}" will be used instead.`) );
+    options.template = defaultTemplate;
   }
 
   if (notAmongTemplateCollection && options.skipPrompts && options.template === undefined) {
     console.log( chalk.cyanBright(`No template specified, the default template: "${defaultTemplate}" will be used instead.`) );
+    options.template = defaultTemplate;
   }
 
   if (options.skipPrompts) {
     return {
       ...options,
       folderName: options.folderName || defaultFolderName,
-      template: defaultTemplate,
+      template: options.template,
       runInstall: false,
       git: false
     }
@@ -114,9 +116,9 @@ export let cli = async (args) => {
     options.git = false;
   }
 
-  let [updatedOptions, folderNameAnswers] = await folderNamePrompt(options);
+  let [updatedOptions, folderNameAnswers, defaultFolderName] = await folderNamePrompt(options);
 
-  options = await promptForMissingOptions(updatedOptions, folderNameAnswers);
+  options = await promptForMissingOptions(updatedOptions, folderNameAnswers, defaultFolderName);
 
   //console.log(options);
 

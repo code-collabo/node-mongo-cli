@@ -14,7 +14,7 @@ export const folderNamePrompt = async (options) => {
         default: folder
       });
     }
-  
+
     const rootDir = process.cwd();
     const rootDirContent = fs.readdirSync(rootDir, (err, files) => {
       if (err) {
@@ -31,11 +31,17 @@ export const folderNamePrompt = async (options) => {
     });
   
     let folderNameAnswers;
+
+    let incrementFolderName = () => {
+        if (matchDefaultValue.length >= 1) {
+            defaultFolderName = `${defaultFolderName}-${matchDefaultValue.length}`;
+          }
+    }
+
+    if (!options.folderName && options.skipPrompts) incrementFolderName();
   
-    if (!options.folderName) {
-      if (matchDefaultValue.length >= 1) {
-        defaultFolderName = `${defaultFolderName}-${matchDefaultValue.length}`;
-      }
+    if (!options.folderName && !options.skipPrompts) {
+      incrementFolderName();
       questionPush('Please enter folder name:', defaultFolderName);
       folderNameAnswers = await inquirer.prompt(folderQuestions);
     }
@@ -94,5 +100,5 @@ export const folderNamePrompt = async (options) => {
       options.folderName = folderNameAnswers.folderName;
     }
   
-    return [options, folderNameAnswers];
+    return [options, folderNameAnswers, defaultFolderName];
 }
