@@ -46,7 +46,7 @@ export const folderNamePrompt = async (options) => {
       folderNameAnswers = await inquirer.prompt(folderQuestions);
     }
   
-    if (options.folderName) {
+    if (options.folderName && !options.skipPrompts) {
       try {
         fs.accessSync(`./${options.folderName}`, fs.constants.F_OK);
           console.log( chalk.cyanBright(`Folder name: ${options.folderName} already exists, enter a different folder name instead`) );
@@ -96,8 +96,12 @@ export const folderNamePrompt = async (options) => {
     }
   
     //Note: This affects only the try block of the previous if (options.folderName) statement
-    if (options.folderName) {
+    if (options.folderName && !options.skipPrompts) {
       options.folderName = folderNameAnswers.folderName;
+    }
+
+    if (options.folderName && options.skipPrompts) {
+        options.folderName = incrementFolderName();
     }
   
     return [options, folderNameAnswers, defaultFolderName];

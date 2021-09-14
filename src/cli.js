@@ -46,7 +46,7 @@ let skipPrompts = (options, defaultFolderName, notAmongTemplateCollection, defau
   }
 
   if (notAmongTemplateCollection && options.template === undefined) {
-    console.log( chalk.cyanBright(`No template specified, the default template: "${defaultTemplate}" will be used instead.`) );
+    console.log( chalk.cyanBright(`--yes or -y flag detected. Generate "${defaultTemplate}" template since no template is specified.`) );
     options.template = defaultTemplate;
   }
 
@@ -84,18 +84,22 @@ let promptForMissingOptions = async (options, folderNameAnswers, defaultFolderNa
     });
   }
 
+  let templateAnswers;
+
   if (options.skipPrompts) {
     options = skipPrompts(options, defaultFolderName, notAmongTemplateCollection, defaultTemplate);
+    templateQuestions.template = defaultTemplate;
+    templateAnswers = templateQuestions;
   } 
 
-  if (notAmongTemplateCollection && options.template !== undefined) {
+  if (notAmongTemplateCollection && options.template !== undefined && !options.skipPrompts) {
     console.log( chalk.cyanBright(`Cli does not have template: "${options.template}" in its template collection`) );
   }
 
-  const templateAnswers = await inquirer.prompt(templateQuestions);
+  if (!options.skipPrompts) templateAnswers = await inquirer.prompt(templateQuestions);
 
   if (notAmongTemplateCollection) {
-    return {
+    options = {
       ...options,
       folderName: options.folderName || folderNameAnswers.folderName,
       template: templateAnswers.template,
@@ -103,12 +107,14 @@ let promptForMissingOptions = async (options, folderNameAnswers, defaultFolderNa
     }
   }
 
-  return {
+  options = {
     ...options,
     folderName: options.folderName || folderNameAnswers.folderName,
     template: options.template || templateAnswers.template,
     git: options.git
   }
+
+  return options;
 }
 
 export let cli = async (args) => {

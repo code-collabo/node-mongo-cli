@@ -81,6 +81,6 @@ export let createProject = async (options) => {
 
   await tasks.run();
 
-  console.log(`%s Project bootstrapped into the folder you specified => ${options.folderName} <=`, chalk.green.bold('DONE'));
+  console.log(`%s Project bootstrapped into the generated folder => ${options.folderName} <=`, chalk.green.bold('DONE'));
   return true;
 }
