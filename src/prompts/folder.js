@@ -101,7 +101,31 @@ export const folderNamePrompt = async (options) => {
     }
 
     if (options.folderName && options.skipPrompts) {
+
+      let matchFolderNameArg = rootDirContent.filter(content => {
+        return content.match(options.folderName);
+      });
+
+      console.log(matchFolderNameArg)
+
+      if (matchFolderNameArg) {
+        console.log(matchFolderNameArg)
         options.folderName = incrementFolderName();
+      }
+
+      /*if (matchFolderNameArg) {
+        console.log(matchDefaultValue)
+        options.folderName = incrementFolderName();
+      }*/
+
+      //console.log(matchFolderNameArg);
+      /*if (matchDefaultValue) {
+        console.log(matchDefaultValue)
+      }*/
+      /*if (matchDefaultValue) {
+        options.folderName = incrementFolderName();
+      }*/
+        //options.folderName = incrementFolderName();
     }
   
     return [options, folderNameAnswers, defaultFolderName];
