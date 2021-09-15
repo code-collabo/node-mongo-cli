@@ -49,7 +49,7 @@ export const folderNameMissingOptionPrompt = async (options) => {
     if (options.folderName && !options.skipPrompts) {
       try {
         fs.accessSync(`./${options.folderName}`, fs.constants.F_OK);
-          console.log( chalk.cyanBright(`Folder name: ${options.folderName} already exists, enter a different folder name instead`) );
+          console.log( chalk.cyanBright(`Folder name ${options.folderName} already exists`) );
           questionPush( 'Enter different folder name:', null);
           folderNameAnswers = await inquirer.prompt(folderQuestions);
       } catch (err) {
@@ -72,7 +72,7 @@ export const folderNameMissingOptionPrompt = async (options) => {
   
         if (equalToAtLeastOneFolder === true) {
           if (folderNameAnswers.folderName !== '') {
-            console.log( chalk.cyanBright(`Folder name: "${folderNameAnswers.folderName}" already exists, enter a different folder name instead`) );
+            console.log( chalk.cyanBright(`Folder name "${folderNameAnswers.folderName}" already exists`) );
           } else {
             console.log( chalk.cyanBright(`Folder name cannot be empty`) );
           }
@@ -98,7 +98,7 @@ export const folderNameMissingOptionPrompt = async (options) => {
     //Note: This affects only the try block of the previous if (options.folderName && !options.skipPrompts) statement
     if (options.folderName && !options.skipPrompts) {
       options.folderName = folderNameAnswers.folderName;
-    }
+    } //------------------------------------------------
     
     if (options.folderName && options.skipPrompts) {
       let matchFolderNameArg = rootDirContent.some(content => {

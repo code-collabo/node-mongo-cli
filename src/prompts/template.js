@@ -1,14 +1,7 @@
 import inquirer from 'inquirer';
-import chalk from 'chalk';
 
 let skipPromptsModified = (options, defaultFolderName, notAmongTemplateCollection, defaultTemplate) => {
-  if (notAmongTemplateCollection && options.template !== undefined) {
-    console.log( chalk.cyanBright(`Cli does not have template: "${options.template}" in its template collection, the default template: "${defaultTemplate}" will be used instead.`) );
-    options.template = defaultTemplate;
-  }
-
-  if (notAmongTemplateCollection && options.template === undefined) {
-    console.log( chalk.cyanBright(`--yes or -y flag detected. Generate "${defaultTemplate}" template since no template is specified.`) );
+  if (notAmongTemplateCollection && (options.template !== undefined || options.template === undefined)) {
     options.template = defaultTemplate;
   }
 
@@ -50,10 +43,6 @@ export const templateMissingOptionPrompt = async (options, folderNameAnswers, de
     options = skipPromptsModified(options, defaultFolderName, notAmongTemplateCollection, defaultTemplate);
     templateQuestions.template = defaultTemplate;
     templateAnswers = templateQuestions;
-  } 
-
-  if (notAmongTemplateCollection && options.template !== undefined && !options.skipPrompts) {
-    console.log( chalk.cyanBright(`Cli does not have template: "${options.template}" in its template collection`) );
   }
 
   if (!options.skipPrompts) templateAnswers = await inquirer.prompt(templateQuestions);
