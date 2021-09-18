@@ -32,10 +32,18 @@ export const folderNameMissingOptionPrompt = async (options) => {
   
     let folderNameAnswers;
 
+    let extractedNumbers = matchDefaultValue.map((value) => {
+      let valueMatch = value.match(/(\d+)/);
+      if (valueMatch !== null) return value.match(/(\d+)/).map(Number)[0];
+    }).filter(value => { return value !== undefined; });
+
+    let maxNumber = Math.max(...extractedNumbers);
+
     let incrementFolderName = () => {
-        if (matchDefaultValue.length >= 1) {
-            defaultFolderName = `${defaultFolderName}-${matchDefaultValue.length}`;
-          }
+      if (matchDefaultValue.length >= 1) {
+        if (maxNumber === -Infinity) defaultFolderName = `${defaultFolderName}-${matchDefaultValue.length}`;
+          else defaultFolderName = `${defaultFolderName}-${maxNumber + 1}`;
+      }
     }
 
     if (!options.folderName && options.skipPrompts) incrementFolderName();
