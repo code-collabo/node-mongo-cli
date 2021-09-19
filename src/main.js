@@ -62,7 +62,13 @@ export let createProject = async (options) => {
   options.templateDirectory = templateDir;
 
   try {
-    await access(templateDir, fs.constants.R_OK);
+    await access(templateDir, fs.constants.R_OK).then(_ => {
+      /* rename name option in package.json same as project/folder name */
+      execa('npx', ['npe','name',options.folderName], {
+        cwd: options.targetDirectory
+      }).stdout.pipe(process.stdout);
+    })
+    
   }catch (err) {
     console.error(`\n%s "${options.template}" is (probably) an invalid template name i.e. not among template name stored in the templateCollection variable/array.`, chalk.red.bold('ERROR'));
     process.exit(1);
