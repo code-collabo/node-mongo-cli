@@ -32,18 +32,7 @@ export async function initGit(options) {
 
 let npmInstall = async (cliOptions) => {
   if (cliOptions.runInstall) { //install only if runInstall returns true
-    const install = spawn('npm', ['install'], {cwd: cliOptions.targetDirectory, stdio: 'inherit'});
-    
-    //console.log(install.stdout);
-    //console.log(install);
-    
-    install.stdout.on('data', (data) => {
-      console.log(`${data}`);
-    });
-
-    install.stderr.on('data', (data) => {
-      console.log(`${data}`);
-    });
+    spawn('npm', ['install'], {cwd: cliOptions.targetDirectory, stdio: 'inherit'});
   }
 
   return;
@@ -88,12 +77,17 @@ export let createProject = async (options) => {
       title: 'Git init',
       task: () => initGit(options),
       skip: () => !options.git ? 'Automatically initialize git by doing nothing. Alternatively, pass --git or -g' : undefined
+    },
+    {
+      title: 'npm install',
+      task: () => npmInstall(options),
+      skip: () => !options.runInstall ? 'Automatically install dependencies by doing nothing. Alternatively, pass --install or -i' : undefined
     }
   ]);
 
   await listrTasks.run();
 
-  await npmInstall(options);
+  //await npmInstall(options);
 
   return true;
 }
