@@ -5,11 +5,10 @@ import path from 'path';
 import { promisify } from 'util';
 import execa from 'execa';
 import Listr from 'listr';
-import { execFile } from 'child_process';
+import { spawn } from 'child_process';
 
 const access = promisify(fs.access);
 const copy = promisify(ncp);
-const execute = promisify(execFile);
 
 let copyTemplateFiles = async (options) => {
   return copy(options.templateDirectory, options.targetDirectory, {
@@ -31,13 +30,19 @@ export async function initGit(options) {
   return;
 }
 
-let npmInstall = async (options) => {
-  if (options.runInstall) {
-    await execute('npm', ['install'], (error, stdout, stderr) => {
-      if (error) {
-        throw error;
-      }
-      console.log(`\n${stderr}\n${stdout}`);
+let npmInstall = async (cliOptions) => {
+  if (cliOptions.runInstall) { //install only if runInstall returns true
+    const install = spawn('npm', ['install'], {cwd: cliOptions.targetDirectory, stdio: 'inherit'});
+    
+    //console.log(install.stdout);
+    //console.log(install);
+    
+    install.stdout.on('data', (data) => {
+      console.log(`${data}`);
+    });
+
+    install.stderr.on('data', (data) => {
+      console.log(`${data}`);
     });
   }
 
@@ -88,7 +93,7 @@ export let createProject = async (options) => {
 
   await listrTasks.run();
 
-  npmInstall(options);
+  await npmInstall(options);
 
   return true;
 }
