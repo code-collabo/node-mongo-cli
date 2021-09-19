@@ -5,7 +5,7 @@ import path from 'path';
 import { promisify } from 'util';
 import execa from 'execa';
 import Listr from 'listr';
-import { projectInstall } from 'pkg-install';
+import { spawn } from 'child_process';
 
 const access = promisify(fs.access);
 const copy = promisify(ncp);
@@ -25,6 +25,14 @@ export async function initGit(options) {
     if (result.failed) {
       return Promise.reject(new Error('Failed to initialize git'));
     }
+  }
+
+  return;
+}
+
+let npmInstall = async (cliOptions) => {
+  if (cliOptions.runInstall) { //install only if runInstall returns true
+    spawn('npm', ['install'], {cwd: cliOptions.targetDirectory, stdio: 'inherit'});
   }
 
   return;
@@ -66,27 +74,26 @@ export let createProject = async (options) => {
     process.exit(1);
   }
 
-  const tasks = new Listr([
+  const listrTasks = new Listr([
     {
-      title: 'copy project files',
+      title: `Project bootstrapped into the generated folder ${chalk.green(`=> ${options.folderName}`)}`,
       task: () => copyTemplateFiles(options)
     },
     {
-      title: 'Initialize git',
+      title: 'Git init',
       task: () => initGit(options),
       skip: () => !options.git ? 'Automatically initialize git by doing nothing. Alternatively, pass --git or -g' : undefined
     },
     {
-      title: 'Install dependencies',
-      task: () => projectInstall({
-        cwd: options.targetDirectory
-      }),
+      title: 'npm install',
+      task: () => npmInstall(options),
       skip: () => !options.runInstall ? 'Automatically install dependencies by doing nothing. Alternatively, pass --install or -i' : undefined
     }
   ]);
 
-  await tasks.run();
+  await listrTasks.run();
 
-  console.log(`%s Project bootstrapped into the generated folder => ${options.folderName} <=`, chalk.green.bold('DONE'));
+  //await npmInstall(options);
+
   return true;
 }
