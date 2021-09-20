@@ -16,7 +16,7 @@ let copyTemplateFolderContent = async (options) => {
   });
 }
 
-let gitInit = (options) => {
+let gitInit = async (options) => {
   if (options.git) { //git init only if git returns true
     const result = await execa('git', ['init'], {
       cwd: options.targetDirectory
