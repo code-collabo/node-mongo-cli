@@ -1,7 +1,7 @@
 import arg from 'arg';
 import { folderNameMissingOptionPrompt } from './prompts/folder';
 import { templateMissingOptionPrompt } from './prompts/template';
-import { createProject } from './main';
+import { downloadTemplateKit } from './main';
 
 let parseArgumentsIntoOptions = (rawArgs) => {
 
@@ -56,7 +56,7 @@ export let cli = async (args) => {
   //console.log(options);
 
   try {
-    await createProject(options);
+    await downloadTemplateKit(options);
   } catch (err) {
     console.log('Error | ', err);
   }

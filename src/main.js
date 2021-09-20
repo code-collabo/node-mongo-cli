@@ -10,13 +10,13 @@ import { spawn } from 'child_process';
 const access = promisify(fs.access);
 const copy = promisify(ncp);
 
-let copyTemplateFiles = async (options) => {
+let copyTemplateFolderContent = async (options) => {
   return copy(options.templateDirectory, options.targetDirectory, {
     clobber: false
   });
 }
 
-export async function initGit(options) {
+let gitInit = (options) => {
   if (options.git) { //git init only if git returns true
     const result = await execa('git', ['init'], {
       cwd: options.targetDirectory
@@ -38,7 +38,7 @@ let npmInstall = async (cliOptions) => {
   return;
 }
 
-export let createProject = async (options) => {
+export let downloadTemplateKit = async (options) => {
   options = {
     ...options,
     targetDirectory: options.targetDirectory || process.cwd() //root/parent folder at this point
@@ -77,11 +77,11 @@ export let createProject = async (options) => {
   const listrTasks = new Listr([
     {
       title: `Project bootstrapped into the generated folder ${chalk.green(`=> ${options.folderName}`)}`,
-      task: () => copyTemplateFiles(options)
+      task: () => copyTemplateFolderContent(options)
     },
     {
       title: 'Git init',
-      task: () => initGit(options),
+      task: () => gitInit(options),
       skip: () => !options.git ? 'Automatically initialize git by doing nothing. Alternatively, pass --git or -g' : undefined
     },
     {
