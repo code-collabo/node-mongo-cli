@@ -1,5 +1,5 @@
 import arg from 'arg';
-import { folderNameMissingOptionPrompt } from './prompts/folder';
+import { folderNameMissingOptionPrompt } from './prompts/foldername';
 import { templateMissingOptionPrompt } from './prompts/template';
 import { downloadTemplateKit } from './main';
 
