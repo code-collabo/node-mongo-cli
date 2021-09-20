@@ -1,4 +1,5 @@
 import inquirer from 'inquirer';
+import chalk from 'chalk';
 
 let skipPromptsModified = (options, defaultFolderName, notAmongTemplateCollection, defaultTemplate) => {
   if (notAmongTemplateCollection && (options.template !== undefined || options.template === undefined)) {
@@ -27,11 +28,13 @@ export const templateMissingOptionPrompt = async (options, folderNameAnswers, de
 
   const notAmongTemplateCollection = equalToAtLeastOneTemplate === false;
 
+  if (notAmongTemplateCollection && options.template !== undefined) console.log(`${chalk.redBright(`${options.template}`)} is not in the node-mongo template collection`);
+
   if (!options.template || notAmongTemplateCollection) {
     templateQuestions.push({
       type: 'list',
       name: 'template',
-      message: 'Please choose which project template to use',
+      message: 'Please choose which node-mongo template kit to use',
       choices: templateCollection,
       default: defaultTemplate
     });

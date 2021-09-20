@@ -57,12 +57,12 @@ export const folderNameMissingOptionPrompt = async (options) => {
     if (options.folderName && !options.skipPrompts) {
       try {
         fs.accessSync(`./${options.folderName}`, fs.constants.F_OK);
-          console.log( chalk.cyanBright(`Folder name ${options.folderName} already exists`) );
+          console.log( chalk.cyanBright(`Folder name ${chalk.green(`${options.folderName}`)} already exists`) );
           questionPush( 'Enter different folder name:', null);
           folderNameAnswers = await inquirer.prompt(folderQuestions);
       } catch (err) {
         if (err) {
-          folderNameAnswers = {};
+          folderNameAnswers = {folderName: ''};
           folderNameAnswers.folderName = options.folderName;
          }
       }
@@ -80,9 +80,9 @@ export const folderNameMissingOptionPrompt = async (options) => {
   
         if (equalToAtLeastOneFolder === true) {
           if (folderNameAnswers.folderName !== '') {
-            console.log( chalk.cyanBright(`Folder name "${folderNameAnswers.folderName}" already exists`) );
+            console.log( `Folder name ${chalk.green(`${folderNameAnswers.folderName}`)} already exists` );
           } else {
-            console.log( chalk.cyanBright(`Folder name cannot be empty`) );
+            console.log( `${chalk.yellowBright(`Folder name cannot be empty`)}` );
           }
           folderQuestions.push({
             type: 'input',
