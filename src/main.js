@@ -30,9 +30,9 @@ let gitInit = (options) => {
   return;
 }
 
-let npmInstall = async (cliOptions) => {
-  if (cliOptions.runInstall) { //install only if runInstall returns true
-    spawn('npm', ['install'], {cwd: cliOptions.targetDirectory, stdio: 'inherit'});
+let npmInstall = async (options) => {
+  if (options.runInstall) { //install only if runInstall returns true
+    spawn('npm', ['install'], {cwd: options.targetDirectory, stdio: 'inherit'});
   }
 
   return;
