@@ -70,24 +70,24 @@ export let downloadTemplateKit = async (options) => {
     })
     
   }catch (err) {
-    console.error(`\n%s "${options.template}" is (probably) an invalid template name i.e. not among template name stored in the templateCollection variable/array.`, chalk.red.bold('ERROR'));
+    console.error(`\n%s Template name or directory path is (probably) incorrect`, chalk.red.bold('ERROR'));
     process.exit(1);
   }
 
   const listrTasks = new Listr([
     {
-      title: `Project bootstrapped into the generated folder ${chalk.green(`=> ${options.folderName}`)}`,
+      title: `${chalk.green(`${options.template} template`)} copied into the generated folder ${chalk.green(`=> ${options.folderName}`)}`,
       task: () => copyTemplateFolderContent(options)
     },
     {
-      title: 'Git init',
+      title: 'git init',
       task: () => gitInit(options),
-      skip: () => !options.git ? 'Automatically initialize git by doing nothing. Alternatively, pass --git or -g' : undefined
+      skip: () => !options.git ? 'Skipped because you specified either --skip-git or --yes flags' : undefined
     },
     {
       title: 'npm install',
       task: () => npmInstall(options),
-      skip: () => !options.runInstall ? 'Automatically install dependencies by doing nothing. Alternatively, pass --install or -i' : undefined
+      skip: () => !options.runInstall ? 'Skipped because you specified either --skip-install or --yes flags' : undefined
     }
   ]);
 
