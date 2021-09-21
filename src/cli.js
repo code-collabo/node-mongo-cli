@@ -1,13 +1,19 @@
 import arg from 'arg';
+import { help } from './help';
 import { folderNameMissingOptionPrompt } from './prompts/foldername';
 import { templateMissingOptionPrompt } from './prompts/template';
 import { downloadTemplateKit } from './main';
 
 let parseArgumentsIntoOptions = (rawArgs) => {
 
-  //make -x the alias for --skip-git
+  //configure --skip-git flag
   let myHandler = (value, argName, previousValue) => {
     return previousValue || '--skip-git';
+  }
+
+  //configure --help flag
+  let helpHandler = (value, argName, previousValue) => {
+    return previousValue || '--help';
   }
 
   const args = arg({
@@ -21,7 +27,9 @@ let parseArgumentsIntoOptions = (rawArgs) => {
     '-x': '--skip-git',
     '-y': '--yes',
     '-i': '--install',
-    '-s': '--skip-install'
+    '-s': '--skip-install',
+    '--help': arg.flag(helpHandler),
+    '-h': '--help'
   },
   {
     argv: rawArgs.slice(2)
@@ -34,13 +42,12 @@ let parseArgumentsIntoOptions = (rawArgs) => {
     folderName: args._[0],
     template: args._[1],
     runInstall: args['--install'] || true,
-    skipInstall: args['--skip-install'] || false
+    skipInstall: args['--skip-install'] || false,
+    help: args['--help'] || false
   }
 }
 
-export let cli = async (args) => {
-  let options = parseArgumentsIntoOptions(args);
-
+let otherOptions = async (options) => {
   if (options.skipInstall) {
     options.runInstall = false;
   }
@@ -59,5 +66,15 @@ export let cli = async (args) => {
     await downloadTemplateKit(options);
   } catch (err) {
     console.log('Error | ', err);
+  }
+}
+
+export let cli = async (args) => {
+  let options = parseArgumentsIntoOptions(args);
+
+  if (options.help) {
+    help();
+  } else {
+    await otherOptions(options);
   }
 }
