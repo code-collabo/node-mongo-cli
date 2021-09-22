@@ -20,8 +20,10 @@ the common js template into a folder named test-folder.
 
 Prompts:
 If you do not specify one or both arguments above, 
-you will be prompted to type in folder name and/or 
-choose template option from list.
+you will be prompted to add your folder name and/or 
+choose template option from list. For foldername, you 
+can choose to use the default foldername provided in
+the prompt or type in your preferred folder name.
 
 Flags:
 -h, --help          Show help
@@ -29,7 +31,14 @@ Flags:
 -g, --git           Initialize git repo
 -s, --skip-install  Skip installing dependencies
 -x, --skip-git      Skip initializing git
--y, --yes           Skip both install and git, and use esm template as default
+-y, --yes           See note on --yes flag below
+
+No prompt when --yes flag is used. It skips both 
+install and git init, and uses esm template as default 
+if no template is specified or if template entered is 
+not in the template collection. In the case of folder
+name, default foldername is used if no folder name is
+specified or when folder name already exists.
 `
 );
 }
