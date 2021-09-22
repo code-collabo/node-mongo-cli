@@ -28,7 +28,7 @@ export const templateMissingOptionPrompt = async (options, folderNameAnswers, de
 
   const notAmongTemplateCollection = equalToAtLeastOneTemplate === false;
 
-  if (notAmongTemplateCollection && options.template !== undefined) console.log(`${chalk.redBright(`${options.template}`)} is not in the node-mongo template collection`);
+  if (notAmongTemplateCollection && options.template !== undefined && !options.skipPrompts) console.log(`${chalk.redBright(`${options.template}`)} is not in the node-mongo template collection`);
 
   if (!options.template || notAmongTemplateCollection) {
     templateQuestions.push({
