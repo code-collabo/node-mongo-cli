@@ -1,7 +1,8 @@
 
 export const help = () => {
 console.log(
-`Usage:
+`
+Usage:
 node-mongo <folder_name> <template>  
 
 Command:
@@ -30,5 +31,14 @@ Flags:
 -x, --skip-git      Skip initializing git
 -y, --yes           Skip both install and git, and use esm template as default
 `
+);
+}
+
+export const notRecognised = () => {
+console.log(
+`
+Flag(s) not recognised. Use the help command below for more info:
+
+node-mongo --help`
 );
 }
