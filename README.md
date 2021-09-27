@@ -59,13 +59,24 @@ choose template option from list. For foldername, you
 can choose to use the default foldername provided in
 the prompt or type in your preferred folder name.
 
-### --yes' flag
+### --yes flag
 No prompt when --yes flag is used. It skips both 
 install and git init, and uses esm template as default 
 if no template is specified or if template entered is 
 not in the template collection. In the case of folder
 name, default foldername is used if no folder name is
 specified or when folder name already exists.
+
+## Documentation
+More about the node-mongo project in Code Collabo's documentation.
+
+## Appreciation
+Appreciation goes to [@dkundel](https://github.com/dkundel), [@academind](https://github.com/academind), [@CodAffection](https://github.com/CodAffection), [@coryhouse](https://github.com/coryhouse) whose awesome youTube videos, articles and/or courses helped a lot while building the node-mongo project.
+
+Consider adding the 4 authors pictures here too
+
+## Contributors
+Decide if contributors should be here since they are still few or in a separate file.
 
 <!--
 
@@ -87,9 +98,6 @@ No user guide yet, work is still in progress.
 
 #### Contributing to node-mongo
 * See [contributor guide](https://code-collabo.gitbook.io/docs/contributor-guide/contributor-guide) which contains ***contributing.md***, ***CODE_OF_CONDUCT***, ***git workflow*** and ***project development setup*** to help you get started.
-
-## Resources
-You can [use these resources](https://code-collabo.gitbook.io/docs/contributor-guide/node-mongo-project/resources) as guide while contributing to the project. Appreciation goes to authors [@dkundel](https://github.com/dkundel), [@academind](https://github.com/academind), [@CodAffection](https://github.com/CodAffection), whose awesome youTube videos and/or articles make up this list of resources, and which have been useful to building the node-mongo project so far. Also to [@coryhouse](https://github.com/coryhouse), author of building a javascript development environment course.
 
 ## Contributors ✨
 
