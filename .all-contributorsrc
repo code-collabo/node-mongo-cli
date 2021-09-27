@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "dkundel",
+      "name": "Dominik Kundel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1505101?v=4",
+      "profile": "https://dkundel.com",
+      "contributions": [
+        "mentoring"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "node-mongo-cli",
+  "projectOwner": "code-collabo",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
