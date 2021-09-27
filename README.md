@@ -1,6 +1,6 @@
 # node-mongo-cli
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) ![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg) ![GitHub issues](https://img.shields.io/github/issues/code-collabo/node-mongo-cli?color=red) ![GitHub pull requests](https://img.shields.io/github/issues-pr/code-collabo/node-mongo-cli?color=goldenrod)
@@ -85,6 +85,7 @@ Decide if contributors should be here since they are still few or in a separate 
 <table>
   <tr>
     <td align="center"><a href="https://dkundel.com"><img src="https://avatars.githubusercontent.com/u/1505101?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dominik Kundel</b></sub></a><br /><a href="#mentoring-dkundel" title="Mentoring">🧑‍🏫</a></td>
+    <td align="center"><a href="https://academind.com"><img src="https://avatars.githubusercontent.com/u/28806202?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Academind</b></sub></a><br /><a href="#mentoring-academind" title="Mentoring">🧑‍🏫</a></td>
   </tr>
 </table>
 
