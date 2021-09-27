@@ -73,35 +73,12 @@ More about the node-mongo project in Code Collabo's documentation.
 ## Appreciation
 Appreciation goes to [@dkundel](https://github.com/dkundel), [@academind](https://github.com/academind), [@CodAffection](https://github.com/CodAffection), [@coryhouse](https://github.com/coryhouse) whose awesome youTube videos, articles and/or courses helped a lot while building the node-mongo project.
 
-Consider adding the 4 authors pictures here too
 
-## Contributors
-Decide if contributors should be here since they are still few or in a separate file.
 
 <!--
 
-node-mongo
-
-Use the help command
-
-node-mongo --help
-
-
-tool useful to initialize, scaffold and make mongoDB development easier in nodejs environment. With the CLI, you can install any of the starter kit templates - [esm](https://github.com/code-collabo/node-mongo-starter-kit) and [cjs](https://github.com/code-collabo/node-mongo-starter-cjs). It not only helps install the starter-kit, but also allows you to add new model and controller files with content using simple commands.
-
-The [cli](https://github.com/code-collabo/node-mongo-cli) is built to help provide better experience when using the starter-kit in MongoDB, MERN or MEAN projects.
-
-## Documentation
-For easy maintenance (due to modifications to be made and addition of more features) and also to provide you better support, sections previously included in the readme have been [moved to our docs](https://code-collabo.gitbook.io/docs/) - see [this section of the docs](https://code-collabo.gitbook.io/docs/contributor-guide/docs) in case you also wish to contribute to the docs. Simply click on any of the links to learn to install, use and contribute to the node-mongo project.
-#### Using node-mongo
-No user guide yet, work is still in progress.
-
-#### Contributing to node-mongo
-* See [contributor guide](https://code-collabo.gitbook.io/docs/contributor-guide/contributor-guide) which contains ***contributing.md***, ***CODE_OF_CONDUCT***, ***git workflow*** and ***project development setup*** to help you get started.
-
-## Contributors ✨
-
-[Thanks to these wonderful people](https://github.com/code-collabo/node-mongo-cli/blob/develop/contributor.md) helping to improve the [node-mongo-cli project](https://github.com/code-collabo/node-mongo-cli), and [all contributors](https://code-collabo.gitbook.io/docs/meet-our-awesome-contributors/all-contributors) to the [Code Collabo community project](https://github.com/code-collabo)_**.**_
+## Contributors
+Decide if contributors should be here since they are still few or in a separate file.
 
 ## Technologies
 
