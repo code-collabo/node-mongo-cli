@@ -14,6 +14,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "chuddyjoachim",
+      "name": "Chikezie Joachim",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56943504?v=4",
+      "profile": "http://chuddyjoachim.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
