@@ -8,7 +8,14 @@ The **node-mongo** project has 3 main projects:
 * 3 boilerplate templates for nodejs and/or mongoDB development.
 * Demo CRUD app to test connection and show example usage of the templates.
 
-## CLI Installation
+## CLI Features
+
+* CLI bootstraps the esm, cjs or ts templates for nodejs and/or mongoDB development.
+* Install dependencies and intialize git for the template bootstrapped or choose to skip them.
+* Folders are automatically created based on user entry in prompt or command-line.
+* Default folder name is provided and incremented if name already exists.
+
+## **CLI Installation**
 
 Install CLI globally with this command:
 
