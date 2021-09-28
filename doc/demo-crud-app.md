@@ -1,6 +1,6 @@
-# Demo CRUD App
+# Demo CRUD app
 
-### Interacting with database
+## Interacting with database
 
 You can use postman or any other tool to add data or remove data from the database. To make it easy to test that all is well setup and also to show example usage of the template with a client app in development, you can download the [node-mongo-demo-app](https://github.com/code-collabo/node-mongo-demo-app).
 

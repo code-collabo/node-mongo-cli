@@ -1,12 +1,12 @@
 # Table of contents
 
 * [node-mongo CLI](README.md)
-* [Boilerplate Templates](boilerplate-templates.md)
-* [Demo CRUD App](demo-crud-app.md)
+* [Boilerplate templates](boilerplate-templates.md)
+* [Demo CRUD app](demo-crud-app.md)
 
 ## contributor guide
 
-* [Contribution Guidelines](https://code-collabo.gitbook.io/code-collabo/collabo-guidelines/contributing)
+* [Contribution guidelines](https://code-collabo.gitbook.io/code-collabo/collabo-guidelines/contributing)
 * [Project development](contributor-guide/project-development.md)
 
 ---
