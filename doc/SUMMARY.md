@@ -9,7 +9,7 @@
 * [Contribution guidelines](https://code-collabo.gitbook.io/code-collabo/collabo-guidelines/contributing)
 * [Project development](contribution-guide/project-development.md)
 
-## All contributors <a id="contributors"></a>
+## All contributors
 
 * [All contributors](https://github.com/code-collabo/node-mongo-cli#contributors-)
 
