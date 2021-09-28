@@ -6,7 +6,8 @@
 
 ## contributor guide
 
-* [Untitled](contributor-guide/untitled-1.md)
+* [Contribution Guidelines](https://code-collabo.gitbook.io/code-collabo/collabo-guidelines/contributing)
+* [Project development](contributor-guide/project-development.md)
 
 ---
 
