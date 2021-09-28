@@ -1,14 +1,14 @@
 # Table of contents
 
-* [node-mongo](README.md)
-* [Untitled](untitled.md)
+* [node-mongo CLI](README.md)
+* [Boilerplate Templates](boilerplate-templates.md)
+* [Demo CRUD App](demo-crud-app.md)
 
-## user guide
+## contribute to node-mongo <a id="contributor-guide"></a>
 
-* [Command Line Interface](user-guide/command-line-interface.md)
-* [Boilerplate templates](user-guide/boilerplate-templates.md)
+* [Untitled](contributor-guide/untitled-1.md)
 
-## contributor guide
+---
 
-* [Untitled](contributor-guide/untitled.md)
+* [Release notes](https://github.com/code-collabo/node-mongo-cli/releases)
 

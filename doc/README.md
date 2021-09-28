@@ -1,68 +1,59 @@
-# node-mongo
+# node-mongo CLI
+
+![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) ![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg) ![GitHub issues](https://img.shields.io/github/issues/code-collabo/node-mongo-cli?color=red) ![GitHub pull requests](https://img.shields.io/github/issues-pr/code-collabo/node-mongo-cli?color=goldenrod)
 
 The **node-mongo** project has 3 main projects:
 
-* A Command Line Interface \(CLI\) to bootstrap boilerplate templates.
+* The node-mongo CLI \(add npm link here later\) to bootstrap boilerplate templates.
 * 3 boilerplate templates for nodejs and/or mongoDB development.
-* A demo CRUD app to test that your connection is setup and show example usage of the templates.
+* Demo CRUD app to test connection and show example usage of the templates.
 
-## Command Line Interface \(CLI\)
+## CLI Installation
 
-* * CLI to bootstraps the esm, cjs or ts templates for nodejs and/or mongoDB development.
-* Install dependencies and intialize git for the template bootstrapped or choose to skip them.
-* Folders are automatically created based on user entry in prompt or command-line.
-* Default folder name is provided and incremented if name already exists.
-* Two connection options to pick from: your installed mongoDB and mongoDBatlas.
-* Demo CRUD app to test that your connection is setup and show example usage of the templates.
+Install CLI globally with this command:
 
-## 
+```text
+npm install -g @code-collabo/node-mongo-cli
+```
 
-## 
+## Command
 
-## node-mongo-cli
+After installing globally, use the node-mongo command.
 
-## Boilerplate templates
+```text
+node-mongo
+```
 
+### Usage
 
+```text
+node-mongo <folder_name> <template>
+```
 
-## Contributor guide
+### Usage example
 
+The example below will bootstrap the cjs template i.e. the common js template into a folder named test-folder.
 
+```text
+node-mongo test-folder cjs
+```
 
+### Flags
 
+```text
+-h, --help          Show help
+-i, --install       Install dependencies
+-g, --git           Initialize git repo
+-s, --skip-install  Skip installing dependencies
+-x, --skip-git      Skip initializing git
+-y, --yes           See note on --yes flag below
+```
 
-### 
+### Prompts
 
-## Features
+If you do not specify one or both arguments above, you will be prompted to add your folder name and/or choose template option from list. For folder name, you can choose to use the default folder name provided in the prompt or type in your preferred folder name.
 
-### CLI
+### Skip prompts
 
-* CLI to bootstraps the esm, cjs or ts templates for nodejs and/or mongoDB development.
-* Install dependencies and intialize git for the template bootstrapped or choose to skip them.
-* Folders are automatically created based on user entry in prompt or command-line.
-* Default folder name is provided and incremented if name already exists.
-* Two connection options to pick from: your installed mongoDB and mongoDBatlas.
-* Demo CRUD app to test that your connection is setup and show example usage of the templates.
-
-## 
-
-## Documentation
-
-More about the node-mongo project in Code Collabo's documentation.
-
-## Appreciation
-
-Appreciation goes to [@dkundel](https://github.com/dkundel), [@academind](https://github.com/academind), [@CodAffection](https://github.com/CodAffection), [@coryhouse](https://github.com/coryhouse) whose awesome youTube videos, articles and/or courses helped a lot while building the node-mongo project - cli, templates and/or demo app. Also to [@IsraelObiagba](https://github.com/IsraelObiagba) and [@jiobiagba](https://github.com/jiobiagba) for their help.
-
-| [![](https://avatars.githubusercontent.com/u/1505101?v=4?s=100) **Dominik Kundel**](https://dkundel.com) [🧑‍🏫](./#mentoring-dkundel) | [![](https://avatars.githubusercontent.com/u/28806202?v=4?s=100) **Academind**](https://academind.com) [🧑‍🏫](./#mentoring-academind) | [![](https://avatars.githubusercontent.com/u/32505654?v=4?s=100) **CodAffection**](http://codaffection.com/) [🧑‍🏫](./#mentoring-CodAffection) | [![](https://avatars.githubusercontent.com/u/1688997?v=4?s=100) **Cory House**](http://www.bitnative.com) [🧑‍🏫](./#mentoring-coryhouse) | [![](https://avatars.githubusercontent.com/u/14045379?v=4?s=100) **Israel Obiagba**](https://github.com/IsraelObiagba) [🧑‍🏫](./#mentoring-IsraelObiagba) | [![](https://avatars.githubusercontent.com/u/42423547?v=4?s=100) **Joseph Obiagba**](https://github.com/jiobiagba) [🧑‍🏫](./#mentoring-jiobiagba) |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-
-
-## Contributors ✨
-
-Thanks to these amazing contributors to the node-mongo-cli project. This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. See [emoji key](https://allcontributors.org/docs/en/emoji-key). Contributions of any kind welcome!
-
-| [![](https://avatars.githubusercontent.com/u/45185388?v=4?s=100) **Obiagba Mary Ifeoma**](https://github.com/Ifycode) [💻](https://github.com/code-collabo/node-mongo-cli/commits?author=Ifycode) [📖](https://github.com/code-collabo/node-mongo-cli/commits?author=Ifycode) | [![](https://avatars.githubusercontent.com/u/56943504?v=4?s=100) **Chikezie Joachim**](http://chuddyjoachim.com) [💻](https://github.com/code-collabo/node-mongo-cli/commits?author=chuddyjoachim) | [![](https://avatars.githubusercontent.com/u/46410174?v=4?s=100) **All Contributors**](https://allcontributors.org) [🚇](./#infra-all-contributors) |
-| :--- | :--- | :--- |
-
+No prompt when --yes flag is used. It skips both install and git init, and uses esm template as default if no template is specified or if template entered is not in the template collection. In the case of folder name, default folder name is used if no folder name is specified or when folder name already exists.
 
