@@ -4,13 +4,16 @@
 * [Boilerplate templates](boilerplate-templates.md)
 * [Demo CRUD app](demo-crud-app.md)
 
-## contributor guide
+## contribution guide
 
 * [Contribution guidelines](https://code-collabo.gitbook.io/code-collabo/collabo-guidelines/contributing)
-* [Project development](contributor-guide/project-development.md)
+* [Project development](contribution-guide/project-development.md)
 
----
+## All contributors <a id="contributors"></a>
 
 * [All contributors](https://github.com/code-collabo/node-mongo-cli#contributors-)
+
+## release notes
+
 * [Release notes](https://github.com/code-collabo/node-mongo-cli/releases)
 
