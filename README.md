@@ -6,17 +6,19 @@
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) ![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg) ![GitHub issues](https://img.shields.io/github/issues/code-collabo/node-mongo-cli?color=red) ![GitHub pull requests](https://img.shields.io/github/issues-pr/code-collabo/node-mongo-cli?color=goldenrod)
 
 The **node-mongo-cli** is a command-line interface made with nodejs. It bootstraps any of these 3 boilerplate templates for your nodejs and/or mongoDB development:
-- ES module template
-- Commonjs template
+- [ES module template](https://github.com/code-collabo/node-mongo-esm-kit)
+- [Commonjs template](https://github.com/code-collabo/node-mongo-cjs-kit)
 - Typescript (coming soon)
 
 ## Features
+### CLI
 - CLI bootstraps the esm, cjs or ts templates for nodejs and/or mongoDB development.
 - Install dependencies and intialize git for the template bootstrapped or choose to skip them.
 - Folders are automatically created based on user entry in prompt or command-line.
 - Default folder name is provided and incremented if name already exists.
-- Two connection options to pick from: your installed mongoDB and mongoDBatlas.
-- Demo CRUD app to test that your connection is setup and show example usage of the templates.
+### Templates
+- Two mongoDB connection options to pick from in the templates: your installed mongoDB and mongoDBatlas.
+- [Demo CRUD app](https://github.com/code-collabo/node-mongo-demo-app) you can go and download to test that your connection is setup and show example usage of the templates.
 
 ## Installation
 Install CLI globally with this command:
