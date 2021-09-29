@@ -5,6 +5,8 @@
 
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) ![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg) ![GitHub issues](https://img.shields.io/github/issues/code-collabo/node-mongo-cli?color=red) ![GitHub pull requests](https://img.shields.io/github/issues-pr/code-collabo/node-mongo-cli?color=goldenrod)
 
+**Supported node versions:** node v12.x to v16.x
+
 The **node-mongo-cli** is a command-line interface made with nodejs. It bootstraps any of these 3 boilerplate templates for your nodejs and/or mongoDB development:
 - [ES module template](https://github.com/code-collabo/node-mongo-esm-kit)
 - [Commonjs template](https://github.com/code-collabo/node-mongo-cjs-kit)
