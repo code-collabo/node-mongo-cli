@@ -2,6 +2,8 @@
 
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) ![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg) ![GitHub issues](https://img.shields.io/github/issues/code-collabo/node-mongo-cli?color=red) ![GitHub pull requests](https://img.shields.io/github/issues-pr/code-collabo/node-mongo-cli?color=goldenrod)
 
+**Supported node versions:** node v12.x to 16.x
+
 The **node-mongo** project has 3 main projects:
 
 * The node-mongo CLI to bootstrap boilerplate templates.
