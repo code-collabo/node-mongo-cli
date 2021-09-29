@@ -10,7 +10,7 @@ node-mongo
 
 Arguments:
 <folder_name>   Replace this with your folder name
-<template>      Available templates: esm, cjs and ts
+<template>      Available templates: esm, cjs (and ts coming soon)
 
 Usage example:
 node-mongo test-folder cjs
