@@ -6,8 +6,8 @@
 
 ## contribution guide
 
-* [Contribution guidelines](https://code-collabo.gitbook.io/code-collabo/collabo-guidelines/contributing)
-* [Project development](contribution-guide/project-development.md)
+* [Contribution guidelines](https://code-collabo.gitbook.io/doc/collabo-guidelines/contributing)
+* [Development mode](contribution-guide/development-mode.md)
 
 ## All contributors
 
