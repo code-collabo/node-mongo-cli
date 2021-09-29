@@ -10,7 +10,7 @@
     "lint": "esw src --color",
     "lint:watch": "npm run lint -- --watch"
   },
-  "author": "Obiagba Mary",
+  "author": "Obiagba Mary | Code Collabo Community",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",

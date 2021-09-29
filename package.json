@@ -1,13 +1,14 @@
 {
   "name": "@code-collabo/node-mongo-cli",
   "version": "1.0.0",
-  "description": "node-mongo-cli package to bootstrap mongodb projects by Code Collabo community.",
+  "description": "node-mongo-cli Command Line Interface made with nodejs to bootstrap any of 3 boilerplate templates for your nodejs and/or mongoDB development.",
   "main": "src/cli.js",
   "bin": {
     "@code-collabo/node-mongo-cli": "bin/create-node-mongo-project",
     "node-mongo": "bin/create-node-mongo-project"
   },
   "publicConfig": {
+    "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "scripts": {
@@ -26,14 +27,21 @@
   },
   "keywords": [
     "cli",
-    "node-mongo-cli",
+    "boilerplate",
+    "template",
+    "create",
     "node",
     "nodejs",
-    "mongo",
+    "node-mongo",
+    "node-mongo-cli",
+    "mongod",
     "mongodb",
+    "atlas",
+    "esm",
+    "cjs",
     "javascript"
   ],
-  "author": "Code Collabo",
+  "author": "Obiagba Mary | Code Collabo Community",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/code-collabo/node-mongo-cli/issues"
