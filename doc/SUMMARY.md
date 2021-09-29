@@ -16,5 +16,4 @@
 ## useful links
 
 * [Release notes](https://github.com/code-collabo/node-mongo-cli/releases)
-* [Code Collabo](https://code-collabo.gitbook.io/code-collabo/)
 
