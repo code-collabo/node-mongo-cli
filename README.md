@@ -17,7 +17,7 @@ The **node-mongo-cli** is a command-line interface made with nodejs. It bootstra
 - Folders are automatically created based on user entry in prompt or command-line.
 - Default folder name is provided and incremented if name already exists.
 ### Templates
-- Two mongoDB connection options to pick from in the templates: your installed mongoDB and mongoDBatlas.
+- [Two mongoDB connection options](https://code-collabo.gitbook.io/node-mongo/boilerplate-templates#mongodb-connection-options) to pick from in the templates: your installed mongoDB and mongoDBatlas.
 - [Demo CRUD app](https://github.com/code-collabo/node-mongo-demo-app) you can go and download to test that your connection is setup and show example usage of the templates.
 
 ## Installation
@@ -60,7 +60,7 @@ choose template option from list. For foldername, you
 can choose to use the default foldername provided in
 the prompt or type in your preferred folder name.
 
-### --yes flag
+### Skip prompts
 No prompt when --yes flag is used. It skips both 
 install and git init, and uses esm template as default 
 if no template is specified or if template entered is 
@@ -68,8 +68,8 @@ not in the template collection. In the case of folder
 name, default foldername is used if no folder name is
 specified or when folder name already exists.
 
-## Documentation
-More about the node-mongo project in Code Collabo's documentation.
+## Want to contribute?
+Love the project and wish to contribute? See contribution guide in the [node-mongo gitbook documentation](https://code-collabo.gitbook.io/node-mongo/) for how to start contributing. You can also reach out to [@Ifycode](https://github.com/Ifycode) in case you need any assistance.
 
 ## Appreciation
 Appreciation goes to [@dkundel](https://github.com/dkundel), [@academind](https://github.com/academind), [@CodAffection](https://github.com/CodAffection), [@coryhouse](https://github.com/coryhouse) whose awesome youTube videos, articles and/or courses helped a lot while building the node-mongo project - cli, templates and/or demo app. Also to [@IsraelObiagba](https://github.com/IsraelObiagba) and [@jiobiagba](https://github.com/jiobiagba) for their help.
