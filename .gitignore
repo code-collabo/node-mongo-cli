@@ -6,6 +6,9 @@ test.js
 # dependencies
 /node_modules
 
+# npm
+.npmrc
+
 # compiled output
 /dist
 /tmp
