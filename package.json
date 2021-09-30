@@ -1,17 +1,17 @@
 {
   "name": "@code-collabo/node-mongo-cli",
   "version": "1.0.0",
-  "description": "node-mongo-cli package to bootstrap mongodb projects by Code Collabo community.",
+  "description": "node-mongo-cli Command Line Interface made with nodejs to bootstrap any of 3 boilerplate templates for your nodejs and/or mongoDB development.",
   "main": "src/cli.js",
   "bin": {
     "@code-collabo/node-mongo-cli": "bin/create-node-mongo-project",
     "node-mongo": "bin/create-node-mongo-project"
   },
   "publicConfig": {
+    "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "scripts": {
-    "preinstall": "node bin/customize-preinstall",
     "prestart": "node -r esm src/customize/startMessage.js",
     "start": "npm-run-all --parallel lint:watch",
     "lint": "esw src --color",
@@ -27,14 +27,21 @@
   },
   "keywords": [
     "cli",
-    "node-mongo-cli",
+    "boilerplate",
+    "template",
+    "create",
     "node",
     "nodejs",
-    "mongo",
+    "node-mongo",
+    "node-mongo-cli",
+    "mongod",
     "mongodb",
+    "atlas",
+    "esm",
+    "cjs",
     "javascript"
   ],
-  "author": "Code Collabo",
+  "author": "Obiagba Mary | Code Collabo Community",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/code-collabo/node-mongo-cli/issues"
@@ -50,8 +57,7 @@
     "inquirer": "^8.0.0",
     "listr": "^0.14.3",
     "ncp": "^2.0.0",
-    "npm-run-all": "^4.1.5",
-    "pkg-install": "^1.0.0"
+    "npm-run-all": "^4.1.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.10",

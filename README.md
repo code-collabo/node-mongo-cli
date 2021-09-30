@@ -5,33 +5,111 @@
 
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) ![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg) ![GitHub issues](https://img.shields.io/github/issues/code-collabo/node-mongo-cli?color=red) ![GitHub pull requests](https://img.shields.io/github/issues-pr/code-collabo/node-mongo-cli?color=goldenrod)
 
-`node-mongo-cli` is a command-line interface tool useful to initialize, scaffold and make mongoDB development easier in nodejs environment. With the CLI, you can install any of the starter kit templates - [es6](https://github.com/code-collabo/node-mongo-starter-kit) and [cjs](https://github.com/code-collabo/node-mongo-starter-cjs). It not only helps install the starter-kit, but also allows you to add new model and controller files with content using simple commands.
+**Supported node versions:** node v12.x to v16.x
 
-The [cli](https://github.com/code-collabo/node-mongo-cli) is built to help provide better experience when using the starter-kit in MongoDB, MERN or MEAN projects.
+The **node-mongo-cli** is a command-line interface made with nodejs. It bootstraps any of these 3 boilerplate templates for your nodejs and/or mongoDB development:
+- [ES module template](https://github.com/code-collabo/node-mongo-esm-kit)
+- [Commonjs template](https://github.com/code-collabo/node-mongo-cjs-kit)
+- Typescript (coming soon)
+
+## Features
+### CLI
+- CLI bootstraps the esm, cjs or ts templates for nodejs and/or mongoDB development.
+- Install dependencies and intialize git for the template bootstrapped or choose to skip them.
+- Folders are automatically created based on user entry in prompt or command-line.
+- Default folder name is provided and incremented if name already exists.
+### Templates
+- [Two mongoDB connection options](https://code-collabo.gitbook.io/node-mongo/boilerplate-templates#mongodb-connection-options) to pick from in the templates: your installed mongoDB and mongoDBatlas.
+- [Demo CRUD app](https://github.com/code-collabo/node-mongo-demo-app) you can go and download to test that your connection is setup and show example usage of the templates.
+
+## Installation
+Install CLI globally with this command:
+````
+npm install -g @code-collabo/node-mongo-cli
+````
+
+## Command
+After installing globally, use the node-mongo command.
+````
+node-mongo
+````
+
+### Usage
+````
+node-mongo <folder_name> <template>  
+````
+
+### Usage example
+The example below will bootstrap the cjs template i.e. the common js template into a folder named test-folder.
+````
+node-mongo test-folder cjs
+````
+
+### Flags
+````
+-h, --help          Show help
+-i, --install       Install dependencies
+-g, --git           Initialize git repo
+-s, --skip-install  Skip installing dependencies
+-x, --skip-git      Skip initializing git
+-y, --yes           See note on --yes flag below
+````
+
+### Prompts
+If you do not specify one or both arguments above, 
+you will be prompted to add your folder name and/or 
+choose template option from list. For foldername, you 
+can choose to use the default foldername provided in
+the prompt or type in your preferred folder name.
+
+### Skip prompts
+No prompt when --yes flag is used. It skips both 
+install and git init, and uses esm template as default 
+if no template is specified or if template entered is 
+not in the template collection. In the case of folder
+name, default foldername is used if no folder name is
+specified or when folder name already exists.
 
 ## Documentation
-For easy maintenance (due to modifications to be made and addition of more features) and also to provide you better support, sections previously included in the readme have been [moved to our docs](https://github.com/code-collabo/docs). Simply click on any of the links to learn to install, use and contribute to the node-mongo project.
-#### Using node-mongo
-No user guide yet, work is still in progress.
+See the links for the official [node-mongo documentation](https://code-collabo.gitbook.io/node-mongo/) and [Code Collabo documentation](https://code-collabo.gitbook.io/doc/).
 
-#### Contributing to node-mongo
-* See [docs: contributor guide](https://github.com/code-collabo/docs/tree/main/contributor-guide) which contains ***contributing.md***, ***CODE_OF_CONDUCT***, ***git workflow*** and ***project development setup*** to help you get started.
+## Want to contribute?
+Love the project and wish to contribute? See contribution guide in the [node-mongo gitbook documentation](https://code-collabo.gitbook.io/node-mongo/) for how to start contributing. You can also reach out to [@Ifycode](https://github.com/Ifycode) in case you need any assistance.
 
-## Resources
-You can [use these resources](https://github.com/code-collabo/docs/blob/main/contributor-guide/node-mongo-project/resources.md) as guide while contributing to the project. Appreciation goes to authors [@dkundel](https://github.com/dkundel), [@academind](https://github.com/academind), [@CodAffection](https://github.com/CodAffection), whose awesome youTube videos and/or articles make up this list of resources, and which have been useful to building the node-mongo project so far. Also to [@coryhouse](https://github.com/coryhouse), author of building a javascript development environment course.
+## Appreciation
+Appreciation goes to [@dkundel](https://github.com/dkundel), [@academind](https://github.com/academind), [@CodAffection](https://github.com/CodAffection), [@coryhouse](https://github.com/coryhouse) whose awesome youTube videos, articles and/or courses helped a lot while building the node-mongo project - cli, templates and/or demo app. Also to [@IsraelObiagba](https://github.com/IsraelObiagba) and [@jiobiagba](https://github.com/jiobiagba) for their help.
+
+<table>
+  <tr>
+    <td align="center"><a href="https://dkundel.com"><img src="https://avatars.githubusercontent.com/u/1505101?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dominik Kundel</b></sub></a><br /><a href="#mentoring-dkundel" title="Mentoring">🧑‍🏫</a></td>
+    <td align="center"><a href="https://academind.com"><img src="https://avatars.githubusercontent.com/u/28806202?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Academind</b></sub></a><br /><a href="#mentoring-academind" title="Mentoring">🧑‍🏫</a></td>
+    <td align="center"><a href="http://codaffection.com/"><img src="https://avatars.githubusercontent.com/u/32505654?v=4?s=100" width="100px;" alt=""/><br /><sub><b>CodAffection</b></sub></a><br /><a href="#mentoring-CodAffection" title="Mentoring">🧑‍🏫</a></td>
+    <td align="center"><a href="http://www.bitnative.com"><img src="https://avatars.githubusercontent.com/u/1688997?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cory House</b></sub></a><br /><a href="#mentoring-coryhouse" title="Mentoring">🧑‍🏫</a></td>
+    <td align="center"><a href="https://github.com/IsraelObiagba"><img src="https://avatars.githubusercontent.com/u/14045379?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Israel Obiagba</b></sub></a><br /><a href="#mentoring-IsraelObiagba" title="Mentoring">🧑‍🏫</a></td>
+    <td align="center"><a href="https://github.com/jiobiagba"><img src="https://avatars.githubusercontent.com/u/42423547?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joseph Obiagba</b></sub></a><br /><a href="#mentoring-jiobiagba" title="Mentoring">🧑‍🏫</a></td>
+  </tr>
+</table>
+
+<!--
+## Technologies
+
+[<img alt="javascript" height="25px" src="https://www.freepnglogos.com/uploads/javascript/javascript-online-logo-for-website-0.png" />](https://github.com/code-collabo/node-mongo-cli)
+[<img alt="node js" height="25px" src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" />](https://github.com/code-collabo/node-mongo-cli)
+[<img alt="mongoDB" height="25px" src="https://webassets.mongodb.com/_com_assets/cms/MongoDB_Logo_FullColorBlack_RGB-4td3yuxzjs.png" />](https://github.com/code-collabo/node-mongo-cli)
+-->
 
 ## Contributors ✨
 
-Thanks to these wonderful people helping to improve the ***node-mongo-cli*** project [= (emoji key) =>](https://allcontributors.org/docs/en/emoji-key)
+Thanks to these amazing contributors to the node-mongo-cli project. This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. See [emoji key](https://allcontributors.org/docs/en/emoji-key). Contributions of any kind welcome!
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/Ifycode"><img src="https://avatars.githubusercontent.com/u/45185388?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Obiagba Mary Ifeoma</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/commits?author=Ifycode" title="Code">💻</a> <a href="https://github.com/code-collabo/node-mongo-cli/commits?author=Ifycode" title="Documentation">📖</a> <a href="#infra-Ifycode" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-Ifycode" title="Maintenance">🚧</a> <a href="https://github.com/code-collabo/node-mongo-cli/pulls?q=is%3Apr+reviewed-by%3AIfycode" title="Reviewed Pull Requests">👀</a> <a href="#projectManagement-Ifycode" title="Project Management">📆</a> <a href="#ideas-Ifycode" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://github.com/IsraelObiagba"><img src="https://avatars.githubusercontent.com/u/14045379?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Israel Obiagba</b></sub></a><br /><a href="#mentoring-IsraelObiagba" title="Mentoring">🧑‍🏫</a></td>
-    <td align="center"><a href="https://github.com/jiobiagba"><img src="https://avatars.githubusercontent.com/u/42423547?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joseph Obiagba</b></sub></a><br /><a href="#mentoring-jiobiagba" title="Mentoring">🧑‍🏫</a></td>
+    <td align="center"><a href="https://github.com/Ifycode"><img src="https://avatars.githubusercontent.com/u/45185388?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Obiagba Mary Ifeoma</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/commits?author=Ifycode" title="Code">💻</a> <a href="https://github.com/code-collabo/node-mongo-cli/commits?author=Ifycode" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://chuddyjoachim.com"><img src="https://avatars.githubusercontent.com/u/56943504?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chikezie Joachim</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/commits?author=chuddyjoachim" title="Code">💻</a></td>
+    <td align="center"><a href="https://allcontributors.org"><img src="https://avatars.githubusercontent.com/u/46410174?v=4?s=100" width="100px;" alt=""/><br /><sub><b>All Contributors</b></sub></a><br /><a href="#infra-all-contributors" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
   </tr>
 </table>
 
@@ -39,11 +117,3 @@ Thanks to these wonderful people helping to improve the ***node-mongo-cli*** pro
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
-See complete list of Code Collabo contributors in the [docs: all-contributors.md](https://github.com/code-collabo/docs/blob/main/all-contributors.md).
-
-## Technologies
-
-[<img alt="javascript" height="25px" src="https://www.freepnglogos.com/uploads/javascript/javascript-online-logo-for-website-0.png" />](https://github.com/code-collabo/node-mongo-cli)
-[<img alt="node js" height="25px" src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" />](https://github.com/code-collabo/node-mongo-cli)
-[<img alt="mongoDB" height="25px" src="https://webassets.mongodb.com/_com_assets/cms/MongoDB_Logo_FullColorBlack_RGB-4td3yuxzjs.png" />](https://github.com/code-collabo/node-mongo-cli)

@@ -1,12 +1,12 @@
 {
-  "name": "node-mongo-cjs-kit",
+  "name": "node-mongo-esm-kit",
   "version": "1.0.0",
-  "description": "Node js, express & mongoDB boilerplate template - the common js template.",
+  "description": "Node js, express & mongoDB boilerplate template - the ES modules template.",
   "main": "src/server.js",
   "scripts": {
-    "prestart": "node src/startMessage.js",
+    "prestart": "babel-node src/startMessage.js",
     "start": "nodemon --exec npm-run-all --parallel open:src lint:watch",
-    "open:src": "node src/server.js",
+    "open:src": "babel-node src/server.js",
     "lint": "esw src --color",
     "lint:watch": "npm run lint -- --watch"
   },
@@ -20,6 +20,11 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/eslint-parser": "^7.13.10",
+    "@babel/node": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
     "chalk": "^4.1.0",
     "eslint": "^7.20.0",
     "eslint-plugin-import": "^2.22.1",

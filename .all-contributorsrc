@@ -12,30 +12,25 @@
       "profile": "https://github.com/Ifycode",
       "contributions": [
         "code",
-        "doc",
-        "infra",
-        "maintenance",
-        "review",
-        "projectManagement",
-        "ideas"
+        "doc"
       ]
     },
     {
-      "login": "IsraelObiagba",
-      "name": "Israel Obiagba",
-      "avatar_url": "https://avatars.githubusercontent.com/u/14045379?v=4",
-      "profile": "https://github.com/IsraelObiagba",
+      "login": "chuddyjoachim",
+      "name": "Chikezie Joachim",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56943504?v=4",
+      "profile": "http://chuddyjoachim.com",
       "contributions": [
-        "mentoring"
+        "code"
       ]
     },
     {
-     "login": "jiobiagba",
-      "name": "Joseph Obiagba",
-      "avatar_url": "https://avatars.githubusercontent.com/u/42423547?v=4",
-      "profile": "https://github.com/jiobiagba",
+      "login": "all-contributors",
+      "name": "All Contributors",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46410174?v=4",
+      "profile": "https://allcontributors.org",
       "contributions": [
-        "mentoring"
+        "infra"
       ]
     }
   ],

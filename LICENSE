@@ -1,5 +1,5 @@
 ISC License (ISC)
-Copyright 2021 Code Collabo
+Copyright 2021 Obiagba Mary | Code Collabo Community
 
 Permission to use, copy, modify, and/or
 distribute this software for any purpose
@@ -18,3 +18,9 @@ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
 WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
 TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH
 THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+@dkundel's create-project LICENCE file:
+https://github.com/dkundel/create-project/blob/master/LICENSE
+
+List of project resources:
+https://code-collabo.gitbook.io/node-mongo/contribution-guide/development-mode#project-resources
