@@ -1,6 +1,6 @@
 # node-mongo CLI
 
-![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) ![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg) ![GitHub issues](https://img.shields.io/github/issues/code-collabo/node-mongo-cli?color=red) ![GitHub pull requests](https://img.shields.io/github/issues-pr/code-collabo/node-mongo-cli?color=goldenrod)
+![npm version](https://badge.fury.io/js/%40code-collabo%2Fnode-mongo-cli.svg) ![NPM Downloads](https://img.shields.io/npm/dy/@code-collabo/node-mongo-cli?color=blue) ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) ![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg) ![GitHub issues](https://img.shields.io/github/issues/code-collabo/node-mongo-cli?color=red) ![GitHub pull requests](https://img.shields.io/github/issues-pr/code-collabo/node-mongo-cli?color=goldenrod)
 
 **Supported node versions:** node v12.x to v16.x
 
@@ -11,6 +11,8 @@ The **node-mongo** project has 3 main projects:
 * Demo CRUD app to test connection and show example usage of the templates.
 
 ## CLI Features
+
+![node-mongo](https://github.com/Ifycode/Ifycode/blob/main/code-collabo/node-mongo-cli.gif?raw=true)
 
 * CLI bootstraps the esm, cjs or ts templates for nodejs and/or mongoDB development.
 * Install dependencies and intialize git for the template bootstrapped or choose to skip them.
