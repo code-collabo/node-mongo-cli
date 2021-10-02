@@ -16,7 +16,7 @@ Change directory \(cd\) into the root of the downloaded template. If you downloa
 Rename the .npmignore file to .gitignore and save the file if you have or will be initializing git in your template. The .env file has been added to the list in there so that you don't push your secrets to github.
 {% endhint %}
 
-Install dependencies:
+Install dependencies (skip this install step if CLI installed your dependencies for you):
 
 ```text
 npm install
@@ -47,7 +47,7 @@ Create a .env file in the root of the downloaded template. After installing mong
 DBNAME="insert-your-own-db-name-here"
 ```
 
-You can add other environment variables if you like, but this tutorial is going to stick to this simple setup. Also create a collection. You can use the collection name "demo" from the src/api/models/demo.js file while you follow this tutorial. You can always use a different name later on once you get used to how the template is setup. In the src/app.js file, you will find the import named "mongooseModuleExport" which is what you need. If you ever need to use the mongoDB atlas option, then you will need to comment out mongooseModuleExport and remove comment from "mongooseModuleExportAtlas" so that you can access the db connection set up for atlas instead. Since you have chosen to install mongoDB locally on your computer, use the mongooseModuleExport import. So you don't need to change anything in the src/app.js file. Open up [http://localhost:3000](http://localhost:3000) in the browser to see the message "App works" displayed on the screen. Also see [http://localhost:3000/demo](http://localhost:3000/demo) for items in your demo collection. Count should be zero and items should be an empty array since you have not added anything in the database.
+You can add other environment variables if you like, but this tutorial is going to stick to this simple setup. Also create a collection. You can use the collection name "demo" from the src/api/models/demo.js file while you follow this tutorial. You can always use a different name later on once you get used to how the template is setup. In the src/app.js file, you will find the import named "mongooseModuleExport" which is what you need. If you ever need to use the mongoDB atlas option, then you will need to comment out "mongooseModuleExport" and remove comment from "mongooseModuleExportAtlas" so that you can access the db connection set up for atlas instead. Since you have chosen to install mongoDB locally on your computer, use the "mongooseModuleExport" import. So you don't need to change anything in the src/app.js file. Open up [http://localhost:3000](http://localhost:3000) in the browser to see the message "App works" displayed on the screen. Also see [http://localhost:3000/demo](http://localhost:3000/demo) for items in your demo collection. Count should be zero and items should be an empty array since you have not added anything in the database.
 
 ### MongoDB atlas option
 
@@ -60,7 +60,7 @@ PASSWORD="insert-your-own-password-here"
 CLUSTERNAME="insert-your-own-clustername-here"
 ```
 
-Use the collection name "demo" from the src/api/models/demo.js file while you follow this tutorial. You can always use a different name later on once you get used to how the template is setup. In the src/app.js file, you will find the import named "mongooseModuleExportAtlas" which is what you need but is commented out. Comment out "mongooseModuleExport" and remove comment from mongooseModuleExportAtlas so that you can access the db connection set up for atlas instead. If you ever need to use the installed mongoDB option, then you will need to comment out mongooseModuleExportAtlas and remove comment from mongooseModuleExport so that you can access the db connection setup for the installed mongoDB option. Open up [http://localhost:3000](http://localhost:3000) in the browser to see the message "App works" displayed on the screen. Also see [http://localhost:3000/demo](http://localhost:3000/demo) for items in your demo collection. Count should be zero and items should be an empty array since you have not added anything in the database.
+Use the collection name "demo" from the src/api/models/demo.js file while you follow this tutorial. You can always use a different name later on once you get used to how the template is setup. In the src/app.js file, you will find the import named "mongooseModuleExportAtlas" which is what you need but is commented out. Comment out "mongooseModuleExport" and remove comment from "mongooseModuleExportAtlas" so that you can access the db connection set up for atlas instead. If you ever need to use the installed mongoDB option, then you will need to comment out "mongooseModuleExportAtlas" and remove comment from "mongooseModuleExport" so that you can access the db connection setup for the installed mongoDB option. Open up [http://localhost:3000](http://localhost:3000) in the browser to see the message "App works" displayed on the screen. Also see [http://localhost:3000/demo](http://localhost:3000/demo) for items in your demo collection. Count should be zero and items should be an empty array since you have not added anything in the database.
 
 ## Customising dev environment
 
