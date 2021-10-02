@@ -12,6 +12,12 @@ Install dependencies:
 npm install
 ```
 
+Link:
+
+```text
+npm link
+```
+
 Run eslint:
 
 ```text
@@ -22,6 +28,12 @@ Run jasmine test:
 
 ```text
 npm test
+```
+
+Unlink (when you are done developing):
+
+```text
+npm unlink
 ```
 
 {% hint style="success" %}
