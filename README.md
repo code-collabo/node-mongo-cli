@@ -112,8 +112,8 @@ Thanks to these amazing contributors to the node-mongo-cli project. This project
   <tr>
     <td align="center"><a href="https://github.com/Ifycode"><img src="https://avatars.githubusercontent.com/u/45185388?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Obiagba Mary Ifeoma</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/commits?author=Ifycode" title="Code">💻</a> <a href="https://github.com/code-collabo/node-mongo-cli/commits?author=Ifycode" title="Documentation">📖</a></td>
     <td align="center"><a href="http://chuddyjoachim.com"><img src="https://avatars.githubusercontent.com/u/56943504?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chikezie Joachim</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/commits?author=chuddyjoachim" title="Code">💻</a></td>
-    <td align="center"><a href="https://allcontributors.org"><img src="https://avatars.githubusercontent.com/u/46410174?v=4?s=100" width="100px;" alt=""/><br /><sub><b>All Contributors</b></sub></a><br /><a href="#infra-all-contributors" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
     <td align="center"><a href="https://keithanphilander-e53b5c.netlify.app/"><img src="https://avatars.githubusercontent.com/u/29425128?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Keithan Philander</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/issues?q=author%3AKeithanPhilander" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://allcontributors.org"><img src="https://avatars.githubusercontent.com/u/46410174?v=4?s=100" width="100px;" alt=""/><br /><sub><b>All Contributors</b></sub></a><br /><a href="#infra-all-contributors" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
   </tr>
 </table>
 
