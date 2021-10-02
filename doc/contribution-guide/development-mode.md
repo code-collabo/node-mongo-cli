@@ -4,7 +4,7 @@ Love the project and wish to contribute? See the [git workflow](https://code-col
 
 ## node-mongo CLI
 
-The commands to run when developing the [node-mongo-cli](https://github.com/code-collabo/node-mongo-cli) are the same as what is on the [node-mongo CLI page](https://code-collabo.gitbook.io/node-mongo/) for users. The installation however is different. 
+The commands to run when developing the [node-mongo-cli](https://github.com/code-collabo/node-mongo-cli) are the same as what is on the [node-mongo CLI page](https://code-collabo.gitbook.io/node-mongo/) for users. The installation however is different.
 
 Install dependencies:
 
@@ -30,7 +30,7 @@ Run jasmine test:
 npm test
 ```
 
-Unlink (when you are done developing):
+Unlink \(when you are done developing\):
 
 ```text
 npm unlink
@@ -46,7 +46,7 @@ Run the boilerplate templates and demo app exactly as described on the [boilerpl
 
 ## Project resources
 
-Consult these resources by  [@dkundel](https://github.com/dkundel), [@academind](https://github.com/academind) and [@CodAffection](https://github.com/CodAffection) to get a background of the CLI, boilerplate templates and the demo-app:
+Consult these resources by [@dkundel](https://github.com/dkundel), [@academind](https://github.com/academind) and [@CodAffection](https://github.com/CodAffection) to get a background of the CLI, boilerplate templates and the demo-app:
 
 * [How to build a CLI with node.js](https://youtu.be/s2h28p4s-Xs) - _youTube video_.
 * [How to build a CLI with node.js](https://www.twilio.com/blog/how-to-build-a-cli-with-node-js) - _the article_.
