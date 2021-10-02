@@ -6,7 +6,7 @@
 
 The **node-mongo** project has 3 main projects:
 
-* The node-mongo CLI to bootstrap boilerplate templates.
+* The [node-mongo CLI](https://github.com/code-collabo/node-mongo-cli) to bootstrap boilerplate templates.
 * 3 boilerplate templates for nodejs and/or mongoDB development.
 * Demo CRUD app to test connection and show example usage of the templates.
 
@@ -21,7 +21,7 @@ The **node-mongo** project has 3 main projects:
 
 ## **CLI Installation**
 
-Install **node-mongo-cli** globally with this command:
+Install [node-mongo CLI](https://www.npmjs.com/package/@code-collabo/node-mongo-cli) globally with this command:
 
 ```text
 npm install -g @code-collabo/node-mongo-cli
