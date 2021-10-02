@@ -1,6 +1,6 @@
 # Readme
 
-This project was generated with [@code-collabo/node-mongo-cli](https://code-collabo.gitbook.io/node-mongo/) version 1.0.0.
+This project was generated with [@code-collabo/node-mongo-cli](https://code-collabo.gitbook.io/node-mongo/) version 1.0.1.
 
 ## Development server
 
