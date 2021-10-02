@@ -32,7 +32,8 @@ let gitInit = async (options) => {
 
 let npmInstall = async (options) => {
   if (options.runInstall) { //install only if runInstall returns true
-    spawn('npm', ['install'], {cwd: options.targetDirectory, stdio: 'inherit'});
+    if (process.platform === 'win32') spawn('npm.cmd', ['install'], { cwd: options.targetDirectory, stdio: 'inherit' });
+      else spawn('npm', ['install'], {cwd: options.targetDirectory, stdio: 'inherit'});
   }
 
   return;
