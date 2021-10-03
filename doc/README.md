@@ -4,6 +4,8 @@
 
 **Supported node versions:** node v12.x to v16.x
 
+**Operating Systems:** Latest version works on Mac OS and Windows OS
+
 The **node-mongo** project has 3 main projects:
 
 * The [node-mongo CLI](https://github.com/code-collabo/node-mongo-cli) to bootstrap boilerplate templates.
