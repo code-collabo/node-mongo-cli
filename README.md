@@ -24,6 +24,7 @@ The [node-mongo-cli](https://code-collabo.gitbook.io/node-mongo/) is a command-l
 - Folders are automatically created based on user entry in prompt or command-line.
 - Default folder name is provided and incremented if name already exists.
 ### Templates
+- Development environment already set up with @babel (for esm only) and eslint.
 - [Two mongoDB connection options](https://code-collabo.gitbook.io/node-mongo/boilerplate-templates#mongodb-connection-options) to pick from in the templates: your installed mongoDB and mongoDBatlas.
 - [Demo CRUD app](https://github.com/code-collabo/node-mongo-demo-app) you can go and download to test that your connection is setup and show example usage of the templates.
 
