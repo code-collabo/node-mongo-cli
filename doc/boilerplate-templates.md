@@ -79,6 +79,10 @@ PASSWORD=insert-your-own-password-here
 CLUSTERNAME=insert-your-own-clustername-here
 ```
 
+{% hint style="success" %}
+Use your user password and not your mongoDB atlas account password. Also you need to attach an extension to the cluster name because of how the connection string in the boilerplate template is written - See [comment on issue #129](https://github.com/code-collabo/node-mongo-cli/issues/129#issuecomment-933110182) for clarity.
+{% endhint %}
+
 Use the collection name "demo" from the src/api/models/demo.js file while you follow this tutorial. You can always use a different name later on once you get used to how the template is setup. You will find these imports in the code block below inside the src/app.js file.
 
 If you are using the esm template:
@@ -92,7 +96,7 @@ If you are using the cjs template:
 //===== MongoDB ATLAS db =======
 //const mongooseModuleExportAtlas = require('./atlas/db'); //eslint-disable-line no-unused-vars
 ````
-By default, the installed mongoDB option's db is what is used. Since you are using atlas, comment out "mongooseModuleExport" and remove comment from "mongooseModuleExportAtlas" so that you can access the db connection set up for atlas instead. Open up [http://localhost:3000](http://localhost:3000) in the browser to see the message "App works" displayed on the screen. Also see [http://localhost:3000/demo](http://localhost:3000/demo) for items in your demo collection. Count should be zero and items should be an empty array since you have not added anything in the database. See [helpful comment in this issue](https://github.com/code-collabo/node-mongo-cli/issues/129#issuecomment-933110182) if you still have not been able to connect successfully without errors. 
+By default, the installed mongoDB option's db is what is used. Since you are using atlas, comment out "mongooseModuleExport" and remove comment from "mongooseModuleExportAtlas" so that you can access the db connection set up for atlas instead. Open up [http://localhost:3000](http://localhost:3000) in the browser to see the message "App works" displayed on the screen. Also see [http://localhost:3000/demo](http://localhost:3000/demo) for items in your demo collection. Count should be zero and items should be an empty array since you have not added anything in the database. Again, see [helpful comment in issue #129](https://github.com/code-collabo/node-mongo-cli/issues/129#issuecomment-933110182) if you still have not been able to connect successfully without errors. 
 
 ## Customising dev environment
 
