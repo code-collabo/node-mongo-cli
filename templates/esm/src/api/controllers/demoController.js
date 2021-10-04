@@ -30,13 +30,13 @@ router.get('/', (req, res) => {
           age: doc.age,
           request: {
             type: 'GET',
-            url: `http://localhost:3000/${routeName}/${doc._id}`
+            url: `http://localhost:${process.env.PORT}/${routeName}/${doc._id}`
           }
         }
       })
     };
     res.status(200).json(response);
-    console.log( chalk.greenBright(`\nGET request successful! \n\nRunning at http://localhost:3000/${routeName}/\n`) );
+    console.log( chalk.greenBright(`\nGET request successful! \n\nRunning at http://localhost:${process.env.PORT}/${routeName}/\n`) );
   })
   .catch(err => {
     res.status(500).json({
@@ -62,11 +62,11 @@ router.post('/', (req, res) => {
         age: doc.age,
         request: {
           type: 'GET',
-          url: `http://localhost:3000/${routeName}/${doc._id}`
+          url: `http://localhost:${process.env.PORT}/${routeName}/${doc._id}`
         }
       }
     });
-    console.log( chalk.greenBright(`\n${item} CREATED successfully! \n\nCreated ${item} url: http://localhost:3000/${routeName}/${doc._id}\n`) );
+    console.log( chalk.greenBright(`\n${item} CREATED successfully! \n\nCreated ${item} url: http://localhost:${process.env.PORT}/${routeName}/${doc._id}\n`) );
   })
   .catch(err => {
     res.status(500).json({
@@ -95,10 +95,10 @@ router.get('/:demoId', (req, res, next) => {
         request: {
           type: 'GET',
           description: `Url link to all ${item}s`,
-          url: `http://localhost:3000/${routeName}/`
+          url: `http://localhost:${process.env.PORT}/${routeName}/`
         }
       });
-      console.log( chalk.greenBright(`\nGET request successful! \n\n${item} url: http://localhost:3000/${routeName}/${doc._id}\n`) );
+      console.log( chalk.greenBright(`\nGET request successful! \n\n${item} url: http://localhost:${process.env.PORT}/${routeName}/${doc._id}\n`) );
     }else {
       console.log( chalk.redBright('\nNo record found for provided ID\n') );
       return res.status(404).json({
@@ -124,13 +124,13 @@ router.patch('/:demoId', (req, res, next) => {
   Demo.updateOne({_id: id}, { $set: updateOps })
   .exec()
   .then(() => {
-    console.log( chalk.greenBright(`\nPATCH request for ID ${id} successful! \n\nUpdated ${item} url: http://localhost:3000/${routeName}/${id}\n`) );
+    console.log( chalk.greenBright(`\nPATCH request for ID ${id} successful! \n\nUpdated ${item} url: http://localhost:${process.env.PORT}/${routeName}/${id}\n`) );
     return res.status(200).json({
       message: 'Patch request successful!',
       request: {
         type: 'GET',
         description: `Url link to updated ${item}`,
-        url: `http://localhost:3000/${routeName}/${id}`
+        url: `http://localhost:${process.env.PORT}/${routeName}/${id}`
       }
     });
   })
@@ -153,13 +153,13 @@ router.put('/:id', (req, res) => {
   Demo.findByIdAndUpdate(id, { $set: resetItem }, { new: true })
   .exec()
   .then(response => {
-    console.log( chalk.greenBright(`\nPUT request for ID ${response._id} successful! \n\nUpdated ${item} url: http://localhost:3000/${routeName}/${id}\n`) );
+    console.log( chalk.greenBright(`\nPUT request for ID ${response._id} successful! \n\nUpdated ${item} url: http://localhost:${process.env.PORT}/${routeName}/${id}\n`) );
     return res.status(200).json({
       message: `Put request successful!`,
       request: {
         type: 'GET',
         description: `Url link to updated ${item}`,
-        url: `http://localhost:3000/${routeName}/${id}`
+        url: `http://localhost:${process.env.PORT}/${routeName}/${id}`
       }
     });
   })
@@ -183,7 +183,7 @@ router.delete('/:demoId', (req, res, next) => {
       request: {
         type: 'POST',
         description: 'Url link to make post request to',
-        url: `http://localhost:3000/${item}/`,
+        url: `http://localhost:${process.env.PORT}/${item}/`,
         body: {
           name: 'String',
           age: 'Number'
