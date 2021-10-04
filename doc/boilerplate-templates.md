@@ -66,20 +66,33 @@ If you are using the cjs template:
 const mongooseModuleExport = require('./db'); //eslint-disable-line no-unused-vars
 ````
 
-The other import named "mongooseModuleExportAtlas" is not needed for the installed mongoDB option, that is why it is commented out.
+The other import named "mongooseModuleExportAtlas" is not needed for the installed mongoDB option, that is why it is commented out. Open up [http://localhost:3000](http://localhost:3000) in the browser to see the message "App works" displayed on the screen. Also see [http://localhost:3000/demo](http://localhost:3000/demo) for items in your demo collection. Count should be zero and items should be an empty array since you have not added anything in the database.
 
 ### MongoDB atlas option
 
-Create a .env file in the root of the downloaded template. Create a database \(and collection\) and connect to your cluster following the mongoDB documentation. Go to src/atlas/db.js file, you will see that there are environment variables i.e. **process.env.USERNAME**, **process.env.PASSWORD**, **process.env.CLUSTERNAME**, **process.env.DBNAME** in the mongoDB connection string. You want to store your username, password, cluster name and database name that you created with atlas inside these variables. Store them in the variables inside the .env file you created earlier like so:
+Create a database \(and collection\) and connect to your cluster following the mongoDB atlas documentation. Go to src/atlas/db.js file, you will see that there are environment variables i.e. **process.env.USERNAME**, **process.env.PASSWORD**, **process.env.CLUSTERNAME**, **process.env.DBNAME** in the mongoDB connection string. You want to store your username, password, cluster name and database name that you created with atlas inside these variables. Store them in the variables inside the .env file you created earlier like so:
 
 ```text
-DBNAME="insert-your-own-db-name-here"
-USERNAME="insert-your-own-username-here"
-PASSWORD="insert-your-own-password-here"
-CLUSTERNAME="insert-your-own-clustername-here"
+DBNAME=insert-your-own-dbname-here
+USERNAME=insert-your-own-username-here
+PASSWORD=insert-your-own-password-here
+CLUSTERNAME=insert-your-own-clustername-here
 ```
 
-Use the collection name "demo" from the src/api/models/demo.js file while you follow this tutorial. You can always use a different name later on once you get used to how the template is setup. In the src/app.js file, you will find the import named "mongooseModuleExportAtlas" which is what you need but is commented out. Comment out "mongooseModuleExport" and remove comment from "mongooseModuleExportAtlas" so that you can access the db connection set up for atlas instead. If you ever need to use the installed mongoDB option, then you will need to comment out "mongooseModuleExportAtlas" and remove comment from "mongooseModuleExport" so that you can access the db connection setup for the installed mongoDB option. Open up [http://localhost:3000](http://localhost:3000) in the browser to see the message "App works" displayed on the screen. Also see [http://localhost:3000/demo](http://localhost:3000/demo) for items in your demo collection. Count should be zero and items should be an empty array since you have not added anything in the database.
+Use the collection name "demo" from the src/api/models/demo.js file while you follow this tutorial. You can always use a different name later on once you get used to how the template is setup. You will find these imports in the code block below inside the src/app.js file.
+
+If you are using the esm template:
+````
+//===== MongoDB ATLAS db =======
+//import mongooseModuleExportAtlas from './atlas/db'; //eslint-disable-line no-unused-vars
+````
+
+If you are using the cjs template:
+````
+//===== MongoDB ATLAS db =======
+//const mongooseModuleExportAtlas = require('./atlas/db'); //eslint-disable-line no-unused-vars
+````
+By default, the installed mongoDB option's db is what is used. Since you are using atlas, comment out "mongooseModuleExport" and remove comment from "mongooseModuleExportAtlas" so that you can access the db connection set up for atlas instead. Open up [http://localhost:3000](http://localhost:3000) in the browser to see the message "App works" displayed on the screen. Also see [http://localhost:3000/demo](http://localhost:3000/demo) for items in your demo collection. Count should be zero and items should be an empty array since you have not added anything in the database.
 
 ## Customising dev environment
 
