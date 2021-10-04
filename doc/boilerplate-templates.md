@@ -92,9 +92,9 @@ If you are using the cjs template:
 //===== MongoDB ATLAS db =======
 //const mongooseModuleExportAtlas = require('./atlas/db'); //eslint-disable-line no-unused-vars
 ````
-By default, the installed mongoDB option's db is what is used. Since you are using atlas, comment out "mongooseModuleExport" and remove comment from "mongooseModuleExportAtlas" so that you can access the db connection set up for atlas instead. Open up [http://localhost:3000](http://localhost:3000) in the browser to see the message "App works" displayed on the screen. Also see [http://localhost:3000/demo](http://localhost:3000/demo) for items in your demo collection. Count should be zero and items should be an empty array since you have not added anything in the database.
+By default, the installed mongoDB option's db is what is used. Since you are using atlas, comment out "mongooseModuleExport" and remove comment from "mongooseModuleExportAtlas" so that you can access the db connection set up for atlas instead. Open up [http://localhost:3000](http://localhost:3000) in the browser to see the message "App works" displayed on the screen. Also see [http://localhost:3000/demo](http://localhost:3000/demo) for items in your demo collection. Count should be zero and items should be an empty array since you have not added anything in the database. See [helpful comment in this issue](https://github.com/code-collabo/node-mongo-cli/issues/129#issuecomment-933110182) if you still have not been able to connect successful without errors. 
 
 ## Customising dev environment
 
-Replace "insert-your-project-name" with your own project name in the src/startMessage.js file. Modify template as you like it.
+Replace "insert-your-project-name" with your own project name in the src/startMessage.js file. Modify boilerplate template as you like it.
 
