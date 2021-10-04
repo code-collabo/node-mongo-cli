@@ -5,7 +5,8 @@
   "main": "src/server.js",
   "scripts": {
     "prestart": "babel-node src/startMessage.js",
-    "start": "nodemon --exec npm-run-all --parallel open:src lint:watch",
+    "start": "babel-node src/server.js",
+    "dev": "nodemon --exec npm-run-all --parallel open:src lint:watch",
     "open:src": "babel-node src/server.js",
     "lint": "esw src --color",
     "lint:watch": "npm run lint -- --watch"
