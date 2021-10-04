@@ -51,7 +51,22 @@ After installing mongoDB, keep mongoDB running in the terminal\(s\) as shown in 
 DBNAME=insert-your-own-dbname-here
 ```
 
-You can add other environment variables if you like, but this tutorial is going to stick to this simple setup. Also create a collection. You can use the collection name "demo" from the src/api/models/demo.js file while you follow this tutorial. You can always use a different name later on once you get used to how the template is setup. In the src/app.js file, you will find the import named "mongooseModuleExport" which is what you need. If you ever need to use the mongoDB atlas option, then you will need to comment out "mongooseModuleExport" and remove comment from "mongooseModuleExportAtlas" so that you can access the db connection set up for atlas instead. Since you have chosen to install mongoDB locally on your computer, use the "mongooseModuleExport" import. So you don't need to change anything in the src/app.js file. Open up [http://localhost:3000](http://localhost:3000) in the browser to see the message "App works" displayed on the screen. Also see [http://localhost:3000/demo](http://localhost:3000/demo) for items in your demo collection. Count should be zero and items should be an empty array since you have not added anything in the database.
+You can add other environment variables if you like, but this tutorial is going to stick to this simple setup. Also create a collection. You can use the collection name "demo" from the src/api/models/demo.js file while you follow this tutorial. You can always use a different name later on once you get used to how the template is setup. You will find these imports in the code block below inside the src/app.js file. 
+
+If you are using the esm template:
+````
+//===== Installed mongoDB's db =======
+import mongooseModuleExport from './db'; //eslint-disable-line no-unused-vars
+````
+
+If you are using the cjs template:
+
+````
+//===== Installed mongoDB's db =======
+const mongooseModuleExport = require('./db'); //eslint-disable-line no-unused-vars
+````
+
+The other import named "mongooseModuleExportAtlas" is not needed for the installed mongoDB option, that is why it is commented out.
 
 ### MongoDB atlas option
 
