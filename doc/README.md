@@ -37,6 +37,11 @@ After installing globally, use the node-mongo command.
 node-mongo
 ```
 
+### Show help
+````
+node-mongo --help
+````
+
 ### Usage
 
 ```text
