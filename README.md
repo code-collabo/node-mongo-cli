@@ -24,7 +24,7 @@ The [node-mongo-cli](https://code-collabo.gitbook.io/node-mongo/) is a command-l
 - Folders are automatically created based on user entry in prompt or command-line.
 - Default folder name is provided and incremented if name already exists.
 ### Templates
-- Development environment already set up with @babel (for esm only) and eslint.
+- Development environment already set up with @babel (for esm template only) and eslint.
 - [Two mongoDB connection options](https://code-collabo.gitbook.io/node-mongo/boilerplate-templates#mongodb-connection-options) to pick from in the templates: your installed mongoDB and mongoDBatlas.
 - [Demo CRUD app](https://github.com/code-collabo/node-mongo-demo-app) you can go and download to test that your connection is setup and show example usage of the templates.
 
@@ -80,7 +80,7 @@ specified or when folder name already exists.
 See the links for the official [node-mongo documentation](https://code-collabo.gitbook.io/node-mongo/) and [Code Collabo documentation](https://code-collabo.gitbook.io/doc/).
 
 ## Want to contribute?
-Love the project and wish to contribute? See contribution guide in the [node-mongo gitbook documentation](https://code-collabo.gitbook.io/node-mongo/) for how to start contributing. You can also reach out to [@Ifycode](https://github.com/Ifycode) in case you need any assistance.
+Love the project and wish to contribute? See contribution guide in the [node-mongo documentation](https://code-collabo.gitbook.io/node-mongo/) for how to start contributing. You can also reach out to [@Ifycode](https://github.com/Ifycode) in case you need any assistance.
 
 ## Appreciation
 Appreciation goes to [@dkundel](https://github.com/dkundel), [@academind](https://github.com/academind), [@CodAffection](https://github.com/CodAffection), [@coryhouse](https://github.com/coryhouse) whose awesome youTube videos, articles and/or courses helped a lot while building the node-mongo project - cli, templates and/or demo app. Also to [@IsraelObiagba](https://github.com/IsraelObiagba) and [@jiobiagba](https://github.com/jiobiagba) for their help.
