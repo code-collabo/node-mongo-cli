@@ -9,7 +9,10 @@ const server = http.createServer(app);
 
 server.listen(port, () => {
   try {
-    console.log( chalk.cyanBright(`\nServer running at http://localhost:${port}`) );
+    if(process.env.NODE_ENV == "development"){
+      return console.log( chalk.cyanBright(`\nServer running at http://localhost:${port}`) );
+    }
+    return console.log('Server started.')
   }catch(err) {
     console.log(err);
   }
