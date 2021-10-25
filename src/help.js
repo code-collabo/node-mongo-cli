@@ -27,6 +27,7 @@ the prompt or type in your preferred folder name.
 
 Flags:
 -h, --help          Show help
+-v, --version       Show version number
 -i, --install       Install dependencies
 -g, --git           Initialize git repo
 -s, --skip-install  Skip installing dependencies

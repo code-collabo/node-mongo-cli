@@ -1,5 +1,6 @@
 import arg from 'arg';
 import { help } from './help';
+import { version } from './version';
 import { notRecognised } from './help';
 import { folderNameMissingOptionPrompt } from './prompts/foldername';
 import { templateMissingOptionPrompt } from './prompts/template';
@@ -17,6 +18,11 @@ let parseArgumentsIntoOptions = (rawArgs) => {
     return previousValue || '--help';
   }
 
+  //configure --version flag
+  let versionHelper = (value, argName, previousValue) => {
+    return previousValue || '--version';
+  }
+
   try {
     const args = arg({
       '--git': Boolean,
@@ -32,7 +38,9 @@ let parseArgumentsIntoOptions = (rawArgs) => {
       '-i': '--install',
       '-s': '--skip-install',
       '--help': arg.flag(helpHandler),
-      '-h': '--help'
+      '-h': '--help',
+      '--version': arg.flag(versionHelper),
+      '-v': '--version'
     },
     {
       argv: rawArgs.slice(2)
@@ -46,7 +54,8 @@ let parseArgumentsIntoOptions = (rawArgs) => {
       template: args._[1],
       runInstall: args['--install'] || true,
       skipInstall: args['--skip-install'] || false,
-      help: args['--help'] || false
+      help: args['--help'] || false,
+      version: args['--version'] || false
     }  
   } catch (err) {
     notRecognised();
@@ -81,6 +90,8 @@ export let cli = async (args) => {
   try {
     if (options.help) {
       help();
+    } else if (options.version) {
+      version();
     } else {
       await otherOptions(options);
     }
