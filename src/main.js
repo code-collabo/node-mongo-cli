@@ -10,6 +10,12 @@ import { spawn } from 'child_process';
 const access = promisify(fs.access);
 const copy = promisify(ncp);
 
+let createGitIgnoreFile = async (options) => {
+  const content = '# See http://help.github.com/ignore-files/ for more about ignoring files.\n\n#.env file\n.env\n\n# dependencies\n/node_modules';
+  fs.writeFileSync(path.join(options.targetDirectory, '.gitignore'), content);
+  return;
+}
+
 let copyTemplateFolderContent = async (options) => {
   return copy(options.templateDirectory, options.targetDirectory, {
     clobber: false
@@ -74,6 +80,8 @@ export let downloadTemplateKit = async (options) => {
     console.error(`\n%s Template name or directory path is (probably) incorrect`, chalk.red.bold('ERROR'));
     process.exit(1);
   }
+
+  await createGitIgnoreFile(options);
 
   const listrTasks = new Listr([
     {
