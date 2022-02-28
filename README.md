@@ -1,6 +1,6 @@
 # node-mongo-cli
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![npm version](https://badge.fury.io/js/%40code-collabo%2Fnode-mongo-cli.svg)](https://www.npmjs.com/package/@code-collabo/node-mongo-cli) [![Npm package total downloads](https://badgen.net/npm/dt/@code-collabo/node-mongo-cli?color=blue)](https://npmjs.com/package/@code-collabo/node-mongo-cli) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://code-collabo.gitbook.io/node-mongo/contribution-guide/development-mode) [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://github.com/code-collabo/node-mongo-cli/blob/develop/LICENSE) [![GitHub issues](https://img.shields.io/github/issues/code-collabo/node-mongo-cli?color=red)](https://github.com/code-collabo/node-mongo-cli/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/code-collabo/node-mongo-cli?color=goldenrod)](https://github.com/code-collabo/node-mongo-cli/pulls)
@@ -49,7 +49,7 @@ node-mongo --help
 
 ### Usage
 ````
-node-mongo <folder_name> <template>  
+node-mongo <folder_name> <template>
 ````
 
 ### Usage example
@@ -70,16 +70,16 @@ node-mongo test-folder cjs
 ````
 
 ### Prompts
-If you do not specify one or both arguments above, 
-you will be prompted to add your folder name and/or 
-choose template option from list. For foldername, you 
+If you do not specify one or both arguments above,
+you will be prompted to add your folder name and/or
+choose template option from list. For foldername, you
 can choose to use the default foldername provided in
 the prompt or type in your preferred folder name.
 
 ### Skip prompts
-No prompt when --yes flag is used. It skips both 
-install and git init, and uses esm template as default 
-if no template is specified or if template entered is 
+No prompt when --yes flag is used. It skips both
+install and git init, and uses esm template as default
+if no template is specified or if template entered is
 not in the template collection. In the case of folder
 name, default foldername is used if no folder name is
 specified or when folder name already exists.
@@ -124,6 +124,7 @@ Thanks to these amazing contributors to the node-mongo-cli project. This project
     <td align="center"><a href="https://github.com/Ifycode"><img src="https://avatars.githubusercontent.com/u/45185388?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Obiagba Mary Ifeoma</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/commits?author=Ifycode" title="Code">💻</a> <a href="https://github.com/code-collabo/node-mongo-cli/commits?author=Ifycode" title="Documentation">📖</a></td>
     <td align="center"><a href="http://chuddyjoachim.com"><img src="https://avatars.githubusercontent.com/u/56943504?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chikezie Joachim</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/commits?author=chuddyjoachim" title="Code">💻</a></td>
     <td align="center"><a href="https://keithanphilander-e53b5c.netlify.app/"><img src="https://avatars.githubusercontent.com/u/29425128?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Keithan Philander</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/issues?q=author%3AKeithanPhilander" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="http://rashidmya.dev"><img src="https://avatars.githubusercontent.com/u/64389512?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rashid</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/commits?author=rashidmya" title="Code">💻</a></td>
     <td align="center"><a href="https://allcontributors.org"><img src="https://avatars.githubusercontent.com/u/46410174?v=4?s=100" width="100px;" alt=""/><br /><sub><b>All Contributors</b></sub></a><br /><a href="#infra-all-contributors" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
   </tr>
 </table>
