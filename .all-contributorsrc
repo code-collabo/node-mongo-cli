@@ -34,21 +34,21 @@
       ]
     },
     {
-      "login": "all-contributors",
-      "name": "All Contributors",
-      "avatar_url": "https://avatars.githubusercontent.com/u/46410174?v=4",
-      "profile": "https://allcontributors.org",
-      "contributions": [
-        "infra"
-      ]
-    },
-    {
       "login": "rashidmya",
       "name": "Rashid",
       "avatar_url": "https://avatars.githubusercontent.com/u/64389512?v=4",
       "profile": "http://rashidmya.dev",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "all-contributors",
+      "name": "All Contributors",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46410174?v=4",
+      "profile": "https://allcontributors.org",
+      "contributions": [
+        "infra"
       ]
     }
   ],
