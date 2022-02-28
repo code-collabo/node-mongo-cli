@@ -3,7 +3,7 @@ import chalk from 'chalk';
 import fs from 'fs';
 
 export const folderNameMissingOptionPrompt = async (options) => {
-    let defaultFolderName = 'node-mongo-kit';
+    let defaultFolderName = 'nm-kit';
     const folderQuestions = [];
   
     let questionPush = (msgString, folder) => {
