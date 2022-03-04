@@ -50,6 +50,15 @@
       "contributions": [
         "infra"
       ]
+    },
+    {
+      "login": "izhar360",
+      "name": "Muhammad Izhar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/79567009?v=4",
+      "profile": "https://github.com/izhar360",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
