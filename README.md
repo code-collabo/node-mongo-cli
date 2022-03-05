@@ -54,6 +54,8 @@ node-mongo <folder_name> <template>
 
 ### Usage example
 The example below will bootstrap the cjs template i.e. the common js template into a folder named test-folder.
+Replace <folder_name> with your preferred folder name.
+Replace <template> with any of these: esm, cjs or ts (note: the ts template is not available yet).
 ````
 node-mongo test-folder cjs
 ````
@@ -75,8 +77,6 @@ you will be prompted to add your folder name and/or
 choose template option from list. For foldername, you
 can choose to use the default foldername provided in
 the prompt or type in your preferred folder name.
-Replace `<folder_name>` with your preferred folder name.
-Replace `<template>` with any of these: esm, cjs or ts (note: the ts template is not available yet).
 
 ### Skip prompts
 No prompt when --yes flag is used. It skips both
