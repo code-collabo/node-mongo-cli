@@ -1,6 +1,6 @@
 # @code-collabo/node-mongo-cli
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![npm version](https://badge.fury.io/js/%40code-collabo%2Fnode-mongo-cli.svg)](https://www.npmjs.com/package/@code-collabo/node-mongo-cli) [![Npm package total downloads](https://badgen.net/npm/dt/@code-collabo/node-mongo-cli?color=blue)](https://npmjs.com/package/@code-collabo/node-mongo-cli) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://code-collabo.gitbook.io/node-mongo/contribution-guide/development-mode) [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://github.com/code-collabo/node-mongo-cli/blob/develop/LICENSE) [![GitHub issues](https://img.shields.io/github/issues/code-collabo/node-mongo-cli?color=red)](https://github.com/code-collabo/node-mongo-cli/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/code-collabo/node-mongo-cli?color=goldenrod)](https://github.com/code-collabo/node-mongo-cli/pulls)
@@ -130,6 +130,9 @@ Thanks to these amazing contributors to the node-mongo-cli project. This project
     <td align="center"><a href="https://allcontributors.org"><img src="https://avatars.githubusercontent.com/u/46410174?v=4?s=100" width="100px;" alt=""/><br /><sub><b>All Contributors</b></sub></a><br /><a href="#infra-all-contributors" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
     <td align="center"><a href="https://github.com/izhar360"><img src="https://avatars.githubusercontent.com/u/79567009?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Muhammad Izhar</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/commits?author=izhar360" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Sync271"><img src="https://avatars.githubusercontent.com/u/67158080?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abhishek K M</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/commits?author=Sync271" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://hritikr.me"><img src="https://avatars.githubusercontent.com/u/35923605?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hritik R</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/commits?author=HritikR" title="Documentation">📖</a></td>
   </tr>
 </table>
 
