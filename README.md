@@ -1,6 +1,6 @@
 # @code-collabo/node-mongo-cli
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![npm version](https://badge.fury.io/js/%40code-collabo%2Fnode-mongo-cli.svg)](https://www.npmjs.com/package/@code-collabo/node-mongo-cli) [![Npm package total downloads](https://badgen.net/npm/dt/@code-collabo/node-mongo-cli?color=blue)](https://npmjs.com/package/@code-collabo/node-mongo-cli) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://code-collabo.gitbook.io/node-mongo/contribution-guide/development-mode) [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://github.com/code-collabo/node-mongo-cli/blob/develop/LICENSE) [![GitHub issues](https://img.shields.io/github/issues/code-collabo/node-mongo-cli?color=red)](https://github.com/code-collabo/node-mongo-cli/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/code-collabo/node-mongo-cli?color=goldenrod)](https://github.com/code-collabo/node-mongo-cli/pulls)
@@ -14,7 +14,7 @@
 The [node-mongo-cli](https://code-collabo.gitbook.io/node-mongo/) is a command-line interface made with nodejs. It bootstraps any of these 3 boilerplate templates for your nodejs and/or mongoDB development:
 - [ES module template](https://github.com/code-collabo/node-mongo-esm-kit)
 - [Commonjs template](https://github.com/code-collabo/node-mongo-cjs-kit)
-- Typescript (coming soon)
+- [Typescript template (only manual download option available for now)](https://github.com/code-collabo/node-mongo-api-boilerplate-template-TS)
 
 ## Features
 
@@ -133,6 +133,7 @@ Thanks to these amazing contributors to the node-mongo-cli project. This project
   </tr>
   <tr>
     <td align="center"><a href="http://hritikr.me"><img src="https://avatars.githubusercontent.com/u/35923605?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hritik R</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/commits?author=HritikR" title="Documentation">📖</a> <a href="https://github.com/code-collabo/node-mongo-cli/commits?author=HritikR" title="Code">💻</a></td>
+    <td align="center"><a href="https://olaleye.vercel.app/"><img src="https://avatars.githubusercontent.com/u/70102539?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Olaleye Blessing</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/commits?author=Olaleye-Blessing" title="Documentation">📖</a></td>
   </tr>
 </table>
 
