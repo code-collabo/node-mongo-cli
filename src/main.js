@@ -16,7 +16,7 @@ let createGitIgnoreFile = async (options) => {
   return;
 }
 
-let generateEnvFile = async (options) => {
+let createEnvFiles = async (options) => {
   const content = 'MONGODB_URI=\nMONGODB_ATLAS_URI=';
   fs.writeFileSync(path.join(options.targetDirectory, '.env'), content);
   fs.writeFileSync(path.join(options.targetDirectory, '.env.example'), content);
@@ -90,7 +90,7 @@ export let downloadTemplateKit = async (options) => {
 
   await createGitIgnoreFile(options);
 
-  await generateEnvFile(options);
+  await createEnvFiles(options);
 
   const listrTasks = new Listr([
     {
