@@ -132,7 +132,7 @@ Thanks to these amazing contributors to the node-mongo-cli project. This project
     <td align="center"><a href="https://github.com/Sync271"><img src="https://avatars.githubusercontent.com/u/67158080?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abhishek K M</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/commits?author=Sync271" title="Documentation">📖</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="http://hritikr.me"><img src="https://avatars.githubusercontent.com/u/35923605?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hritik R</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/commits?author=HritikR" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://hritikr.me"><img src="https://avatars.githubusercontent.com/u/35923605?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hritik R</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/commits?author=HritikR" title="Documentation">📖</a> <a href="https://github.com/code-collabo/node-mongo-cli/commits?author=HritikR" title="Code">💻</a></td>
     <td align="center"><a href="https://olaleye.vercel.app/"><img src="https://avatars.githubusercontent.com/u/70102539?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Olaleye Blessing</b></sub></a><br /><a href="https://github.com/code-collabo/node-mongo-cli/commits?author=Olaleye-Blessing" title="Documentation">📖</a></td>
   </tr>
 </table>
