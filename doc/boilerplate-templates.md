@@ -1,4 +1,5 @@
 # API boilerplate templates
+There are three (3) API boilerplate templates for nodejs and/or mongoDB development. The sections below contain detailed information on the download options available, the API design, and how to use the API boilerplate templates.
 
 ## Template features
 - Development environment already set up with @babel (for esm template only) and eslint.
