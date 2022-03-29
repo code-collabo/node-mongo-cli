@@ -25,6 +25,16 @@
       ]
     },
     {
+      "login": "HritikR",
+      "name": "Hritik R",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35923605?v=4",
+      "profile": "http://hritikr.me",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
       "login": "KeithanPhilander",
       "name": "Keithan Philander",
       "avatar_url": "https://avatars.githubusercontent.com/u/29425128?v=4",
@@ -40,15 +50,6 @@
       "profile": "http://rashidmya.dev",
       "contributions": [
         "code"
-      ]
-    },
-    {
-      "login": "all-contributors",
-      "name": "All Contributors",
-      "avatar_url": "https://avatars.githubusercontent.com/u/46410174?v=4",
-      "profile": "https://allcontributors.org",
-      "contributions": [
-        "infra"
       ]
     },
     {
@@ -70,22 +71,21 @@
       ]
     },
     {
-      "login": "HritikR",
-      "name": "Hritik R",
-      "avatar_url": "https://avatars.githubusercontent.com/u/35923605?v=4",
-      "profile": "http://hritikr.me",
-      "contributions": [
-        "doc",
-        "code"
-      ]
-    },
-    {
       "login": "Olaleye-Blessing",
       "name": "Olaleye Blessing",
       "avatar_url": "https://avatars.githubusercontent.com/u/70102539?v=4",
       "profile": "https://olaleye.vercel.app/",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "all-contributors",
+      "name": "All Contributors",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46410174?v=4",
+      "profile": "https://allcontributors.org",
+      "contributions": [
+        "infra"
       ]
     }
   ],
