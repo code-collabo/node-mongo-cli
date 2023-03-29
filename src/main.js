@@ -68,8 +68,12 @@ export let downloadTemplateKit = async (options) => {
   const currentFileUrl = import.meta.url;
 
   let newUrl;
-  if (process.platform === 'darwin') newUrl = new URL(currentFileUrl).pathname;
-   else newUrl = new URL(currentFileUrl).pathname.substring(new URL(currentFileUrl).pathname.indexOf('/') + 1);
+  if (process.platform === "darwin" || process.platform === "linux") {
+    newUrl = new URL(currentFileUrl).pathname;
+  } else
+    newUrl = new URL(currentFileUrl).pathname.substring(
+      new URL(currentFileUrl).pathname.indexOf("/") + 1
+    );
 
   const templateDir = path.resolve(newUrl, '../../templates', options.template.toLowerCase());
   
