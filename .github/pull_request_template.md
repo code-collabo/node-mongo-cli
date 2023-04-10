@@ -1,14 +1,12 @@
 **This pull request makes the following changes:**
-* Fixes issue code-collabo/node-mongo-cli#issueNumberHere 
+* Fixes code-collabo/put-repo-name-where-the-issue-is-located-here#putTheIssueNumberHere 
 
-**Details:**
-* Setup for '...'
-* Adds '...' etc.
+**General checklist**
+- [ ] File or folder now contains changes as specified in the issue i worked on
+- [ ] I have linked the issue I worked on to this pull request submitted by me
 
-**Testing checklist:**
-- [ ] Run '...'
-- [ ] Check that '...'
-- [ ] Check that '...' etc.
-- [ ] I certify that I ran my checklist.
+**Testing checklist**
+
+Replace this text with the testing checklist from the issue this pull request fixes.
 
 Ping @code-collabo/node-mongo-cli
