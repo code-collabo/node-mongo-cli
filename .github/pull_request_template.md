@@ -1,5 +1,5 @@
 **This pull request makes the following changes:**
-* Fixes issue #issueNumberHere 
+* Fixes code-collabo/put-repo-name-where-the-issue-is-located-here#putTheIssueNumberHere 
 
 **Checklist:**
 - [ ] File or folder now contains changes as specified in the issue i worked on
