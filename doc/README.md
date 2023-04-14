@@ -8,6 +8,10 @@
 
 **Operating Systems:** Mac OS and Windows OS
 
+#
+Parent repo: [code-collabo/node-mongo](https://github.com/code-collabo/node-mongo)
+#
+
 The **node-mongo** project has 3 main projects:
 
 * The [node-mongo CLI](https://github.com/code-collabo/node-mongo-cli) to bootstrap boilerplate templates.
