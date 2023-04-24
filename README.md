@@ -9,11 +9,11 @@
 
 # 
 
-**Supported node versions:** node v12.x to v16.x
+**Supported node versions:** node v12.x to v19.x
 
 # 
 
-**Operating Systems:** Mac, Windows and Linux
+**Operating Systems:** Mac, Windows and Linux OS
 
 #
 
@@ -98,7 +98,9 @@ name, default foldername is used if no folder name is
 specified or when folder name already exists.
 
 ## Documentation
-See the links for the official [node-mongo documentation](https://code-collabo.gitbook.io/node-mongo/) and [Code Collabo documentation](https://code-collabo.gitbook.io/doc/).
+See the links to the official documentation of this project and community building it below:
+- [node-mongo documentation](https://code-collabo.gitbook.io/node-mongo/)
+- [Code Collabo documentation](https://code-collabo.gitbook.io/doc/)
 
 ## Appreciation
 Appreciation to [@dkundel](https://github.com/dkundel), [@academind](https://github.com/academind), [@CodAffection](https://github.com/CodAffection), [@coryhouse](https://github.com/coryhouse) for the awesome helpful course resources they create, and to [@jiobiagba](https://github.com/jiobiagba) and [@IsraelObiagba](https://github.com/IsraelObiagba) for occasional reviews.
