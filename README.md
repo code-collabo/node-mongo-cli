@@ -21,10 +21,10 @@ Parent repo: [code-collabo/node-mongo](https://github.com/code-collabo/node-mong
 
 #
 
-The [node-mongo-cli](https://code-collabo.gitbook.io/node-mongo/) is a command-line interface made with nodejs. It bootstraps any of these 3 boilerplate templates for your nodejs and/or mongoDB development:
-- [ES module template](https://github.com/code-collabo/node-mongo-esm-kit)
-- [Commonjs template](https://github.com/code-collabo/node-mongo-cjs-kit)
-- [Typescript template (only manual download option available for now)](https://github.com/code-collabo/node-mongo-api-boilerplate-template-TS)
+The [node-mongo-cli](https://code-collabo.gitbook.io/node-mongo/) is a command-line interface made with nodejs. It bootstraps any of the node-mongo API boilerplate templates for your nodejs and/or mongoDB development, depending on which one you prefer:
+- [Typescript template](https://github.com/code-collabo/node-mongo-api-boilerplate-templates/ts)
+- [ES module template](https://github.com/code-collabo/node-mongo-api-boilerplate-templates/esm)
+- [Commonjs template](https://github.com/code-collabo/node-mongo-api-boilerplate-templates/cjs)
 
 ## Features
 
@@ -37,32 +37,31 @@ The [node-mongo-cli](https://code-collabo.gitbook.io/node-mongo/) is a command-l
 - Default folder name is provided and incremented if name already exists.
 ### Templates
 - Development environment already set up with @babel (for esm template only) and eslint.
-- [Two mongoDB connection options](https://code-collabo.gitbook.io/node-mongo/boilerplate-templates#mongodb-connection-options) to pick from in the templates: your installed mongoDB and mongoDBatlas.
-- [Demo CRUD app](https://github.com/code-collabo/node-mongo-demo-app) you can go and download to test that your connection is setup and show example usage of the templates.
+- Default connection setup type: MongoDB Atlas. But you get to choose if you want to use it or switch to Local mongoDB connection setup type. 
 
-## Installation
+## CLI installation
 Install CLI globally with this command:
 ````
 npm install -g @code-collabo/node-mongo-cli
 ````
 
-## Command
+## CLI command
 After installing globally, use the node-mongo command.
 ````
 node-mongo
 ````
 
-### Show help
+### Show CLI help
 ````
 node-mongo --help
 ````
 
-### Usage
+### CLI usage
 ````
 node-mongo <folder_name> <template>
 ````
 
-### Usage example
+### CLI usage example
 Replace <folder_name> with your preferred folder name.
 Replace \<template> with any of these: esm, cjs or ts (note: the ts template is not available yet).
 The example below will bootstrap the cjs template i.e. the common js template into a folder named test-folder.
@@ -70,7 +69,7 @@ The example below will bootstrap the cjs template i.e. the common js template in
 node-mongo test-folder cjs
 ````
 
-### Flags
+### CLI flags
 ````
 -h, --help          Show help
 -v, --version       Show version number
@@ -81,14 +80,14 @@ node-mongo test-folder cjs
 -y, --yes           See note on --yes flag below
 ````
 
-### Prompts
+### CLI prompts
 If you do not specify one or both arguments above,
 you will be prompted to add your folder name and/or
 choose template option from list. For foldername, you
 can choose to use the default foldername provided in
 the prompt or type in your preferred folder name.
 
-### Skip prompts
+### CLI skip prompts
 No prompt when --yes flag is used. It skips both
 install and git init, and uses esm template as default
 if no template is specified or if template entered is
@@ -96,7 +95,7 @@ not in the template collection. In the case of folder
 name, default foldername is used if no folder name is
 specified or when folder name already exists.
 
-## Documentation
+## Node-mongo documentation
 See the links for the official [node-mongo documentation](https://code-collabo.gitbook.io/node-mongo/) and [Code Collabo documentation](https://code-collabo.gitbook.io/doc/).
 
 ## Want to contribute?
