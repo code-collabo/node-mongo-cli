@@ -35,8 +35,10 @@ The [node-mongo-cli](https://code-collabo.gitbook.io/node-mongo/) is a command-l
 - Install dependencies and intialize git for the template bootstrapped or choose to skip them.
 - Folders are automatically created based on user entry in prompt or command-line.
 - Default folder name is provided and incremented if name already exists.
+
 ### Templates
-- Development environment already set up with @babel (for esm template only) and eslint.
+- Now uses MVC architecture pattern i.e. separated route, model, controller and service files. 
+- Development environment already set up with @babel (for esm template only), eslint and server watch.
 - Default connection setup type: MongoDB Atlas. But you get to choose if you want to use it or switch to Local mongoDB connection setup type. 
 
 ## CLI installation
@@ -95,7 +97,7 @@ not in the template collection. In the case of folder
 name, default foldername is used if no folder name is
 specified or when folder name already exists.
 
-## Node-mongo documentation
+## Documentation
 See the links for the official [node-mongo documentation](https://code-collabo.gitbook.io/node-mongo/) and [Code Collabo documentation](https://code-collabo.gitbook.io/doc/).
 
 ## Want to contribute?
