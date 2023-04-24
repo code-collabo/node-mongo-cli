@@ -7,12 +7,18 @@
 
 <!-- [![NPM Downloads](https://img.shields.io/npm/dy/@code-collabo/node-mongo-cli?color=blue)](https://www.npmjs.com/package/@code-collabo/node-mongo-cli) -->
 
+# 
+
 **Supported node versions:** node v12.x to v16.x
 
-**Operating Systems:** Mac OS and Windows OS
+# 
+
+**Operating Systems:** Mac, Windows and Linux
 
 #
+
 Parent repo: [code-collabo/node-mongo](https://github.com/code-collabo/node-mongo)
+
 #
 
 The [node-mongo-cli](https://code-collabo.gitbook.io/node-mongo/) is a command-line interface made with nodejs. It bootstraps any of these 3 boilerplate templates for your nodejs and/or mongoDB development:
