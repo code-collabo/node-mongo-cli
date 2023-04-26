@@ -22,9 +22,9 @@ Parent repo: [code-collabo/node-mongo](https://github.com/code-collabo/node-mong
 #
 
 The [node-mongo-cli](https://www.npmjs.com/package/@code-collabo/node-mongo-cli) is a command-line interface made with nodejs. It bootstraps any of the node-mongo API boilerplate templates for your nodejs and/or mongoDB development, depending on which one you prefer:
-- [Typescript template](https://github.com/code-collabo/node-mongo-api-boilerplate-templates/ts)
-- [ES module template](https://github.com/code-collabo/node-mongo-api-boilerplate-templates/esm)
-- [Commonjs template](https://github.com/code-collabo/node-mongo-api-boilerplate-templates/cjs)
+* [Typescript template](https://github.com/code-collabo/node-mongo-api-boilerplate-templates/tree/develop/ts)
+* [ES module template](https://github.com/code-collabo/node-mongo-api-boilerplate-templates/tree/develop/esm)
+* [Commonjs template](https://github.com/code-collabo/node-mongo-api-boilerplate-templates/tree/develop/cjs)
 
 ## Features
 
