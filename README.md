@@ -40,13 +40,13 @@ The [node-mongo-cli](https://www.npmjs.com/package/@code-collabo/node-mongo-cli)
 * Development environment already set up with @babel (for esm template only), eslint, and server watch.
 * The default connection setup type is MongoDB Atlas. But you get to choose if you want to use it or switch to the Local mongoDB connection setup type.
 
-## CLI installation
+### CLI installation
 Install CLI globally with this command:
 ````
 npm install -g @code-collabo/node-mongo-cli
 ````
 
-## CLI command
+### CLI command
 After installing globally, use the node-mongo command.
 ````
 node-mongo
@@ -62,7 +62,7 @@ node-mongo --help
 node-mongo <folder_name> <template>
 ````
 
-#### CLI usage example
+### CLI usage example
 
 Replace \<folder\_name> with your preferred folder name. Replace \<template> with any of these: ts, esm, or cjs. The example below will bootstrap the ts template i.e. the typescript template into a folder named test-folder.
 
