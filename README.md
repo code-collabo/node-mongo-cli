@@ -21,25 +21,24 @@ Parent repo: [code-collabo/node-mongo](https://github.com/code-collabo/node-mong
 
 #
 
-The [node-mongo-cli](https://www.npmjs.com/package/@code-collabo/node-mongo-cli) is a command-line interface made with nodejs. It bootstraps any of the node-mongo API boilerplate templates for your nodejs and/or mongoDB development, depending on which one you prefer:
-* [Typescript template](https://github.com/code-collabo/node-mongo-api-boilerplate-templates/tree/develop/ts)
-* [ES module template](https://github.com/code-collabo/node-mongo-api-boilerplate-templates/tree/develop/esm)
-* [Commonjs template](https://github.com/code-collabo/node-mongo-api-boilerplate-templates/tree/develop/cjs)
+The [node-mongo-cli](https://www.npmjs.com/package/@code-collabo/node-mongo-cli) is a command-line interface made with nodejs. It bootstraps any of the [node-mongo API boilerplate templates](https://github.com/code-collabo/node-mongo-api-boilerplate-templates) for your nodejs mongoDB development, depending on your preference.
 
-## Features
+### Features
 
 ![node-mongo](https://github.com/Ifycode/Ifycode/blob/main/code-collabo/node-mongo-cli.gif?raw=true)
 
-### CLI
-- CLI bootstraps the esm, cjs or ts templates for nodejs and/or mongoDB development.
-- Install dependencies and intialize git for the template bootstrapped or choose to skip them.
-- Folders are automatically created based on user entry in prompt or command-line.
-- Default folder name is provided and incremented if name already exists.
+#### CLI
 
-### API boilerplate templates
-- Now uses MVC architecture pattern i.e. separated route, model, controller and service files. 
-- Development environment already set up with @babel (for esm template only), eslint and server watch.
-- Default connection setup type: MongoDB Atlas. But you get to choose if you want to use it or switch to Local mongoDB connection setup type. 
+* CLI bootstraps the typescript, es module, or common js (a.k.a. ts, esm, cjs) templates for nodejs mongoDB development.
+* Install dependencies and initialize git for the template bootstrapped or choose to skip them.
+* Folders are automatically created based on user entry in the prompt or command line.
+* The default folder name is used and incremented if the folder name provided already exists.
+
+#### API boilerplate templates
+
+* API boilerplate templates now use the MVC architecture pattern i.e. separated route, model, controller, and service files.
+* Development environment already set up with @babel (for esm template only), eslint, and server watch.
+* The default connection setup type is MongoDB Atlas. But you get to choose if you want to use it or switch to the Local mongoDB connection setup type.
 
 ## CLI installation
 Install CLI globally with this command:
@@ -63,9 +62,9 @@ node-mongo --help
 node-mongo <folder_name> <template>
 ````
 
-### CLI usage example
+#### CLI usage example
 
-Replace \<folder\_name> with your preferred folder name. Replace \<template> with any of these: esm, cjs or ts. The example below will bootstrap the ts template i.e. the typescript template into a folder named test-folder.
+Replace \<folder\_name> with your preferred folder name. Replace \<template> with any of these: ts, esm, or cjs. The example below will bootstrap the ts template i.e. the typescript template into a folder named test-folder.
 
 ```
 node-mongo test-folder ts
