@@ -4,6 +4,8 @@
   ],
   "imageSize": 100,
   "commit": false,
+  "contributorsPerLine": 6,
+  "contributorsSortAlphabetically": true,
   "contributors": [
     {
       "login": "Ifycode",
@@ -100,7 +102,6 @@
       ]
     }
   ],
-  "contributorsPerLine": 7,
   "projectName": "node-mongo-cli",
   "projectOwner": "code-collabo",
   "repoType": "github",
