@@ -17,7 +17,10 @@
 
 #
 
-Parent repo: [code-collabo/node-mongo](https://github.com/code-collabo/node-mongo)
+**Parent repo:** [code-collabo/node-mongo](https://github.com/code-collabo/node-mongo)
+
+#
+**Latest info:** The latest version of CLI generates API boilerplate templates v1.0.0
 
 #
 
