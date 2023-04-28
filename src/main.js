@@ -74,10 +74,9 @@ export let downloadTemplateKit = async (options) => {
     newUrl = new URL(currentFileUrl).pathname.substring(
       new URL(currentFileUrl).pathname.indexOf("/") + 1
     );
-
   const templateDir = path.resolve(newUrl, '../../templates', options.template.toLowerCase());
 
-  options.templateDirectory = templateDir;
+   options.templateDirectory = templateDir;
 
   try {
     await access(templateDir, fs.constants.R_OK).then(_ => {
@@ -86,7 +85,7 @@ export let downloadTemplateKit = async (options) => {
         cwd: options.targetDirectory
       }).stdout.pipe(process.stdout);
     })
-
+    
   }catch (err) {
     console.error(`\n%s Template name or directory path is (probably) incorrect`, chalk.red.bold('ERROR'));
     process.exit(1);
