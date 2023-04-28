@@ -100,7 +100,7 @@ name, default foldername is used if no folder name is
 specified or when folder name already exists.
 
 ## Documentation
-See the links to the official documentation of this project and community building it below:
+See the links to the official documentation of the node-mongo project and community building it below:
 - [Node Mongo documentation](https://code-collabo.gitbook.io/node-mongo-v2.0.0)
 - [Code Collabo documentation](https://code-collabo.gitbook.io/doc/)
 
