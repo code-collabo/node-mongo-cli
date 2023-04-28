@@ -81,10 +81,12 @@ export let downloadTemplateKit = async (options) => {
       new URL(currentFileUrl).pathname.indexOf("/") + 1
     );
 
+
   const templateDir = path.resolve(newUrl, '../../templates', options.template.toLowerCase());
 
   options.templateDirectory = templateDir;
 
+  
   try {
     await access(templateDir, fs.constants.R_OK).then(_ => {
       /* rename name option in package.json same as project/folder name */
