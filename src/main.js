@@ -17,7 +17,7 @@ let createGitIgnoreFile = async (options) => {
 }
 
 let createEnvFiles = async (options) => {
-  const content = 'MONGODB_URI=\nMONGODB_ATLAS_URI=';
+  const content = 'PORT=8080\nMONGODB_URI=\nMONGODB_ATLAS_URI= \n\nCLIENT_APP_PORT\nCLIENT_APP_URL';
   fs.writeFileSync(path.join(options.targetDirectory, '.env'), content);
   fs.writeFileSync(path.join(options.targetDirectory, '.env.example'), content);
   return;
