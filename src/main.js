@@ -17,7 +17,7 @@ let createGitIgnoreFile = async (options) => {
 }
 
 let createEnvFiles = async (options) => {
-  const content = 'MONGODB_URI=\nMONGODB_ATLAS_URI=';
+  const content = 'PORT=8080 MONGODB_LOCAL_URI= MONGODB_ATLAS_URI= CLIENT_APP_PORT= CLIENT_APP_URL=';
   fs.writeFileSync(path.join(options.targetDirectory, '.env'), content);
   fs.writeFileSync(path.join(options.targetDirectory, '.env.example'), content);
   return;
@@ -76,7 +76,7 @@ export let downloadTemplateKit = async (options) => {
     );
 
   const templateDir = path.resolve(newUrl, '../../templates', options.template.toLowerCase());
-  
+
   options.templateDirectory = templateDir;
 
   try {
@@ -86,7 +86,7 @@ export let downloadTemplateKit = async (options) => {
         cwd: options.targetDirectory
       }).stdout.pipe(process.stdout);
     })
-    
+
   }catch (err) {
     console.error(`\n%s Template name or directory path is (probably) incorrect`, chalk.red.bold('ERROR'));
     process.exit(1);
