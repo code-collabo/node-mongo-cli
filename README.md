@@ -7,11 +7,17 @@
 
 <!-- [![NPM Downloads](https://img.shields.io/npm/dy/@code-collabo/node-mongo-cli?color=blue)](https://www.npmjs.com/package/@code-collabo/node-mongo-cli) -->
 
-# 
+#
 
-**Supported node versions:** node v12.x to v18.x
+> **Note** 
+> 
+> node-mongo projects require you to have Node.js or Node Version Manager (NVM) installed on your computer 
 
-# 
+#
+
+**Supported Node.js versions:** Node.js v12.x to v18.x
+
+#
 
 **Operating Systems:** Mac, Windows, and Linux OS
 
@@ -20,7 +26,9 @@
 **Parent repo:** [code-collabo/node-mongo](https://github.com/code-collabo/node-mongo)
 
 #
-**Latest info:** The latest version of CLI generates API boilerplate templates v1.0.0
+> **Note** 
+> 
+> The latest version of CLI generates API boilerplate templates v1.0.0
 
 #
 
