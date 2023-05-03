@@ -81,8 +81,8 @@ let otherOptions = async (options) => {
     await downloadTemplateKit(options);
   } catch (err) {
     console.log('Error | ', err);
-    console.log('That they can report the error they encountered at https://github.com/code-collabo/node-mongo-cli/issues/new?assignees=&labels=bug&template=cli-user-error-report.md');
-    console.log('That there is a manual download option for the API boilerplate templates at: https://github.com/code-collabo/node-mongo-api-boilerplate-templates');
+    console.log('You can report the error they encountered at https://github.com/code-collabo/node-mongo-cli/issues/new?assignees=&labels=bug&template=cli-user-error-report.md');
+    console.log('There is a manual download option for the API boilerplate templates at: https://github.com/code-collabo/node-mongo-api-boilerplate-templates');
   }
 }
 
