@@ -98,6 +98,7 @@ export let cli = async (args) => {
       await otherOptions(options);
     }
   } catch (err) {
+    console.log('');
     console.log(' You can report the error you encountered at https://github.com/code-collabo/node-mongo-cli/issues/new?assignees=&labels=bug&template=cli-user-error-report.md');
     console.log(' There is a manual download option for the API boilerplate templates at: https://github.com/code-collabo/node-mongo-api-boilerplate-templates');
   } 
