@@ -42,7 +42,7 @@
     "javascript"
   ],
   "author": "Obiagba Mary",
-  "license": "AGPL3.0",
+  "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/code-collabo/node-mongo-cli/issues"
   },
