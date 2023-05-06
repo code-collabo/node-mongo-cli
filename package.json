@@ -1,6 +1,6 @@
 {
   "name": "@code-collabo/node-mongo-cli",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "node-mongo-cli Command Line Interface made with nodejs to bootstrap any of 3 boilerplate templates for your nodejs and/or mongoDB development.",
   "main": "src/cli.js",
   "bin": {
@@ -41,8 +41,8 @@
     "cjs",
     "javascript"
   ],
-  "author": "Obiagba Mary | Code Collabo Community",
-  "license": "ISC",
+  "author": "Obiagba Mary",
+  "license": "AGPL3.0",
   "bugs": {
     "url": "https://github.com/code-collabo/node-mongo-cli/issues"
   },
