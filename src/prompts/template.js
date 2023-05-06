@@ -20,7 +20,7 @@ let skipPromptsModified = (options, defaultFolderName, notAmongTemplateCollectio
 export const templateMissingOptionPrompt = async (options, folderNameAnswers, defaultFolderName) => {
   const defaultTemplate = 'esm';
   const templateQuestions = [];
-  const templateCollection = [defaultTemplate, 'cjs'];
+  const templateCollection = [defaultTemplate, 'cjs', 'ts'];
 
   const equalToAtLeastOneTemplate = templateCollection.some(tc => {
     return tc === options.template;
