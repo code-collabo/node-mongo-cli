@@ -49,7 +49,7 @@ The [node-mongo-cli](https://www.npmjs.com/package/@code-collabo/node-mongo-cli)
 
 * API boilerplate templates now use the MVC architecture pattern i.e. separated route, model, controller, and service files.
 * Development environment already set up with @babel (for esm template only), eslint, and server watch.
-* The default connection setup type is MongoDB Atlas. You get to choose if you want to use Atlas or switch to the Local mongoDB connection setup type, and you also get to save your preferred connection type for when next you run the automated dev server.
+* The default connection setup type is MongoDB Atlas. You get to choose if you want to use Atlas or switch to the Local mongoDB connection setup type, and you also get to save your preferred connection setup type for when next you run the automated development server.
 * Improved user experience with the newly added walk-through prompts in the terminal: quick to setup, easy to use, with automated and improved user support.
 
 ### CLI installation
