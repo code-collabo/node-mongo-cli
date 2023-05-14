@@ -9,13 +9,13 @@
 
 #
 
-> **Note** 
-> 
-> node-mongo projects require you to have Node.js or Node Version Manager (NVM) installed on your computer 
+> **Note**
+>
+> node-mongo projects require you to have Node.js or Node Version Manager (NVM) installed on your computer
 
 #
 
-**Supported Node.js versions:** Node.js v12.x to v18.x
+**Supported Node.js versions:** Node.js v15.x to v20.x
 
 #
 
@@ -26,8 +26,8 @@
 **Parent repo:** [code-collabo/node-mongo](https://github.com/code-collabo/node-mongo)
 
 #
-> **Note** 
-> 
+> **Note**
+>
 > The latest version of CLI generates API boilerplate templates v1.0.0
 
 #
@@ -79,7 +79,7 @@ node-mongo test-folder ts
 
 ### API boilerplate template and automated development server
 
-See the [API boilerplate templates documentation](https://code-collabo.gitbook.io/node-mongo-v2.0.0/api-boilerplate-templates) for detailed steps to setup your generated API boilerplate template, run the automated development server, and build your own mongoDB backend application with it. 
+See the [API boilerplate templates documentation](https://code-collabo.gitbook.io/node-mongo-v2.0.0/api-boilerplate-templates) for detailed steps to setup your generated API boilerplate template, run the automated development server, and build your own mongoDB backend application with it.
 
 ### Show CLI help
 ````
