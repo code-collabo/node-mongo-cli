@@ -6,6 +6,7 @@ import { promisify } from 'util';
 import execa from 'execa';
 import Listr from 'listr';
 import { spawn } from 'child_process';
+import { userSupport } from './help';
 
 const access = promisify(fs.access);
 const copy = promisify(ncp);
@@ -94,6 +95,7 @@ export let downloadTemplateKit = async (options) => {
 
   }catch (err) {
     console.error(`\n%s Template name or directory path is (probably) incorrect`, chalk.red.bold('ERROR'));
+    userSupport();
     process.exit(1);
   }
 
@@ -121,8 +123,6 @@ export let downloadTemplateKit = async (options) => {
   ]);
 
   await listrTasks.run();
-
-  //await npmInstall(options);
 
   return true;
 }
