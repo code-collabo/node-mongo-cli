@@ -64,11 +64,6 @@ After installing globally, use the node-mongo command.
 node-mongo
 ````
 
-### Show CLI help
-````
-node-mongo --help
-````
-
 ### CLI usage
 ````
 node-mongo <folder_name> <template>
@@ -81,6 +76,35 @@ Replace \<folder\_name> with your preferred folder name. Replace \<template> wit
 ```
 node-mongo test-folder ts
 ```
+
+### API boilerplate template and automated development server
+
+Change directory (cd) into the generated test-folder (if you used another folder name, cd into that folder instead):
+
+````
+cd test-folder
+````
+
+Install dependencies:
+
+````
+npm install
+````
+
+Start the automated development server:
+
+````
+npm run dev
+````
+
+
+
+### Show CLI help
+````
+node-mongo --help
+````
+
+
 
 ### CLI flags
 ````
