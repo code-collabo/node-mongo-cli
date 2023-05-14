@@ -79,25 +79,7 @@ node-mongo test-folder ts
 
 ### API boilerplate template and automated development server
 
-Change directory (cd) into the generated test-folder (if you used another folder name, cd into that folder instead):
-
-````
-cd test-folder
-````
-
-Install dependencies:
-
-````
-npm install
-````
-
-Start the automated development server:
-
-````
-npm run dev
-````
-
-
+See the [API boilerplate templates documentation](https://code-collabo.gitbook.io/node-mongo-v2.0.0/api-boilerplate-templates) for detailed steps to setup your generated API boilerplate template, run the automated development server, and build your own mongoDB backend application with it. 
 
 ### Show CLI help
 ````
