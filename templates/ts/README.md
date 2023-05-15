@@ -1,4 +1,4 @@
-# @code-collabo's node-mongo API boilerplate template (es module)
+# @code-collabo's node-mongo API boilerplate template (typescript)
 
 This project (@code-collabo/node-mongo-api-boilerplate-templates version 1.0.0) was generated with [@code-collabo/node-mongo-cli version 2.0.0](https://code-collabo.gitbook.io/node-mongo/).
 

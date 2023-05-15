@@ -1,15 +1,11 @@
 const express = require('express');
+const dotenv = require('dotenv');
 const morgan = require('morgan');
 const cors = require('cors');
-let appController = require('./api/controllers/appController');
-let demoController = require('./api/controllers/demoController');
+let appRouter = require('./api/routes/app.route');
+let demoRouter = require('./api/routes/demo.route');
 
-//===== Installed mongoDB's db =======
-const mongooseModuleExport = require('./db'); //eslint-disable-line no-unused-vars
-
-//===== MongoDB ATLAS db =======
-//const mongooseModuleExportAtlas = require('./atlas/db'); //eslint-disable-line no-unused-vars
-
+dotenv.config();
 
 const app = express();
 
@@ -18,18 +14,20 @@ app.use(express.urlencoded({
   extended: false
 }));
 app.use(express.json());
-app.use(cors({ origin: 'http://localhost:4200' }));
+app.use(cors({ origin: [`http://localhost:${process.env.CLIENT_APP_PORT}`, `${process.env.CLIENT_APP_URL}`] }));
 
-app.use('/', appController);
-app.use('/demo', demoController);
+//====== Use Routers =======
+app.use('/', appRouter);
+app.use('/demo', demoRouter);
+//==========================
 
-app.use((req, res, next) => {
+app.use(function (req, res, next) {
   const error = new Error('Route not found!');
   error.status = 404;
   next(error);
 });
 
-app.use((error, req, res, next) => {//eslint-disable-line no-unused-vars
+app.use(function (error, req, res) {
   res.status(error.status || 500);
   res.json({
     error: {
@@ -38,4 +36,4 @@ app.use((error, req, res, next) => {//eslint-disable-line no-unused-vars
   });
 });
 
-module.exports = app;
+module.exports = { app };
