@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/code-collabo/node-mongo-cli.git"
+    "url": "https://github.com/code-collabo/node-mongo-cli.git"
   },
   "keywords": [
     "cli",
@@ -40,7 +40,7 @@
   "author": "Obiagba Mary",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/code-collabo/node-mongo-cli/issues"
+    "url": "https://github.com/code-collabo/node-mongo/issues"
   },
   "homepage": "https://github.com/code-collabo/node-mongo-cli#readme",
   "dependencies": {
