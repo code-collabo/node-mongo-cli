@@ -94,7 +94,7 @@ node-mongo --help
 -g, --git           Initialize git repo
 -s, --skip-install  Skip installing dependencies
 -x, --skip-git      Skip initializing git
--y, --yes           See note on --yes flag below
+-y, --yes           No prompt: See note on --yes flag below
 ````
 
 ### CLI prompts
@@ -105,12 +105,12 @@ can choose to use the default foldername provided in
 the prompt or type in your preferred folder name.
 
 ### CLI skip prompts
-No prompt when --yes flag is used. It skips both
-install and git init, and uses esm template as default
-if no template is specified or if template entered is
-not in the template collection. In the case of folder
-name, default foldername is used if no folder name is
-specified or when folder name already exists.
+No prompt when --yes flag is used. It skips both install
+and git init. The CLI will generate the (default) ts template
+if no template is specified or if the template entered is not
+in the template collection. In the case of folder name, default
+foldername is used if no folder name is specified or when the
+folder name used already exists.
 
 ## Documentation
 See the links to the official documentation of the node-mongo project and community building it below:
@@ -126,8 +126,8 @@ Appreciation to [@dkundel](https://github.com/dkundel), [@academind](https://git
     <td align="center"><a href="https://academind.com"><img src="https://avatars.githubusercontent.com/u/28806202?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Academind</b></sub></a><br /><a href="#mentoring-academind" title="Mentoring">🧑‍🏫</a></td>
     <td align="center"><a href="http://codaffection.com/"><img src="https://avatars.githubusercontent.com/u/32505654?v=4?s=100" width="100px;" alt=""/><br /><sub><b>CodAffection</b></sub></a><br /><a href="#mentoring-CodAffection" title="Mentoring">🧑‍🏫</a></td>
     <td align="center"><a href="http://www.bitnative.com"><img src="https://avatars.githubusercontent.com/u/1688997?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cory House</b></sub></a><br /><a href="#mentoring-coryhouse" title="Mentoring">🧑‍🏫</a></td>
-    <td align="center"><a href="https://github.com/IsraelObiagba"><img src="https://avatars.githubusercontent.com/u/14045379?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Israel Obiagba</b></sub></a><br /><a href="#mentoring-IsraelObiagba" title="Mentoring">🧑‍🏫</a></td>
     <td align="center"><a href="https://github.com/jiobiagba"><img src="https://avatars.githubusercontent.com/u/42423547?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joseph Obiagba</b></sub></a><br /><a href="#mentoring-jiobiagba" title="Mentoring">🧑‍🏫</a></td>
+    <td align="center"><a href="https://github.com/IsraelObiagba"><img src="https://avatars.githubusercontent.com/u/14045379?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Israel Obiagba</b></sub></a><br /><a href="#mentoring-IsraelObiagba" title="Mentoring">🧑‍🏫</a></td>
   </tr>
 </table>
 
