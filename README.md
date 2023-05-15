@@ -86,8 +86,6 @@ See the [API boilerplate templates documentation](https://code-collabo.gitbook.i
 node-mongo --help
 ````
 
-
-
 ### CLI flags
 ````
 -h, --help          Show help

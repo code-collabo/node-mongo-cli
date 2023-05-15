@@ -1,6 +1,6 @@
 # @code-collabo's node-mongo API boilerplate template (es module)
 
-This project (@code-collabo/node-mongo-api-boilerplate-templates version 1.0.0) was generated with [@code-collabo/node-mongo-cli version 2.0.0](https://code-collabo.gitbook.io/node-mongo/).
+This project (@code-collabo/node-mongo-api-boilerplate-templates version 1.0.0) was generated with [@code-collabo/node-mongo-cli version 2.0.0](https://code-collabo.gitbook.io/node-mongo-v2.0.0).
 
 ## Connection option 1: Running the development server (mongoDB Atlas)
 #### Step 1
