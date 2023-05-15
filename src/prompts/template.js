@@ -18,11 +18,32 @@ let skipPromptsModified = (options, defaultFolderName, notAmongTemplateCollectio
 }
 
 export const templateMissingOptionPrompt = async (options, folderNameAnswers, defaultFolderName) => {
-  const defaultTemplate = 'esm';
   const templateQuestions = [];
-  const templateCollection = [defaultTemplate, 'cjs'];
 
-  const equalToAtLeastOneTemplate = templateCollection.some(tc => {
+  const apiTemplate = {
+    ts: {
+      name: 'typescript API template',
+      abbrev: 'ts',
+    },
+    esm: {
+      name: 'es Module API template',
+      abbrev: 'esm',
+    },
+    cjs: {
+      name: 'commonjs module API template',
+      abbrev: 'cjs',
+    }
+  }
+
+  const defaultTemplate = `${apiTemplate.ts.name} (${apiTemplate.ts.abbrev})`;
+  const esmTemplate = `${apiTemplate.esm.name} (${apiTemplate.esm.abbrev})`;
+  const cjsTemplate = `${apiTemplate.cjs.name} (${apiTemplate.cjs.abbrev})`;
+
+  const templateCollection = [defaultTemplate, esmTemplate, cjsTemplate];
+
+  // Use the abbrev template names for .some operation (for when template name is added through command line)
+  const abbrevTemplateCollection = [apiTemplate.ts.abbrev, apiTemplate.esm.abbrev, apiTemplate.cjs.abbrev];
+  const equalToAtLeastOneTemplate = abbrevTemplateCollection.some(tc => {
     return tc === options.template;
   });
 
@@ -34,8 +55,8 @@ export const templateMissingOptionPrompt = async (options, folderNameAnswers, de
     templateQuestions.push({
       type: 'list',
       name: 'template',
-      message: 'Please choose which node-mongo template kit to use',
-      choices: templateCollection,
+      message: 'Please choose which node-mongo API boilerplate template to use',
+      choices: templateCollection, //uses full names of templates in prompt for better user experience
       default: defaultTemplate
     });
   }
@@ -49,6 +70,14 @@ export const templateMissingOptionPrompt = async (options, folderNameAnswers, de
   }
 
   if (!options.skipPrompts) templateAnswers = await inquirer.prompt(templateQuestions);
+
+  // Transform template name/answers back to abbrev name for cli to process it accordingly
+  const transformTemplateName = (templateOption) => {
+    if (templateOption === defaultTemplate) templateAnswers.template = apiTemplate.ts.abbrev;
+    if (templateOption === esmTemplate) templateAnswers.template = apiTemplate.esm.abbrev;
+    if (templateOption === cjsTemplate) templateAnswers.template = apiTemplate.cjs.abbrev;
+  }
+  transformTemplateName(templateAnswers.template);
 
   if (notAmongTemplateCollection) {
     options = {

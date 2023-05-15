@@ -6,6 +6,7 @@ import { promisify } from 'util';
 import execa from 'execa';
 import Listr from 'listr';
 import { spawn } from 'child_process';
+import { userSupport } from './help';
 
 const access = promisify(fs.access);
 const copy = promisify(ncp);
@@ -17,13 +18,30 @@ let createGitIgnoreFile = async (options) => {
 }
 
 let createEnvFiles = async (options) => {
-  const content = '\nPORT=8080\nMONGODB_LOCAL_URI=\nMONGODB_ATLAS_URI=\n\nCLIENT_APP_PORT=\nCLIENT_APP_URL=';
+  let atlasPort;
+  let localPort;
+  const assignPort = () => {
+    if (options.template === 'ts') {
+      atlasPort = 8070;
+      localPort = 8071;
+    }
+    if (options.template === 'esm') {
+      atlasPort = 8080;
+      localPort = 8081;
+    }
+    if (options.template === 'cjs') {
+      atlasPort = 8090;
+      localPort = 8091;
+    }
+  }
+  assignPort();
+  const content = `\nPORT_ATLAS=${atlasPort}\nMONGODB_ATLAS_URI=\n\nPORT_LOCAL=${localPort}\nMONGODB_LOCAL_URI=\n\nCLIENT_APP_PORT=\nCLIENT_APP_URL=\n`;
   fs.writeFileSync(path.join(options.targetDirectory, '.env.example'), content);
   return;
 }
 
 let createLisenceFiles = async (options) => {
-  const content = 'ISC License (ISC)\n\nCopyright 2022-2023 Mary Obiagba\n\nPermission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.';
+  const content = 'ISC License (ISC)\n\nCopyright 2022-2023 Author Name\n\nPermission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.';
   fs.writeFileSync(path.join(options.targetDirectory, 'LICENSE'), content);
   return;
 }
@@ -94,6 +112,7 @@ export let downloadTemplateKit = async (options) => {
 
   }catch (err) {
     console.error(`\n%s Template name or directory path is (probably) incorrect`, chalk.red.bold('ERROR'));
+    userSupport();
     process.exit(1);
   }
 
@@ -121,8 +140,6 @@ export let downloadTemplateKit = async (options) => {
   ]);
 
   await listrTasks.run();
-
-  //await npmInstall(options);
 
   return true;
 }

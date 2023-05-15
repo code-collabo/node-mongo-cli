@@ -1,7 +1,7 @@
 import arg from 'arg';
-import { help } from './help';
+import chalk from 'chalk';
 import { version } from './version';
-import { notRecognised } from './help';
+import { help, notRecognised } from './help';
 import { folderNameMissingOptionPrompt } from './prompts/foldername';
 import { templateMissingOptionPrompt } from './prompts/template';
 import { downloadTemplateKit } from './main';
@@ -37,7 +37,7 @@ let parseArgumentsIntoOptions = (rawArgs) => {
       '-y': '--yes',
       '-i': '--install',
       '-s': '--skip-install',
-      '--help': arg.flag(helpHandler),
+      '--help': arg.flag(helpHandler), //eslint-disable-line no-dupe-keys
       '-h': '--help',
       '--version': arg.flag(versionHelper),
       '-v': '--version'
@@ -56,7 +56,7 @@ let parseArgumentsIntoOptions = (rawArgs) => {
       skipInstall: args['--skip-install'] || false,
       help: args['--help'] || false,
       version: args['--version'] || false
-    }  
+    }
   } catch (err) {
     notRecognised();
   }
@@ -80,7 +80,7 @@ let otherOptions = async (options) => {
   try {
     await downloadTemplateKit(options);
   } catch (err) {
-    console.log('Error | ', err);
+    console.log(chalk.red.bold('ERROR'), err);
   }
 }
 
@@ -97,5 +97,5 @@ export let cli = async (args) => {
     }
   } catch (err) {
     console.log('');
-  } 
+  }
 }

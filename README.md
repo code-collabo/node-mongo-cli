@@ -9,13 +9,13 @@
 
 #
 
-> **Note** 
-> 
-> node-mongo projects require you to have Node.js or Node Version Manager (NVM) installed on your computer 
+> **Note**
+>
+> node-mongo projects require you to have Node.js or Node Version Manager (NVM) installed on your computer
 
 #
 
-**Supported Node.js versions:** Node.js v12.x to v18.x
+**Supported Node.js versions:** Node.js v16.x to v20.x
 
 #
 
@@ -26,8 +26,8 @@
 **Parent repo:** [code-collabo/node-mongo](https://github.com/code-collabo/node-mongo)
 
 #
-> **Note** 
-> 
+> **Note**
+>
 > The latest version of CLI generates API boilerplate templates v1.0.0
 
 #
@@ -49,7 +49,7 @@ The [node-mongo-cli](https://www.npmjs.com/package/@code-collabo/node-mongo-cli)
 
 * API boilerplate templates now use the MVC architecture pattern i.e. separated route, model, controller, and service files.
 * Development environment already set up with @babel (for esm template only), eslint, and server watch.
-* The default connection setup type is MongoDB Atlas. But you get to choose if you want to use it or switch to the Local mongoDB connection setup type.
+* The default connection setup type is MongoDB Atlas. You get to choose if you want to use Atlas or switch to the Local mongoDB connection setup type, and you also get to save your preferred connection setup type for when next you run the automated development server.
 * Improved user experience with the newly added walk-through prompts in the terminal: quick to setup, easy to use, with automated and improved user support.
 
 ### CLI installation
@@ -64,11 +64,6 @@ After installing globally, use the node-mongo command.
 node-mongo
 ````
 
-### Show CLI help
-````
-node-mongo --help
-````
-
 ### CLI usage
 ````
 node-mongo <folder_name> <template>
@@ -81,6 +76,15 @@ Replace \<folder\_name> with your preferred folder name. Replace \<template> wit
 ```
 node-mongo test-folder ts
 ```
+
+### API boilerplate template and automated development server
+
+See the [API boilerplate templates documentation](https://code-collabo.gitbook.io/node-mongo-v2.0.0/api-boilerplate-templates) for detailed steps to setup your generated API boilerplate template, run the automated development server, and build your own mongoDB backend application with it.
+
+### Show CLI help
+````
+node-mongo --help
+````
 
 ### CLI flags
 ````
@@ -111,7 +115,7 @@ specified or when folder name already exists.
 ## Documentation
 See the links to the official documentation of the node-mongo project and community building it below:
 - [Node Mongo documentation](https://code-collabo.gitbook.io/node-mongo-v2.0.0)
-- [Code Collabo documentation](https://code-collabo.gitbook.io/doc/)
+- [Code Collabo documentation](https://code-collabo.gitbook.io/community-doc-v1.0.0)
 
 ## Appreciation
 Appreciation to [@dkundel](https://github.com/dkundel), [@academind](https://github.com/academind), [@CodAffection](https://github.com/CodAffection), [@coryhouse](https://github.com/coryhouse) for the awesome helpful course resources they create, and to [@jiobiagba](https://github.com/jiobiagba) and [@IsraelObiagba](https://github.com/IsraelObiagba) for their occasional but mighty contributions.

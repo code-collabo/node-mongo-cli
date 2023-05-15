@@ -8,6 +8,7 @@
   ],
   "parserOptions": {
     "ecmaVersion": 7,
+    "requireConfigFile": false,
     "sourceType": "module"
   },
   "env": {
