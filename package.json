@@ -1,6 +1,6 @@
 {
   "name": "@code-collabo/node-mongo-cli",
-  "version": "2.1.0",
+  "version": "2.3.0",
   "description": "node-mongo-cli Command Line Interface made with nodejs to bootstrap any of 3 boilerplate templates for your nodejs and/or mongoDB development.",
   "main": "src/cli.js",
   "bin": {
