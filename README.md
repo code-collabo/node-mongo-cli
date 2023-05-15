@@ -15,7 +15,7 @@
 
 #
 
-**Supported Node.js versions:** Node.js v15.x to v20.x
+**Supported Node.js versions:** Node.js v16.x to v20.x
 
 #
 
@@ -115,7 +115,7 @@ specified or when folder name already exists.
 ## Documentation
 See the links to the official documentation of the node-mongo project and community building it below:
 - [Node Mongo documentation](https://code-collabo.gitbook.io/node-mongo-v2.0.0)
-- [Code Collabo documentation](https://code-collabo.gitbook.io/doc/)
+- [Code Collabo documentation](https://code-collabo.gitbook.io/community-doc-v1.0.0)
 
 ## Appreciation
 Appreciation to [@dkundel](https://github.com/dkundel), [@academind](https://github.com/academind), [@CodAffection](https://github.com/CodAffection), [@coryhouse](https://github.com/coryhouse) for the awesome helpful course resources they create, and to [@jiobiagba](https://github.com/jiobiagba) and [@IsraelObiagba](https://github.com/IsraelObiagba) for their occasional but mighty contributions.
