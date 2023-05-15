@@ -7,10 +7,6 @@
     "@code-collabo/node-mongo-cli": "bin/create-node-mongo-project",
     "node-mongo": "bin/create-node-mongo-project"
   },
-  "publicConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "public"
-  },
   "scripts": {
     "prestart": "node -r esm src/customize/startMessage.js",
     "start": "npm-run-all --parallel lint:watch",
