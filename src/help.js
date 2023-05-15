@@ -11,13 +11,13 @@ node-mongo
 
 Arguments:
 <folder_name>   Replace this with your folder name
-<template>      Available templates: esm, cjs (and ts coming soon)
+<template>      Available templates: ts, esm and cjs
 
 Usage example:
-node-mongo test-folder cjs
+node-mongo test-folder ts
 
-The above example bootstraps the cjs template i.e.
-the common js template into a folder named test-folder.
+The above example bootstraps the ts template i.e.
+the typescript template into a folder named test-folder.
 
 Prompts:
 If you do not specify one or both arguments above,
@@ -33,14 +33,14 @@ Flags:
 -g, --git           Initialize git repo
 -s, --skip-install  Skip installing dependencies
 -x, --skip-git      Skip initializing git
--y, --yes           See note on --yes flag below
+-y, --yes           No prompt: see note on --yes flag below
 
-No prompt when --yes flag is used. It skips both
-install and git init, and uses esm template as default
-if no template is specified or if template entered is
-not in the template collection. In the case of folder
-name, default foldername is used if no folder name is
-specified or when folder name already exists.
+No prompt when --yes flag is used. It skips both install
+and git init. The CLI will generate the (default) ts template
+if no template is specified or if the template entered is not
+in the template collection. In the case of folder name, default
+foldername is used if no folder name is specified or when the
+folder name used already exists.
 `
 );
 }
