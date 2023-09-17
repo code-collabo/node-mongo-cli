@@ -23,12 +23,17 @@ Create a new backend API application:
 node-mongo test-folder ts
 ````
 
-change directory into generated `test-folder` and run:
+Change directory into generated the `test-folder` and run:
 
 ````
 npm run dev:atlas
 ````
 
+Or run:
+
+````
+npm run dev:local
+````
 #
 
 Find a more comprehensive usage guide in the [node-mongo user docs](https://code-collabo.gitbook.io/node-mongo-user/node-mongo-user-docs/readme)
