@@ -23,17 +23,18 @@ Create a new backend API application:
 node-mongo test-folder ts
 ````
 
-Change directory into generated the `test-folder` and run:
+Change directory into generated the `test-folder`, and install the dependencies:
 
 ````
-npm run dev:atlas
+npm install
 ````
 
-Or run:
+Start the automated development server and choose your preferred connection setup type (MongoDB ATLAS or Local):
 
 ````
-npm run dev:local
+npm run dev
 ````
+
 #
 
 Find a more comprehensive usage guide in the [node-mongo user docs](https://code-collabo.gitbook.io/node-mongo-user/node-mongo-user-docs/readme)
