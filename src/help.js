@@ -59,7 +59,10 @@ console.log(
 `
 Flag(s) not recognised. Use any of the help command below for more info:
 
+Help command:
 node-mongo --help
+
+Help command (for shorter command alternative):
 nmgo --help`
 );
 }
