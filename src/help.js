@@ -6,8 +6,14 @@ console.log(
 Usage:
 node-mongo <folder_name> <template>
 
+Usage (for shorter command alternative):
+nmgo <folder_name> <template>
+
 Command:
 node-mongo
+
+Command (shorter command alternative):
+nmgo 
 
 Arguments:
 <folder_name>   Replace this with your folder name
@@ -15,6 +21,9 @@ Arguments:
 
 Usage example:
 node-mongo test-folder ts
+
+Usage example (for shorter command alternative):
+nmgo test-folder ts
 
 The above example bootstraps the ts template i.e.
 the typescript template into a folder named test-folder.
@@ -48,9 +57,10 @@ folder name used already exists.
 export const notRecognised = () => {
 console.log(
 `
-Flag(s) not recognised. Use the help command below for more info:
+Flag(s) not recognised. Use any of the help command below for more info:
 
-node-mongo --help`
+node-mongo --help
+nmgo --help`
 );
 }
 
