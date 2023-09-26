@@ -16,7 +16,8 @@
     "test": "npm-run-all --parallel test-message dev-test",
     "dev-test": "nodemon --exec babel-node spec/run.js",
     "CI-test": "babel-node spec/run.js",
-    "test-message": "node -r esm src/customize/testMessage"
+    "test-message": "node -r esm src/customize/testMessage",
+    "cleanup": "node -r esm dev/cleanup.js"
   },
   "repository": {
     "type": "git",
