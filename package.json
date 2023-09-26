@@ -5,7 +5,8 @@
   "main": "src/cli.js",
   "bin": {
     "@code-collabo/node-mongo-cli": "bin/create-node-mongo-project",
-    "node-mongo": "bin/create-node-mongo-project"
+    "node-mongo": "bin/create-node-mongo-project",
+    "nmgo": "bin/create-node-mongo-project"
   },
   "scripts": {
     "prestart": "node -r esm src/customize/startMessage.js",
@@ -15,7 +16,8 @@
     "test": "npm-run-all --parallel test-message dev-test",
     "dev-test": "nodemon --exec babel-node spec/run.js",
     "CI-test": "babel-node spec/run.js",
-    "test-message": "node -r esm src/customize/testMessage"
+    "test-message": "node -r esm src/customize/testMessage",
+    "cleanup": "node -r esm dev/cleanup.js"
   },
   "repository": {
     "type": "git",
