@@ -109,6 +109,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Festusali",
+      "name": "Festus Ali",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42407804?v=4",
+      "profile": "https://festusali.com/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "projectName": "node-mongo-cli",
@@ -116,5 +125,6 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true,
-  "commitConvention": "angular"
+  "commitConvention": "angular",
+  "commitType": "docs"
 }
