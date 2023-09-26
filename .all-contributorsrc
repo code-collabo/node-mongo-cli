@@ -118,6 +118,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "oyenuga17",
+      "name": "oyenuga17",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64274826?v=4",
+      "profile": "https://github.com/oyenuga17",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "projectName": "node-mongo-cli",
