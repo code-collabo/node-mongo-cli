@@ -5,8 +5,8 @@
   "main": "src/server.[atlas/local].ts",
   "scripts": {
     "dev": "node -r esm node-mongo.js",
-    "dev:local": "nodemon --exec ts-node src/server.local.ts",
-    "dev:atlas": "nodemon --exec ts-node src/server.atlas.ts",
+    "dev:local": "if [ ! -f ./src/server.local.ts ]; then echo \"Error: You can only run dev:local in local development mode\"; exit 1; fi && nodemon --exec ts-node src/server.local.ts",
+    "dev:atlas": "if [ ! -f ./src/server.atlas.ts ]; then echo \"Error: You can only run dev:atlas in Atlas mode\"; exit 1; fi && nodemon --exec ts-node src/server.atlas.ts",
     "lint": "esw src --ext .ts --color",
     "lint:watch": "npm run lint -- --watch",
     "dev:restore": "node -r esm node-mongo.js",
