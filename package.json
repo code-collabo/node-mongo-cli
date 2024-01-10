@@ -17,7 +17,8 @@
     "dev-test": "nodemon --exec babel-node spec/run.js",
     "CI-test": "babel-node spec/run.js",
     "test-message": "node -r esm src/customize/testMessage",
-    "cleanup": "node -r esm dev/cleanup.js"
+    "cleanup": "node -r esm dev/cleanup.js",
+    "ts:watch": "tsc -w"
   },
   "repository": {
     "type": "git",
@@ -66,12 +67,14 @@
     "@babel/plugin-syntax-import-meta": "^7.10.4",
     "@babel/preset-env": "^7.21.5",
     "@babel/register": "^7.21.0",
+    "@types/node": "^20.10.8",
     "babel-plugin-transform-import-meta": "^2.2.0",
     "eslint": "^8.39.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-watch": "^8.0.0",
     "jasmine": "^4.6.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "typescript": "^5.3.3"
   },
   "files": [
     "bin/",
