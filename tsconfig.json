@@ -16,5 +16,5 @@
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node16"
   },
-  "include": ["./src/"]
+  "include": ["./src/", "./templates/"]
 }
