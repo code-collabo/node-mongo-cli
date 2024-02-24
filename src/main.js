@@ -98,7 +98,7 @@ export let downloadTemplateKit = async (options) => {
       new URL(currentFileUrl).pathname.indexOf("/") + 1
     );
 
-  const templateDir = path.resolve(newUrl, '../../templates', options.template.toLowerCase());
+  const templateDir = path.resolve(newUrl, '../../../templates', options.template.toLowerCase());
 
   options.templateDirectory = templateDir;
 

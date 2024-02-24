@@ -78,7 +78,7 @@
   },
   "files": [
     "bin/",
-    "src/",
+    "dist/src/",
     "templates/"
   ]
 }
