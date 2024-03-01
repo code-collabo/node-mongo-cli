@@ -67,6 +67,8 @@
     "@babel/plugin-syntax-import-meta": "^7.10.4",
     "@babel/preset-env": "^7.21.5",
     "@babel/register": "^7.21.0",
+    "@types/listr": "^0.14.9",
+    "@types/ncp": "^2.0.8",
     "@types/node": "^20.10.8",
     "babel-plugin-transform-import-meta": "^2.2.0",
     "eslint": "^8.39.0",
