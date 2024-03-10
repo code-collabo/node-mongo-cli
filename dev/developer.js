@@ -44,7 +44,8 @@ export const repo = {
     'package.json',
     'spec',
     'src',
-    'templates'
+    'templates',
+    'tsconfig.json'
   ],
   developerJsFileName,
   cleanupFolderName,

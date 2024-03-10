@@ -4,8 +4,8 @@
   "compilerOptions": {
     "lib": ["es2023"],
     "outDir": "dist",
-    "module": "NodeNext",
-    "target": "es2022",
+    "module": "ES2022",
+    "target": "ES5",
     "strict": true,
     "allowJs": true,
     "checkJs": false,
@@ -14,7 +14,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "NodeNext"
+    "moduleResolution": "Node"
   },
   "include": ["./src/"]
 }

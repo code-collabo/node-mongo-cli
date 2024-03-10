@@ -115,10 +115,7 @@ export let downloadTemplateKit = async (options: {
   process.chdir(`./${options.folderName}`);
   options.targetDirectory = process.cwd();
 
-  // const currentFileUrl = import.meta.url;
-  const currentFileUrl = __filename;
-
-  console.log(new URL(currentFileUrl).pathname);
+  const currentFileUrl = import.meta.url;
 
   let newUrl;
   if (process.platform === "darwin" || process.platform === "linux") {
@@ -139,9 +136,11 @@ export let downloadTemplateKit = async (options: {
   try {
     await access(templateDir, fs.constants.R_OK).then(async () => {
       /* rename name option in package.json same as project/folder name */
-      execa("npx", ["npe", "name", options.folderName], {
+      const rename = execa("npx", ["npe", "name", options.folderName], {
         cwd: options.targetDirectory,
-      }).stdout.pipe(process.stdout);
+      });
+
+      rename.stdout?.pipe(process.stdout);
     });
   } catch (err) {
     console.error(
