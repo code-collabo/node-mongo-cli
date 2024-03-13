@@ -9,14 +9,14 @@
     "nmgo": "bin/create-node-mongo-project"
   },
   "scripts": {
-    "prestart": "node -r esm src/customize/startMessage.js",
+    "prestart": "node -r esm src/dev/customize/startMessage.js",
     "start": "npm-run-all --parallel lint:watch",
     "lint": "esw src --color",
     "lint:watch": "npm run lint -- --watch",
     "test": "npm-run-all --parallel test-message dev-test",
     "dev-test": "nodemon --exec babel-node spec/run.js",
     "CI-test": "babel-node spec/run.js",
-    "test-message": "node -r esm src/customize/testMessage",
+    "test-message": "node -r esm src/dev/customize/testMessage",
     "cleanup": "node -r esm dev/cleanup.js",
     "ts:watch": "tsc -w"
   },
