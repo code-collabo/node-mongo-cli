@@ -67,6 +67,7 @@
     "@babel/plugin-syntax-import-meta": "^7.10.4",
     "@babel/preset-env": "^7.21.5",
     "@babel/register": "^7.21.0",
+    "@types/inquirer": "^9.0.7",
     "@types/listr": "^0.14.9",
     "@types/ncp": "^2.0.8",
     "@types/node": "^20.10.8",

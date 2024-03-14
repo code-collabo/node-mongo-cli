@@ -1,7 +1,7 @@
 import inquirer from 'inquirer';
 import chalk from 'chalk';
 
-let skipPromptsModified = (options, defaultFolderName, notAmongTemplateCollection, defaultTemplate) => {
+let skipPromptsModified = (options:any, defaultFolderName:string, notAmongTemplateCollection:any, defaultTemplate:string) => {
   if (notAmongTemplateCollection && (options.template !== undefined || options.template === undefined)) {
     options.template = defaultTemplate;
   }
@@ -17,8 +17,8 @@ let skipPromptsModified = (options, defaultFolderName, notAmongTemplateCollectio
   return options;
 }
 
-export const templateMissingOptionPrompt = async (options, folderNameAnswers, defaultFolderName) => {
-  const templateQuestions = [];
+export const templateMissingOptionPrompt = async (options:any, folderNameAnswers:any, defaultFolderName:string) => {
+  const templateQuestions  = [];
 
   const apiTemplate = {
     ts: {
@@ -57,22 +57,25 @@ export const templateMissingOptionPrompt = async (options, folderNameAnswers, de
       name: 'template',
       message: 'Please choose which node-mongo API boilerplate template to use',
       choices: templateCollection, //uses full names of templates in prompt for better user experience
-      default: defaultTemplate
+      default: defaultTemplate,
+      template: defaultTemplate
     });
   }
 
-  let templateAnswers;
+  let templateAnswers:any;
 
   if (options.skipPrompts) {
     options = skipPromptsModified(options, defaultFolderName, notAmongTemplateCollection, defaultTemplate);
-    templateQuestions.template = defaultTemplate;
+    if(templateQuestions[0] !== undefined){
+      templateQuestions[0].template = defaultTemplate;
+    }
     templateAnswers = templateQuestions;
   }
 
   if (!options.skipPrompts) templateAnswers = await inquirer.prompt(templateQuestions);
 
   // Transform template name/answers back to abbrev name for cli to process it accordingly
-  const transformTemplateName = (templateOption) => {
+  const transformTemplateName = (templateOption:any) => {
     if (templateOption === defaultTemplate) templateAnswers.template = apiTemplate.ts.abbrev;
     if (templateOption === esmTemplate) templateAnswers.template = apiTemplate.esm.abbrev;
     if (templateOption === cjsTemplate) templateAnswers.template = apiTemplate.cjs.abbrev;
