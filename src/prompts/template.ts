@@ -58,7 +58,6 @@ export const templateMissingOptionPrompt = async (options:any, folderNameAnswers
       message: 'Please choose which node-mongo API boilerplate template to use',
       choices: templateCollection, //uses full names of templates in prompt for better user experience
       default: defaultTemplate,
-      template: defaultTemplate
     });
   }
 
@@ -66,9 +65,9 @@ export const templateMissingOptionPrompt = async (options:any, folderNameAnswers
 
   if (options.skipPrompts) {
     options = skipPromptsModified(options, defaultFolderName, notAmongTemplateCollection, defaultTemplate);
-    if(templateQuestions[0] !== undefined){
-      templateQuestions[0].template = defaultTemplate;
-    }
+   
+      templateQuestions.template = defaultTemplate;
+    
     templateAnswers = templateQuestions;
   }
 
