@@ -6,20 +6,20 @@ import { folderNameMissingOptionPrompt } from './prompts/foldername';
 import { templateMissingOptionPrompt } from './prompts/template';
 import { downloadTemplateKit } from './main';
 
-let parseArgumentsIntoOptions = (rawArgs:string[]) => {
+let parseArgumentsIntoOptions = (rawArgs: string[]) => {
 
   //configure --skip-git flag
-  let myHandler = (value:string, argName:string, previousValue:string) => {
+  let myHandler = (value: string, argName: string, previousValue: string) => {
     return previousValue || '--skip-git';
   }
 
   //configure --help flag
-  let helpHandler = (value:string, argName:string, previousValue:string) => {
+  let helpHandler = (value: string, argName: string, previousValue: string) => {
     return previousValue || '--help';
   }
 
   //configure --version flag
-  let versionHelper = (value:string, argName:string, previousValue:string) => {
+  let versionHelper = (value: string, argName: string, previousValue: string) => {
     return previousValue || '--version';
   }
 
@@ -62,7 +62,7 @@ let parseArgumentsIntoOptions = (rawArgs:string[]) => {
   }
 }
 
-let otherOptions = async (options:any) => {
+let otherOptions = async (options :any) => {
   if (options.skipInstall) {
     options.runInstall = false;
   }
@@ -84,7 +84,7 @@ let otherOptions = async (options:any) => {
   }
 }
 
-export let cli = async (args:string[]) => {
+export let cli = async (args: string[]) => {
   let options = parseArgumentsIntoOptions(args);
 
   try {
