@@ -37,7 +37,6 @@ export const folderNameMissingOptionPrompt = async (options:any) => {
       if (valueMatch !== null) return value.match(/(\d+)/)?.map(Number)[0];
     }).filter(value => { return value !== undefined; }) as number[];
 
-
     let maxNumber = Math.max(...extractedNumbers);
 
     let incrementFolderName = () => {

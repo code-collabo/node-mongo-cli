@@ -1,7 +1,7 @@
 import inquirer from 'inquirer';
 import chalk from 'chalk';
 
-let skipPromptsModified = (options:any, defaultFolderName:string, notAmongTemplateCollection:any, defaultTemplate:string) => {
+let skipPromptsModified = (options: any, defaultFolderName: string, notAmongTemplateCollection: any, defaultTemplate: string) => {
   if (notAmongTemplateCollection && (options.template !== undefined || options.template === undefined)) {
     options.template = defaultTemplate;
   }
@@ -17,8 +17,8 @@ let skipPromptsModified = (options:any, defaultFolderName:string, notAmongTempla
   return options;
 }
 
-export const templateMissingOptionPrompt = async (options:any, folderNameAnswers:any, defaultFolderName:string) => {
-  const templateQuestions  = [];
+export const templateMissingOptionPrompt = async (options: any, folderNameAnswers: any, defaultFolderName: string) => {
+  const templateQuestions: TemplateQuestions[]  = [];
 
   const apiTemplate = {
     ts: {
@@ -61,18 +61,18 @@ export const templateMissingOptionPrompt = async (options:any, folderNameAnswers
     });
   }
 
-  let templateAnswers:any;
+  let templateAnswers: any;
 
   if (options.skipPrompts) {
     options = skipPromptsModified(options, defaultFolderName, notAmongTemplateCollection, defaultTemplate);
-      templateQuestions.template = defaultTemplate;
+    (templateQuestions as any).template = defaultTemplate;
     templateAnswers = templateQuestions;
   }
 
   if (!options.skipPrompts) templateAnswers = await inquirer.prompt(templateQuestions);
 
   // Transform template name/answers back to abbrev name for cli to process it accordingly
-  const transformTemplateName = (templateOption:any) => {
+  const transformTemplateName = (templateOption: any) => {
     if (templateOption === defaultTemplate) templateAnswers.template = apiTemplate.ts.abbrev;
     if (templateOption === esmTemplate) templateAnswers.template = apiTemplate.esm.abbrev;
     if (templateOption === cjsTemplate) templateAnswers.template = apiTemplate.cjs.abbrev;
