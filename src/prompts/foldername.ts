@@ -2,11 +2,11 @@ import inquirer from 'inquirer';
 import chalk from 'chalk';
 import fs from 'fs';
 
-export const folderNameMissingOptionPrompt = async (options:any) => {
+export const folderNameMissingOptionPrompt = async (options: any) => {
     let defaultFolderName = 'nm-kit';
     const folderQuestions: any[] = [];
   
-    let questionPush = (msgString: string, folder: string|null) => {
+    let questionPush = (msgString: string, folder: string | null) => {
       folderQuestions.push({
         type: 'input',
         name: 'folderName',
@@ -16,7 +16,7 @@ export const folderNameMissingOptionPrompt = async (options:any) => {
     }
 
     const rootDir = process.cwd();
-    const rootDirContent = fs.readdirSync(rootDir, (err:any, files:any) => {
+    const rootDirContent = fs.readdirSync(rootDir, (err: any, files: any) => {
       if (err) {
         throw err;
       }
@@ -30,7 +30,7 @@ export const folderNameMissingOptionPrompt = async (options:any) => {
       return content.match(defaultFolderName);
     });
   
-    let folderNameAnswers:any;
+    let folderNameAnswers: any;
 
     let extractedNumbers = matchDefaultValue.map((value) => {
       let valueMatch = value.match(/(\d+)/);
