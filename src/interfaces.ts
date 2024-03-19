@@ -10,13 +10,13 @@ export type ItemplateOptions = "ts" | "esm" | "cjs";
 
 export interface Ioptions {
   skipPrompts: boolean;
-    git: true;
+    git: boolean;
     skipGit: string | undefined;
     folderName: string;
     template: ItemplateOptions;
     targetDirectory: string;
     templateDirectory: string;
-    runInstall: true;
+    runInstall: boolean;
     skipInstall: boolean;
     help: string | boolean;
     version: string | boolean;

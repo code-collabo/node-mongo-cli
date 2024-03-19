@@ -5,6 +5,7 @@ import { help, notRecognised } from './help';
 import { folderNameMissingOptionPrompt } from './prompts/foldername';
 import { templateMissingOptionPrompt } from './prompts/template';
 import { downloadTemplateKit } from './main';
+import { Ioptions } from './interfaces';
 
 let parseArgumentsIntoOptions = (rawArgs: string[]) => {
 
@@ -62,7 +63,7 @@ let parseArgumentsIntoOptions = (rawArgs: string[]) => {
   }
 }
 
-let otherOptions = async (options :any) => {
+let otherOptions = async (options: Ioptions) => {
   if (options.skipInstall) {
     options.runInstall = false;
   }
@@ -93,7 +94,7 @@ export let cli = async (args: string[]) => {
     } else if (options?.version) {
       version();
     } else {
-      await otherOptions(options);
+      await otherOptions(options as Ioptions);
     }
   } catch (err) {
     console.log('');
