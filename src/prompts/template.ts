@@ -1,5 +1,6 @@
 import inquirer from 'inquirer';
 import chalk from 'chalk';
+import { TemplateQuestions } from '../interfaces';
 
 let skipPromptsModified = (options: any, defaultFolderName: string, notAmongTemplateCollection: any, defaultTemplate: string) => {
   if (notAmongTemplateCollection && (options.template !== undefined || options.template === undefined)) {
