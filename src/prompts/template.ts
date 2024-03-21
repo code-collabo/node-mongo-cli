@@ -1,8 +1,8 @@
 import inquirer from 'inquirer';
 import chalk from 'chalk';
-import { TemplateQuestions } from '../interfaces';
+import { IFoldernameAnswers, Ioptions, ItemplateOptions, TemplateQuestions } from '../interfaces';
 
-let skipPromptsModified = (options: any, defaultFolderName: string, notAmongTemplateCollection: any, defaultTemplate: string) => {
+let skipPromptsModified = (options: Ioptions, defaultFolderName: string, notAmongTemplateCollection: boolean, defaultTemplate: ItemplateOptions) => {
   if (notAmongTemplateCollection && (options.template !== undefined || options.template === undefined)) {
     options.template = defaultTemplate;
   }
@@ -18,7 +18,7 @@ let skipPromptsModified = (options: any, defaultFolderName: string, notAmongTemp
   return options;
 }
 
-export const templateMissingOptionPrompt = async (options: any, folderNameAnswers: any, defaultFolderName: string) => {
+export const templateMissingOptionPrompt = async (options: Ioptions, folderNameAnswers: IFoldernameAnswers, defaultFolderName: string) => {
   const templateQuestions: TemplateQuestions[]  = [];
 
   const apiTemplate = {
@@ -73,7 +73,7 @@ export const templateMissingOptionPrompt = async (options: any, folderNameAnswer
   if (!options.skipPrompts) templateAnswers = await inquirer.prompt(templateQuestions);
 
   // Transform template name/answers back to abbrev name for cli to process it accordingly
-  const transformTemplateName = (templateOption: any) => {
+  const transformTemplateName = (templateOption: string) => {
     if (templateOption === defaultTemplate) templateAnswers.template = apiTemplate.ts.abbrev;
     if (templateOption === esmTemplate) templateAnswers.template = apiTemplate.esm.abbrev;
     if (templateOption === cjsTemplate) templateAnswers.template = apiTemplate.cjs.abbrev;

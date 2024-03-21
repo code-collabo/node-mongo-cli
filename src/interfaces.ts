@@ -6,10 +6,10 @@ export interface TemplateQuestions {
     default: string;
   }
 
-export type ItemplateOptions = "ts" | "esm" | "cjs";
+export type ItemplateOptions = string;
 
 export interface Ioptions {
-  skipPrompts: boolean;
+    skipPrompts: boolean;
     git: boolean;
     skipGit: string | undefined;
     folderName: string;
@@ -20,4 +20,8 @@ export interface Ioptions {
     skipInstall: boolean;
     help: string | boolean;
     version: string | boolean;
+}
+
+export interface IFoldernameAnswers {
+  folderName:string
 }
