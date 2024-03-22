@@ -7,17 +7,18 @@ import execa from 'execa';
 import Listr from 'listr';
 import { spawn } from 'child_process';
 import { userSupport } from './help';
+import { Ioptions, ItemplateOptions } from './interfaces';
 
 const access = promisify(fs.access);
 const copy = promisify(ncp);
 
-let createGitIgnoreFile = async (options) => {
+let createGitIgnoreFile = async (options: {targetDirectory: string}) => {
   const content = '# See http://help.github.com/ignore-files/ for more about ignoring files.\n\n#.env file\n.env\n\n# dependencies\n/node_modules';
   fs.writeFileSync(path.join(options.targetDirectory, '.gitignore'), content);
   return;
 }
 
-let createEnvFiles = async (options) => {
+let createEnvFiles = async (options: {template: ItemplateOptions; targetDirectory: string}) => {
   let atlasPort;
   let localPort;
   const assignPort = () => {
@@ -40,19 +41,19 @@ let createEnvFiles = async (options) => {
   return;
 }
 
-let createLisenceFiles = async (options) => {
+let createLisenceFiles = async (options: {targetDirectory: string}) => {
   const content = 'ISC License (ISC)\n\nCopyright 2022-2023 Author Name\n\nPermission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.';
   fs.writeFileSync(path.join(options.targetDirectory, 'LICENSE'), content);
   return;
 }
 
-let copyTemplateFolderContent = async (options) => {
+let copyTemplateFolderContent = async (options: {templateDirectory: string; targetDirectory: string }) => {
   return copy(options.templateDirectory, options.targetDirectory, {
     clobber: false
   });
 }
 
-let gitInit = async (options) => {
+let gitInit = async (options: {git: boolean | string; targetDirectory: string}) => {
   if (options.git) { //git init only if git returns true
     const result = await execa('git', ['init'], {
       cwd: options.targetDirectory
@@ -66,7 +67,7 @@ let gitInit = async (options) => {
   return;
 }
 
-let npmInstall = async (options) => {
+let npmInstall = async (options: {runInstall: boolean; targetDirectory: string}) => {
   if (options.runInstall) { //install only if runInstall returns true
     if (process.platform === 'win32') spawn('npm.cmd', ['install'], { cwd: options.targetDirectory, stdio: 'inherit' });
       else spawn('npm', ['install'], {cwd: options.targetDirectory, stdio: 'inherit'});
@@ -75,7 +76,7 @@ let npmInstall = async (options) => {
   return;
 }
 
-export let downloadTemplateKit = async (options) => {
+export let downloadTemplateKit = async (options: Ioptions) => {
   options = {
     ...options,
     targetDirectory: options.targetDirectory || process.cwd() //root/parent folder at this point
@@ -98,7 +99,7 @@ export let downloadTemplateKit = async (options) => {
       new URL(currentFileUrl).pathname.indexOf("/") + 1
     );
 
-  const templateDir = path.resolve(newUrl, '../../templates', options.template.toLowerCase());
+  const templateDir = path.resolve(newUrl, '../../../templates', options.template.toLowerCase());
 
   options.templateDirectory = templateDir;
 
@@ -107,7 +108,7 @@ export let downloadTemplateKit = async (options) => {
       /* rename name option in package.json same as project/folder name */
       execa('npx', ['npe','name',options.folderName], {
         cwd: options.targetDirectory
-      }).stdout.pipe(process.stdout);
+      }).stdout?.pipe(process.stdout);
     })
 
   }catch (err) {
