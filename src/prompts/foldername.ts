@@ -1,10 +1,11 @@
 import inquirer from 'inquirer';
 import chalk from 'chalk';
 import fs from 'fs';
+import { IFolderQuestions, Ioptions } from '../interfaces';
 
-export const folderNameMissingOptionPrompt = async (options: any) => {
+export const folderNameMissingOptionPrompt = async (options: Ioptions) => {
     let defaultFolderName = 'nm-kit';
-    const folderQuestions: any[] = [];
+    const folderQuestions: IFolderQuestions[] = [];
   
     let questionPush = (msgString: string, folder: string | null) => {
       folderQuestions.push({
@@ -114,7 +115,7 @@ export const folderNameMissingOptionPrompt = async (options: any) => {
       });
 
       if (matchFolderNameArg) {
-        options.folderName = incrementFolderName();
+        options.folderName = incrementFolderName() as unknown as string;
       }
     }
   

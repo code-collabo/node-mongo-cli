@@ -25,3 +25,10 @@ export interface Ioptions {
 export interface IFoldernameAnswers {
   folderName:string
 }
+
+export interface IFolderQuestions {
+  type: string; 
+  name: string; 
+  message: string; 
+  default?:string | null
+}
