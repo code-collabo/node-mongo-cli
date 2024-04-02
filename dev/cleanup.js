@@ -1,7 +1,7 @@
 import { readdirSync, rmdirSync } from 'fs';
-import chalk from 'chalk';
 import { repo } from './developer';
 const { cwd, chdir } = process;
+import { success, warning, error, consoleLog } from '../lib/helpers';
 
 // -------------------------------------------------------------------------------------------------
 // TODO 1 (after CLI upgrade): Configure cleanup to run using node-mongo command i.e. "node-mongo cleanup" not "npm run cleanup"
@@ -37,15 +37,15 @@ const filterContentToGetTheOnesGeneratedByCLI = repoContent.reduce((acc, curr) =
 if (filterContentToGetTheOnesGeneratedByCLI.length) {
   try {
     filterContentToGetTheOnesGeneratedByCLI.map(folder => {
-      console.log(chalk.green(`✔ ${folder} folder deleted successfully`));
+      success(`✔ ${folder} folder deleted successfully`);
       return rmdirSync(folder, { recursive: true, force: true });
     });
-    console.log('');
+    consoleLog('');
   } catch (err) {
-    console.log(chalk.red(err));
+    error(err);
   }
 } else {
-  console.log(chalk.yellowBright('ℹ There are no folders to delete yet. Generate folder(s) using the "node-mongo" command, then run the cleanup script after you are done developing, and are ready to add and push your changes/fixes.\n'));
+  warning('ℹ There are no folders to delete yet. Generate folder(s) using the "node-mongo" command, then run the cleanup script after you are done developing, and are ready to add and push your changes/fixes.\n');
 }
 
 // ------------------------------------

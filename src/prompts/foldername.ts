@@ -1,7 +1,7 @@
 import inquirer from 'inquirer';
-import chalk from 'chalk';
 import fs from 'fs';
 import { IFolderQuestions, Ioptions } from '../interfaces';
+import { greenNoConsole, consoleLog, cyanBrightLog, warning } from '../../lib/helpers';
 
 export const folderNameMissingOptionPrompt = async (options: Ioptions) => {
     let defaultFolderName = 'nm-kit';
@@ -58,7 +58,7 @@ export const folderNameMissingOptionPrompt = async (options: Ioptions) => {
     if (options.folderName && !options.skipPrompts) {
       try {
         fs.accessSync(`./${options.folderName}`, fs.constants.F_OK);
-          console.log( chalk.cyanBright(`Folder name ${chalk.green(`${options.folderName}`)} already exists`) );
+        cyanBrightLog(`Folder name ${greenNoConsole(`${options.folderName}`)} already exists`);
           questionPush( 'Enter different folder name:', null);
           folderNameAnswers = await inquirer.prompt(folderQuestions);
       } catch (err) {
@@ -81,9 +81,9 @@ export const folderNameMissingOptionPrompt = async (options: Ioptions) => {
   
         if (equalToAtLeastOneFolder === true) {
           if (folderNameAnswers.folderName !== '') {
-            console.log( `Folder name ${chalk.green(`${folderNameAnswers.folderName}`)} already exists` );
+            consoleLog( `Folder name ${greenNoConsole(`${folderNameAnswers.folderName}`)} already exists` );
           } else {
-            console.log( `${chalk.yellowBright(`Folder name cannot be empty`)}` );
+            warning('Folder name cannot be empty');
           }
           folderQuestions.push({
             type: 'input',

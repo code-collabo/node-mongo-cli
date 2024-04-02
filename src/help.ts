@@ -1,7 +1,7 @@
-import chalk from 'chalk';
+import { warning, consoleLog } from '../lib/helpers';
 
 export const help = () => {
-console.log(
+consoleLog(
 `
 Usage:
 node-mongo <folder_name> <template>
@@ -55,7 +55,7 @@ folder name used already exists.
 }
 
 export const notRecognised = () => {
-console.log(
+consoleLog(
 `
 Flag(s) not recognised. Use any of the help command below for more info:
 
@@ -68,13 +68,12 @@ nmgo --help`
 }
 
 export const userSupport = () => {
-console.log (chalk.yellowBright(
+warning(
 `
 It looks like the node-mongo-cli does not work yet for your computer's operating system. Let us know the issue with the CLI on your computer's operating system by reporting it here:
 https://github.com/code-collabo/node-mongo-cli/issues/new?assignees=&labels=bug&template=cli-user-error-report.md
 
 Alternatively, you can download and access the API boilerplate templates from the template's github repo:
 https://github.com/code-collabo/node-mongo-api-boilerplate-templates
-`)
-);
+`);
 }
