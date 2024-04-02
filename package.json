@@ -2,14 +2,14 @@
   "name": "@code-collabo/node-mongo-cli",
   "version": "2.3.0",
   "description": "node-mongo-cli Command Line Interface made with nodejs to bootstrap any of 3 boilerplate templates for your nodejs and/or mongoDB development.",
-  "main": "src/cli.js",
+  "main": "src/cli.ts",
   "bin": {
     "@code-collabo/node-mongo-cli": "bin/create-node-mongo-project",
     "node-mongo": "bin/create-node-mongo-project",
     "nmgo": "bin/create-node-mongo-project"
   },
   "scripts": {
-    "prestart": "node -r esm src/dev/customize/startMessage.js",
+    "prestart": "node -r esm dev/customize/startMessage.js",
     "start": "npm-run-all --parallel lint:watch",
     "lint": "esw src --color",
     "lint:watch": "npm run lint -- --watch",
