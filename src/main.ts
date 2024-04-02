@@ -94,10 +94,9 @@ export let downloadTemplateKit = async (options: Ioptions) => {
   let newUrl;
   if (process.platform === "darwin" || process.platform === "linux") {
     newUrl = new URL(currentFileUrl).pathname;
-  } else
-    newUrl = new URL(currentFileUrl).pathname.substring(
-      new URL(currentFileUrl).pathname.indexOf("/") + 1
-    );
+  } else {
+    newUrl = new URL(currentFileUrl).pathname.substring(new URL(currentFileUrl).pathname.indexOf("/") + 1);
+  }
 
   const templateDir = path.resolve(newUrl, '../../../templates', options.template.toLowerCase());
 
@@ -109,9 +108,8 @@ export let downloadTemplateKit = async (options: Ioptions) => {
       execa('npx', ['npe','name',options.folderName], {
         cwd: options.targetDirectory
       }).stdout?.pipe(process.stdout);
-    })
-
-  }catch (err) {
+    });
+  } catch (err) {
     console.error(`\n%s Template name or directory path is (probably) incorrect`, chalk.red.bold('ERROR'));
     userSupport();
     process.exit(1);

@@ -6,8 +6,8 @@ const { cwd, chdir } = process;
 // -------------------------------------------------------------------------------------------------
 // TODO 1 (after CLI upgrade): Configure cleanup to run using node-mongo command i.e. "node-mongo cleanup" not "npm run cleanup"
 // TODO 2 (if possible): (I don't think you will need this TODO when this is done using the "node-mongo cleanup" command - or it might need slight modification)
-            // update package.json cleanup script dynamically with the cleanup file path.
-            // This means you will have to get the cleanup file name/path dynamically too...
+          // update package.json cleanup script dynamically with the cleanup file path.
+          // This means you will have to get the cleanup file name/path dynamically too...
 // Or... (instead) should cleanup script be handled a pre-commit hook or pre-push hook or something? - We'll see...
 // -------------------------------------------------------------------------------------------------
 

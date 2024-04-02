@@ -12,12 +12,11 @@ const currentFileUrl = import.meta.url;
 let newUrl;
 if (process.platform === "darwin" || process.platform === "linux") {
   newUrl = new URL(currentFileUrl).pathname;
-} else
-  newUrl = new URL(currentFileUrl).pathname.substring(
-    new URL(currentFileUrl).pathname.indexOf("/") + 1
-  );
+} else {
+  newUrl = new URL(currentFileUrl).pathname.substring(new URL(currentFileUrl).pathname.indexOf("/") + 1);
+}
 
-  const cleanupFolderPath = dirname(newUrl);
+const cleanupFolderPath = dirname(newUrl);
 // Change directory into the dynamically gotten parent folder, then extract folder name from path
 chdir(cleanupFolderPath);
 const cleanupFolderName = basename(resolve());
@@ -49,4 +48,4 @@ export const repo = {
   ],
   developerJsFileName,
   cleanupFolderName,
-}
+};
