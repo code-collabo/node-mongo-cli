@@ -43,6 +43,7 @@ export const repo = {
     'package.json',
     'spec',
     'src',
+    'lib',
     'templates',
     'tsconfig.json'
   ],
