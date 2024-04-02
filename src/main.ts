@@ -1,4 +1,3 @@
-import chalk from 'chalk';
 import fs from 'fs';
 import ncp from 'ncp';
 import path from 'path';
@@ -8,6 +7,7 @@ import Listr from 'listr';
 import { spawn } from 'child_process';
 import { userSupport } from './help';
 import { Ioptions, ItemplateOptions } from './interfaces';
+import { greenNoConsole, redBoldNoConsole } from '../lib/helpers';
 
 const access = promisify(fs.access);
 const copy = promisify(ncp);
@@ -110,7 +110,7 @@ export let downloadTemplateKit = async (options: Ioptions) => {
       }).stdout?.pipe(process.stdout);
     });
   } catch (err) {
-    console.error(`\n%s Template name or directory path is (probably) incorrect`, chalk.red.bold('ERROR'));
+    console.error(`\n%s Template name or directory path is (probably) incorrect`, redBoldNoConsole('ERROR'));
     userSupport();
     process.exit(1);
   }
@@ -123,7 +123,7 @@ export let downloadTemplateKit = async (options: Ioptions) => {
 
   const listrTasks = new Listr([
     {
-      title: `${chalk.green(`${options.template} template`)} copied into the generated folder ${chalk.green(`=> ${options.folderName}`)}`,
+      title: `${greenNoConsole(`${options.template} template`)} copied into the generated folder ${greenNoConsole(`=> ${options.folderName}`)}`,
       task: () => copyTemplateFolderContent(options)
     },
     {

@@ -1,3 +1,3 @@
-import chalk from 'chalk';/*eslint-disable no-console*/
+import { cyanBrightLog } from '../../lib/helpers';
 
-console.log( chalk.cyanBright('\nnode-mongo-cli: running jasmine tests...\n') );
+cyanBrightLog('\nnode-mongo-cli: running jasmine tests...\n');

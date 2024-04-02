@@ -1,3 +1,3 @@
-import chalk from 'chalk';/*eslint-disable no-console*/
+import { success } from '../../lib/helpers';
 
-console.log( chalk.greenBright('\nℹ Collabo Community "Create Collabo App": running in dev mode...\n') );
+success('\nℹ Collabo Community "Create Collabo App": running in dev mode...\n');

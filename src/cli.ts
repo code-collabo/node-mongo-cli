@@ -1,11 +1,11 @@
 import arg from 'arg';
-import chalk from 'chalk';
 import { version } from './version';
 import { help, notRecognised } from './help';
 import { folderNameMissingOptionPrompt } from './prompts/foldername';
 import { templateMissingOptionPrompt } from './prompts/template';
 import { downloadTemplateKit } from './main';
 import { Ioptions } from './interfaces';
+import { consoleLog, redBoldLog } from '../lib/helpers';
 
 let parseArgumentsIntoOptions = (rawArgs: string[]) => {
 
@@ -76,12 +76,12 @@ let otherOptions = async (options: Ioptions) => {
 
   options = await templateMissingOptionPrompt(updatedOptions, folderNameAnswers, defaultFolderName);
 
-  //console.log(options);
+  // consoleLog(options);
 
   try {
     await downloadTemplateKit(options);
   } catch (err) {
-    console.log(chalk.red.bold('ERROR'), err);
+    redBoldLog('ERROR', err);
   }
 }
 
@@ -97,6 +97,6 @@ export let cli = async (args: string[]) => {
       await otherOptions(options as Ioptions);
     }
   } catch (err) {
-    console.log('');
+    consoleLog('');
   }
 }
