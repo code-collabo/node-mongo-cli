@@ -1,3 +1,7 @@
+> We no longer develop projects in this GitHub organisation. Head over to our new GitHub organisation to find projects to contribute to: https://github.com/collabo-community
+
+#
+
 # @code-collabo/node-mongo-cli
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
